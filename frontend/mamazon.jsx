@@ -10,8 +10,8 @@ document.addEventListener("DOMContentLoaded", ()=>{
     
  
     window.store = store 
-    window.signUp = SessionApi.signUp
-    window.login = SessionApi.logIn
+    window.signUp = SessionApi.signup
+    window.login = SessionApi.login
     window.logout = SessionApi.logout
     
     ReactDOM.render(<Root store={store} />, root)
