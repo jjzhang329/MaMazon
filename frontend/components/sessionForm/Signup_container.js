@@ -3,7 +3,7 @@ import { signup } from "../../actions/session_actions"
 import SessionForm from './SessionForm'
 const mapState = (state) => ({
     errors: Object.values(state.errors),
-    formType: "Sign up"
+    formType: "Sign Up"
 })
 
 const mapDispatch = (dispatch) => ({
