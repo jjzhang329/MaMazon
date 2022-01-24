@@ -7,7 +7,8 @@ const mapState = (state) => ({
 })
 
 const mapDispatch = (dispatch) => ({
-    action: (user) => dispatch(login(user))
+    action: (user) => dispatch(login(user)),
+    loginDemo: (user) => dispatch(login(user))
 })
 
 export default connect(mapState, mapDispatch)(SessionForm)

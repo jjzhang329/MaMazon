@@ -16,7 +16,7 @@ export default class SessionForm extends React.Component {
  
   handleDemo(e){
     e.preventDefault()
-    const {formType, action} = this.props;
+    const {formType, loginDemo} = this.props;
     let demo = 'Demoplshireme@company.compassword'
     let count = formType === 'Sign-Up' ? 0 : 4
     let that = this;
@@ -33,7 +33,7 @@ export default class SessionForm extends React.Component {
         count++
         if(count === 33){
           clearInterval(fake)
-          action(this.state)
+          loginDemo(this.state)
         }
 
       }, 100)
