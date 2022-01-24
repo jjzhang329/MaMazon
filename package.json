@@ -10,11 +10,16 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "webpack",
     "start": "webpack --watch --mode=development"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jjzhang329/MaMazon.git"
+  },
+  "engines": {
+    "node": "16.13.2",
+    "npm": "8.1.2"
   },
   "keywords": [],
   "author": "",
