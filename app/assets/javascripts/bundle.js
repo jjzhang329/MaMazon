@@ -96,17 +96,16 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var App = function App() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router__WEBPACK_IMPORTED_MODULE_5__.Route, {
-    exact: true,
-    path: "/",
-    component: _greeting_Greeting_container__WEBPACK_IMPORTED_MODULE_1__["default"]
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_4__.AuthRoute, {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router__WEBPACK_IMPORTED_MODULE_5__.Switch, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_4__.AuthRoute, {
     path: "/login",
     component: _sessionForm_Login_container__WEBPACK_IMPORTED_MODULE_2__["default"]
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_4__.AuthRoute, {
     path: "/signup",
     component: _sessionForm_Signup_container__WEBPACK_IMPORTED_MODULE_3__["default"]
-  }));
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router__WEBPACK_IMPORTED_MODULE_5__.Route, {
+    path: "/",
+    component: _greeting_Greeting_container__WEBPACK_IMPORTED_MODULE_1__["default"]
+  })));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);
@@ -241,7 +240,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var mapState = function mapState(state) {
   return {
-    errors: Object.values(state.errors.session),
+    errors: state.errors.session,
     formType: "Sign-In"
   };
 };
@@ -314,9 +313,11 @@ var SessionForm = /*#__PURE__*/function (_React$Component) {
     _this.state = {
       email: "",
       password: "",
-      name: ''
+      name: '',
+      errors: []
     };
     _this.handleDemo = _this.handleDemo.bind(_assertThisInitialized(_this));
+    _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -361,10 +362,19 @@ var SessionForm = /*#__PURE__*/function (_React$Component) {
       }, 100);
     }
   }, {
-    key: "render",
-    value: function render() {
+    key: "handleSubmit",
+    value: function handleSubmit() {
       var _this4 = this;
 
+      this.props.action(this.state).fail(function () {
+        _this4.setState({
+          errors: _this4.props.errors
+        });
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
       var _this$props2 = this.props,
           formType = _this$props2.formType,
           action = _this$props2.action,
@@ -379,7 +389,7 @@ var SessionForm = /*#__PURE__*/function (_React$Component) {
       var buttontext = formType === 'Sign-Up' ? "Click here to Sign-In" : "Creat an account";
       var alterFormText = formType === 'Sign-Up' ? "Already have an account?" : "New to MaMazon?";
       var path = formType === 'Sign-Up' ? "/login" : "/signup";
-      var error = errors.length ? errors.map(function (error, idx) {
+      var error = this.state.errors.length ? this.state.errors.map(function (error, idx) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
           className: "error",
           key: idx
@@ -397,9 +407,7 @@ var SessionForm = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", {
         className: "form-title"
       }, formType), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("form", {
-        onSubmit: function onSubmit() {
-          return action(_this4.state);
-        }
+        onSubmit: this.handleSubmit
       }, nameinput, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h5", null, "Email:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
         type: "text",
         value: this.state.email,
@@ -456,7 +464,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var mapState = function mapState(state) {
   return {
-    errors: Object.values(state.errors.session),
+    errors: state.errors.session,
     formType: "Sign-Up"
   };
 };

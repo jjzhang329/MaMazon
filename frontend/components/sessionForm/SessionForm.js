@@ -5,14 +5,15 @@ import  logo from '../../../app/assets/images/MAMAZON.png'
 export default class SessionForm extends React.Component {
   constructor(props){
       super(props)
-      this.state = {email:"", password:"", name:''}
+      this.state = {email:"", password:"", name:'', errors:[]}
       this.handleDemo = this.handleDemo.bind(this)
+      this.handleSubmit = this.handleSubmit.bind(this)
   }
   handleInput(key){
       return(e)=>this.setState({[key]: e.currentTarget.value})
       
   }
-
+ 
   handleDemo(e){
     e.preventDefault()
     const {formType, action} = this.props;
@@ -39,6 +40,12 @@ export default class SessionForm extends React.Component {
    
   }
 
+  handleSubmit(){
+     this.props.action(this.state).fail(() => { 
+        
+      this.setState({errors: this.props.errors})}) 
+  }
+
 
   render(){
       const {formType, action, errors} = this.props
@@ -53,7 +60,7 @@ export default class SessionForm extends React.Component {
     const buttontext = (formType === 'Sign-Up' ?  "Click here to Sign-In" : "Creat an account") 
     const alterFormText = (formType === 'Sign-Up' ? "Already have an account?" : "New to MaMazon?")
     const path = (formType === 'Sign-Up' ? "/login" : "/signup")
-    const error = errors.length ? errors.map((error,idx)=>{
+    const error = this.state.errors.length ? this.state.errors.map((error,idx)=>{
       return <p className='error' key={idx}>{error} !</p>
     }) : null
       return(
@@ -64,7 +71,7 @@ export default class SessionForm extends React.Component {
             
             <div className='session-form'>
               <h1 className='form-title'>{formType}</h1>
-              <form onSubmit={()=>action(this.state)}> 
+              <form onSubmit={this.handleSubmit}> 
                 {nameinput}
                 <h5>Email:</h5>
                 <input type="text" value={this.state.email}
@@ -73,7 +80,6 @@ export default class SessionForm extends React.Component {
                <h5>Password:</h5>
                 <input type="password" value={this.state.password}
                 onChange={this.handleInput('password')} />
-              
                 {error}
                 <button className='session-button'>{formType}</button>
                 <button className='demo'onClick={this.handleDemo}>Demo User</button>
