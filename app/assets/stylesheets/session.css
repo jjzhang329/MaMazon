@@ -12,7 +12,7 @@
     margin-left: auto;
     margin-right: auto;
     object-fit: contain;
-    width: 100px;   
+    width: 110px;   
 }
 
 .session-form{
@@ -26,14 +26,14 @@
 }
 
 .session-form > h1{
-    font-size: 20px;
+    font-size: 25px;
     margin-top: -5px;
     margin-bottom: 15px;
     align-self: center;
 }
 
 h5{
-    font-size: 12px;
+    font-size: 15px;
     padding: 0px 0px 2px 2px;
     margin-bottom: 0px;
     margin-top: 0px;
@@ -51,6 +51,7 @@ input{
 button{
      background-color: #f0c14b;
     border-radius: 2px;
+    margin-top: 5px;
     width: 98%;
     border-color: #a88734;
     margin-bottom: 5px;
@@ -69,7 +70,7 @@ button{
     background-color: gainsboro;
 }
 .altermessage {
-    font-size: 10px;
+    font-size: 15px;
 }
 
 .error{
