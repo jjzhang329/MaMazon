@@ -9,13 +9,13 @@ const Greeting = ({currentUser, logout})=>{
     </div>) : (
         <div className="greeting">
             <p> Hello, Guest</p>
-        <Link to="/signup">Sign Up</Link>
-        <Link to="/login" >Sign In</Link>
-    </div>)
+            <Link to="/signup">Sign Up</Link> Or <Link to="/login" >Sign In</Link>
+        </div>
+    )
  
     return (
         
-    <div>
+    <div className="greeting-container">
         {display}
     </div>
     )

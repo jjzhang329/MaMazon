@@ -1,0 +1,78 @@
+.session-container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.session-logo{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: contain;
+    width: 100px;   
+}
+
+.session-form{
+    width: 200px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid lightgray;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.session-form > h1{
+    font-size: 20px;
+    margin-top: -5px;
+    margin-bottom: 15px;
+    align-self: center;
+}
+
+h5{
+    font-size: 12px;
+    padding: 0px 0px 2px 2px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+
+input{
+    margin-top: 0px;
+    height: 15px;
+    margin-bottom: 10px;
+    padding: 0px;
+    width: 95%;    
+}
+
+button{
+     background-color: #f0c14b;
+    border-radius: 2px;
+    width: 98%;
+    border-color: #a88734;
+    margin-bottom: 5px;
+}
+ 
+.divider {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 5px;
+}
+.alter{
+    height: 2px;
+    border-radius: 1px;
+    flex-grow: 1;
+    background-color: gainsboro;
+}
+.altermessage {
+    font-size: 10px;
+}
+
+.error{
+    color: red;
+    font-size: 10px;
+}

@@ -2,8 +2,8 @@ import { connect } from "react-redux";
 import {login} from '../../actions/session_actions'
 import SessionForm from './SessionForm'
 const mapState = (state) => ({
-    errors: Object.values(state.errors),
-    formType: "Sign In"
+    errors: Object.values(state.errors.session),
+    formType: "Sign-In"
 })
 
 const mapDispatch = (dispatch) => ({
