@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 
 const Greeting = ({currentUser, logout})=>{
     const display = currentUser ? (
-    <div >
+    <div className="greeting-container">
         <span className="greeting">Hello, {currentUser.name}</span>
         <button className="nav signout"onClick={logout}>Log Out</button>
     </div>) : (
-        <div>
+        <div className="greeting-container">
             <span className="greeting"> Hello, Guest</span>
             <div className="nav line2">
                 <Link to="/signup" className="nav signup">Sign Up</Link> 

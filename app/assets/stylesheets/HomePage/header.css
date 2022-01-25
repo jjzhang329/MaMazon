@@ -58,18 +58,23 @@
 
 .header-nav{
     display: flex;
-     flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: flex-start;  
-    height: 40px;
-    padding: 0 9px 10px 9px;
-    justify-content: center;
-    color:#fff;
-
+    flex-direction: row;  
 }
+.greeting-container{
+    display: flex;
+    flex-direction: column;
+     position:relative;
+    flex-wrap: nowrap;
+    height: 40px;
+    padding: 0 5px 10px 0;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    color:#fff;
+}
+
 .greeting{
     display: flex;
-    margin-top: 9px;
+    align-items: flex-start;  
     font-size: 12px;
     font-weight: 500;
     line-height: 14px;   
@@ -88,10 +93,27 @@
 .signup:hover{
     color:rgb(238, 163, 51)
 }
-.signup:hover{
+.signin:hover{
     color:rgb(238, 163, 51)
 }
 
 .carticon{
+    display: flex;
+    position:relative;    
+    margin-top: 5px;
+    margin-bottom: 4px;
+    height: 36px;
+    padding-right: 0;
     color:white;
+    width: 45px;
+    box-sizing: border-box;
+}
+
+.cartname{
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    margin-top: 25px;
+    margin-left: -5px;
+    margin-right: 15px;
 }

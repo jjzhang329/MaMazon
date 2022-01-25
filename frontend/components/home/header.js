@@ -1,7 +1,7 @@
 import React from 'react';
 import GreetingContainer from '../greeting/Greeting_container';
 import{ GoSearch} from "react-icons/go"
-import {MdOutlineAddShoppingCart} from 'react-icons/md'
+
 const Header = () => {
   return (
     <div className='header'>
@@ -13,7 +13,9 @@ const Header = () => {
         
         <div className='header-nav'>
             <GreetingContainer/>
-            <MdOutlineAddShoppingCart className='carticon'/>
+            <img src={cartURL} className='carticon'/>
+            <div className='cartname'>Cart</div>
+            
         </div>
     </div>
   )
