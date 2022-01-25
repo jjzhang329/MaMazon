@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 .session-container{
     height: 100vh;
     display: flex;
@@ -16,55 +19,65 @@
 }
 
 .session-form{
-    width: 200px;
+    width: 296px;
     height: fit-content;
     display: flex;
     flex-direction: column;
     border: 1px solid lightgray;
-    border-radius: 5px;
-    padding: 20px;
+    border-radius: 4px;
+    padding: 20px 26px;
 }
 
 .session-form > h1{
-    font-size: 20px;
+    font-size: 28px;
     margin-top: -5px;
     margin-bottom: 15px;
-    align-self: center;
+    align-self: flex-start;
 }
 
 h5{
     font-size: 13px;
-    padding: 0px 0px 2px 2px;
-    margin-bottom: 0px;
+    padding: 0px 0px 2px 3px;
     margin-top: 0px;
+    font-weight: 700;
 }
 
 
 input{
-    margin-top: 0px;
-    height: 14px;
+    margin-top: 2px;
+    height: 31px;
     margin-bottom: 10px;
-    padding: 0px;
+    padding: 3px 7px 3px  7px;
     width: 95%;   
-    
+    background-color: #fff;
+    border: 1px solid #a6a6a6;
+    border-top-color: #949494;
+    border-radius: 4px;
+    box-shadow: 0 1px 0 rgb(255 255 255 / 50%), 0 1px 0 rgb(0 0 0 / 7%) inset;
+    outline: 0;
+    font-size: 100%;
+  
 }
-input :active{
-    border-color: rgb(250, 167, 58);
-    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5), 0 1px 0 rgba(0, 0, 0, 0.07) inset;
+input:active{
+    border-color: #cb7d08;
 }
 
 button{
-    font-size: 10px;
-    height: 19px;
+    font-size: 12px;
+    height: 27px;
    background: linear-gradient(to bottom,#f7dfa5,#f0c14b);
     background-image: linear-gradient(rgb(247, 223, 165), rgb(240, 193, 75));
     border: 1px solid #a88734;
     border-radius: 2px;
-    margin-top: 5px;
+    margin-top: 7px;
     width: 98%;   
-    margin-bottom: 5px;
+    margin-bottom: 7px;
 }
 
+button:hover{
+    cursor: pointer;
+    background:  rgb(240, 193, 75);
+}
  
 .divider {
     display: flex;

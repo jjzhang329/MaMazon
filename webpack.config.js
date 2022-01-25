@@ -25,6 +25,7 @@ module.exports = {
                         loader: 'file-loader',
                     }
             }
+          
         ]
     },
     devtool: 'source-map',
