@@ -404,7 +404,7 @@ var SessionForm = /*#__PURE__*/function (_React$Component) {
         to: "/"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
         className: "session-logo",
-        src: _app_assets_images_MAMAZON_png__WEBPACK_IMPORTED_MODULE_1__["default"]
+        src: window.mamazonURL
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "session-form"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", {

@@ -66,7 +66,7 @@ export default class SessionForm extends React.Component {
       return(
           <div className='session-container'>
             <Link to='/'>
-              <img className="session-logo" src={logo}/>
+              <img className="session-logo" src={window.mamazonURL}/>
             </Link>
             
             <div className='session-form'>
