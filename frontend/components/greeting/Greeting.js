@@ -3,13 +3,17 @@ import { Link } from "react-router-dom";
 
 const Greeting = ({currentUser, logout})=>{
     const display = currentUser ? (
-    <div className="greeting">
-        <p>Hello, {currentUser.name}</p>
-        <button onClick={logout}>Log Out</button>
+    <div className="greeting-container">
+        <span className="greeting">Hello, {currentUser.name}</span>
+        <button className="nav signout"onClick={logout}>Log Out</button>
     </div>) : (
-        <div className="greeting">
-            <p> Hello, Guest</p>
-            <Link to="/signup">Sign Up</Link> Or <Link to="/login" >Sign In</Link>
+        <div className="greeting-container">
+            <span className="greeting"> Hello, Guest</span>
+            <div className="nav line2">
+                <Link to="/signup" className="nav signup">Sign Up</Link> 
+                   &nbsp;or&nbsp;
+                <Link to="/login" className="nav signin">Sign In</Link>
+            </div>
         </div>
     )
  
