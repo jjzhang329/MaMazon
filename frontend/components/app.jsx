@@ -4,7 +4,7 @@ import LoginFormContainer from './sessionForm/Login_container'
 import SignupFormContainer from './sessionForm/Signup_container';
 import { AuthRoute } from '../util/route_util';
 import Header from './home/header';
-// 'hello'
+
 const App = ()=>(
     <div>
         <Switch>
