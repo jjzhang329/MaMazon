@@ -52,8 +52,7 @@ input{
     background-color: #fff;
     border: 1px solid #a6a6a6;
     border-top-color: #949494;
-    border-radius: 4px;
-    box-shadow: 0 1px 0 rgb(255 255 255 / 50%), 0 1px 0 rgb(0 0 0 / 7%) inset;
+    border-radius: 4px;  
     outline: 0;
     font-size: 100%;
   
