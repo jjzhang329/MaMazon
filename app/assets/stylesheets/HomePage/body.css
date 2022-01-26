@@ -1,0 +1,28 @@
+.home-body{
+   display: flex;
+ 
+   margin: 0 auto;
+    width: 1500px; 
+    max-width: 1500px;
+    height: 100%;
+   
+}
+.carousel-container{ 
+    display: flex;
+    position: relative;   
+       flex-shrink: 1;
+    max-height: 600px;
+    width:  1500px;
+    overflow-wrap: break-word;
+    z-index: -1;
+    -webkit-mask-image: linear-gradient(black 50%, transparent);
+     mask-image: linear-gradient(black 50%, transparent);
+     margin: auto;
+}
+
+.carousel{
+    position: relative;
+    max-width: 100%;
+    overflow-wrap: break-word;
+
+}

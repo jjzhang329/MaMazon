@@ -3,14 +3,14 @@ import { Route, Switch } from 'react-router';
 import LoginFormContainer from './sessionForm/Login_container'
 import SignupFormContainer from './sessionForm/Signup_container';
 import { AuthRoute } from '../util/route_util';
-import Header from './home/header';
+import Home from './home/home';
 
 const App = ()=>(
     <div>
         <Switch>
         <AuthRoute path="/login" component={LoginFormContainer} />
         <AuthRoute path="/signup" component={SignupFormContainer} />
-        <Route path='/' component={Header} />  
+        <Route path='/' component={Home} />  
         </Switch>
     </div>
 )

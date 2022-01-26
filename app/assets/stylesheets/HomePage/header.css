@@ -1,8 +1,8 @@
 .header{
-    height: 58px;
+    height: 59px;
     display: flex;
     align-items: center;
-    background-color: #141921;
+    background-color: rgb(19,25,33);
     position: sticky;
     margin-top: 0;
     z-index: 10;
@@ -63,8 +63,7 @@
     width: 100%;
     border-radius: 0 0 0 0;  
     border: none;
-    font-size: 20px;
-  
+    font-size: 20px;  
 }
 
 .searchicon{

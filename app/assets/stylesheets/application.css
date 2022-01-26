@@ -15,9 +15,14 @@
  */
 
  body {
-    font-family:  sans-serif;
+    font-family:  Arial, sans-serif;
+    background-color: rgb(234,237,237);
  }
 
  a {
     text-decoration: none;
+ }
+
+div{
+    box-sizing: border-box;
  }
