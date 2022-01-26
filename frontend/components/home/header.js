@@ -1,14 +1,19 @@
 import React from 'react';
 import GreetingContainer from '../greeting/Greeting_container';
 import{ GoSearch} from "react-icons/go"
-
+import { RiArrowDropDownFill} from 'react-icons/ri'
 const Header = () => {
   return (
     <div className='header'>
         <img className="logo" src={window.homelogoURL}/>
         <div className='searchbar'>
+            <div className='dropdown'>
+              <div className='all'>All</div>
+
+              <RiArrowDropDownFill className='dropdownicon'/>
+            </div>
             <input className='searchinput' type="text"/>   
-              <GoSearch className='searchicon' />     
+            <GoSearch className='searchicon' />     
         </div>
         
         <div className='header-nav'>
