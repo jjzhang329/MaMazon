@@ -1,7 +1,6 @@
 class Product < ApplicationRecord
-    validates :name, :description, :category, :price, presence: true
+    validates :name, :description, :department, :price, presence: true
 
-    has_one_attached :picture
-
+    has_one_attached :photo
 
 end
