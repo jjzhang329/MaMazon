@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux';
-import { changeFilter } from '../../actions/filter_actions';
+import { changeFilter, updateFilter } from '../../actions/filter_actions';
 import { fetchAllProducts } from '../../actions/products_actions';
 import NavBar from './nav_bar';
 
@@ -12,8 +12,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    updateFilter: (filter,value) => dispatch(changeFilter(filter,value)),
-    fetchAllProducts: (filter)=>dispatch(fetchAllProducts(filter))
+    updateFilter: (filter,value) => dispatch(updateFilter(filter,value)),
+    // fetchAllProducts: (filter)=>dispatch(fetchAllProducts(filter))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(NavBar);

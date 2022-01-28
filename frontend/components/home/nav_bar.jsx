@@ -5,14 +5,15 @@ import { Link, NavLink } from 'react-router-dom';
 class NavBar extends React.Component{
   constructor(props){
     super(props)
-    this.state = this.props.filter
+    this.state = {department: ""}
     this.handleClick = this.handleClick.bind(this)
   }
 
   handleClick(value){
+    console.log(this.props.filter)
      return()=>{
       this.props.updateFilter('department', value)
-       this.props.fetchAllProducts(this.props.filter)
+      //  this.props.fetchAllProducts(this.props.filter)
     }
   }
   render(){
@@ -21,9 +22,9 @@ class NavBar extends React.Component{
       
       <div className='home-nav-bar-container'>
           <div className='nav-bar'>
-                <NavLink to='/products'className="nav-bar-category" onClick={this.handleClick("")}>All Products</NavLink>
-                <Link to='/products' onClick={this.handleClick('baby')} className="nav-bar-category" >Baby</Link>
-                <Link to='/products' onClick={this.handleClick('beauty')}className="nav-bar-category">Beauty & Personal Care</Link>
+                <NavLink to='/products'className="nav-bar-category" onClick={this.handleClick("")} replace>All Products</NavLink>
+                <NavLink to='/products' onClick={this.handleClick('baby')} className="nav-bar-category" replace>Baby</NavLink>
+                <NavLink to='/products' onClick={this.handleClick('beauty')} className="nav-bar-category" replace>Beauty & Personal Care</NavLink>
                 <NavLink to='' className="nav-bar-category">Fashion</NavLink>
                 <NavLink to='' className="nav-bar-category">Fitness</NavLink>
                 <NavLink to='' className="nav-bar-category">Home Decor</NavLink>

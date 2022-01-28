@@ -8,6 +8,7 @@ import SearchContainer from "./products/search_container"
 
 const App = ()=>(
     <div>
+        <Route path='/' component={Home} />  
         <Switch>
         <AuthRoute path="/login" component={LoginFormContainer} />
         <AuthRoute path="/signup" component={SignupFormContainer} />
@@ -15,9 +16,8 @@ const App = ()=>(
 
         <Route exact path='/products/beauty' component={SearchContainer} /> */}
         <Route path='/products' component={SearchContainer}/>
-       
         </Switch>
-        <Route path='/' component={Home} />  
+        
     </div>
 )
 

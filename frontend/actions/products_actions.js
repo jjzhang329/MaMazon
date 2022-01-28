@@ -12,9 +12,10 @@ const receiveProduct= (product) => ({
 })
 
 //filter by department, by name 
-export const fetchAllProducts = (filter)=>(dispatch)=>(
-    ProductsUtil.fetchAllProducts(filter).then(products=>dispatch(receiveAllProducts(products)))
-)
-export const fetchProduct = (id)=>(dispatch) => (
+export const fetchAllProducts = (filter)=>(dispatch)=>{
+    debugger
+    return ProductsUtil.fetchAllProducts(filter).then(products=>dispatch(receiveAllProducts(products)))
+}
+export const fetchProduct = (id)=>(dispatch) => {
     ProductsUtil.fetchProduct(id).then(product => dispatch(receiveProduct(product)))
-)
+}

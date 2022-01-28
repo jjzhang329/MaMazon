@@ -27,6 +27,7 @@ var changeFilter = function changeFilter(filter, value) {
 var updateFilter = function updateFilter(filter, value) {
   return function (dispatch, getState) {
     dispatch(changeFilter(filter, value));
+    debugger;
     return (0,_products_actions__WEBPACK_IMPORTED_MODULE_0__.fetchAllProducts)(getState().ui.filters)(dispatch);
   };
 };
@@ -69,6 +70,7 @@ var receiveProduct = function receiveProduct(product) {
 
 var fetchAllProducts = function fetchAllProducts(filter) {
   return function (dispatch) {
+    debugger;
     return _util_products_util__WEBPACK_IMPORTED_MODULE_0__.fetchAllProducts(filter).then(function (products) {
       return dispatch(receiveAllProducts(products));
     });
@@ -76,7 +78,7 @@ var fetchAllProducts = function fetchAllProducts(filter) {
 };
 var fetchProduct = function fetchProduct(id) {
   return function (dispatch) {
-    return _util_products_util__WEBPACK_IMPORTED_MODULE_0__.fetchProduct(id).then(function (product) {
+    _util_products_util__WEBPACK_IMPORTED_MODULE_0__.fetchProduct(id).then(function (product) {
       return dispatch(receiveProduct(product));
     });
   };
@@ -181,7 +183,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var App = function App() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router__WEBPACK_IMPORTED_MODULE_6__.Switch, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_3__.AuthRoute, {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router__WEBPACK_IMPORTED_MODULE_6__.Route, {
+    path: "/",
+    component: _home_home__WEBPACK_IMPORTED_MODULE_4__["default"]
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router__WEBPACK_IMPORTED_MODULE_6__.Switch, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_3__.AuthRoute, {
     path: "/login",
     component: _sessionForm_Login_container__WEBPACK_IMPORTED_MODULE_1__["default"]
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_3__.AuthRoute, {
@@ -190,10 +195,7 @@ var App = function App() {
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router__WEBPACK_IMPORTED_MODULE_6__.Route, {
     path: "/products",
     component: _products_search_container__WEBPACK_IMPORTED_MODULE_5__["default"]
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router__WEBPACK_IMPORTED_MODULE_6__.Route, {
-    path: "/",
-    component: _home_home__WEBPACK_IMPORTED_MODULE_4__["default"]
-  }));
+  })));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);
@@ -445,7 +447,9 @@ var NavBar = /*#__PURE__*/function (_React$Component) {
     _classCallCheck(this, NavBar);
 
     _this = _super.call(this, props);
-    _this.state = _this.props.filter;
+    _this.state = {
+      department: ""
+    };
     _this.handleClick = _this.handleClick.bind(_assertThisInitialized(_this));
     return _this;
   }
@@ -455,10 +459,10 @@ var NavBar = /*#__PURE__*/function (_React$Component) {
     value: function handleClick(value) {
       var _this2 = this;
 
+      console.log(this.props.filter);
       return function () {
-        _this2.props.updateFilter('department', value);
+        _this2.props.updateFilter('department', value); //  this.props.fetchAllProducts(this.props.filter)
 
-        _this2.props.fetchAllProducts(_this2.props.filter);
       };
     }
   }, {
@@ -471,15 +475,18 @@ var NavBar = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.NavLink, {
         to: "/products",
         className: "nav-bar-category",
-        onClick: this.handleClick("")
-      }, "All Products"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
+        onClick: this.handleClick(""),
+        replace: true
+      }, "All Products"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.NavLink, {
         to: "/products",
         onClick: this.handleClick('baby'),
-        className: "nav-bar-category"
-      }, "Baby"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
+        className: "nav-bar-category",
+        replace: true
+      }, "Baby"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.NavLink, {
         to: "/products",
         onClick: this.handleClick('beauty'),
-        className: "nav-bar-category"
+        className: "nav-bar-category",
+        replace: true
       }, "Beauty & Personal Care"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.NavLink, {
         to: "",
         className: "nav-bar-category"
@@ -541,11 +548,9 @@ var mapStateToProps = function mapStateToProps(state) {
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     updateFilter: function updateFilter(filter, value) {
-      return dispatch((0,_actions_filter_actions__WEBPACK_IMPORTED_MODULE_2__.changeFilter)(filter, value));
-    },
-    fetchAllProducts: function fetchAllProducts(filter) {
-      return dispatch((0,_actions_products_actions__WEBPACK_IMPORTED_MODULE_3__.fetchAllProducts)(filter));
-    }
+      return dispatch((0,_actions_filter_actions__WEBPACK_IMPORTED_MODULE_2__.updateFilter)(filter, value));
+    } // fetchAllProducts: (filter)=>dispatch(fetchAllProducts(filter))
+
   };
 };
 
@@ -614,7 +619,7 @@ var ProductIndex = /*#__PURE__*/function (_React$Component) {
     key: "render",
     value: function render() {
       if (!this.props.products) return null;
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_home_header__WEBPACK_IMPORTED_MODULE_1__["default"], null), this.props.products.map(function (product) {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, this.props.products.map(function (product) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_product_index_item__WEBPACK_IMPORTED_MODULE_3__["default"], {
           product: product,
           key: product.id
