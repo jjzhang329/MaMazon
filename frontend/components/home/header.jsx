@@ -2,11 +2,13 @@ import React from 'react';
 import GreetingContainer from '../greeting/Greeting_container';
 import{ GoSearch} from "react-icons/go"
 import { RiArrowDropDownFill} from 'react-icons/ri'
-import { Redirect } from 'react-router';
+import { Link } from 'react-router-dom';
 const Header = () => {
   return (
     <div className='header'>
+      <Link to='/'>
         <img className="logo" src={window.homelogoURL}/>
+      </Link>
         <div className='searchbar'>
             <div className='dropdown'>
               <div className='all'>All</div>

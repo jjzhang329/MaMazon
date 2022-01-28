@@ -25,7 +25,6 @@ class ProductIndex extends React.Component{
         this.saveStateToLocalStorage()
     }
     render(){
-        console.log(this.props.filter)
         if(!this.props.products) return null;
         return(
             <div>

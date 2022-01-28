@@ -5,6 +5,7 @@ import SignupFormContainer from './sessionForm/Signup_container';
 import { AuthRoute } from '../util/route_util';
 import Home from './home/home';
 import SearchContainer from "./products/search_container"
+import ProductShowContainer from './products/product_show_container'
 
 const App = ()=>(
     <div>
@@ -12,9 +13,7 @@ const App = ()=>(
         <Switch>
         <AuthRoute path="/login" component={LoginFormContainer} />
         <AuthRoute path="/signup" component={SignupFormContainer} />
-        {/* <Route exact path='/products/baby' component={SearchContainer} />
-
-        <Route exact path='/products/beauty' component={SearchContainer} /> */}
+        <Route path='/products/:id' component={ProductShowContainer} />
         <Route path='/products' component={SearchContainer}/>
         <Route path='/' component={Home} />  
         </Switch>

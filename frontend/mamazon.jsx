@@ -21,7 +21,6 @@ document.addEventListener("DOMContentLoaded", ()=>{
     }
  
     window.store = store 
-    window.fetchAllProducts= actions.fetchAllProducts;
     window.fetchProduct = actions.fetchProduct
     
     ReactDOM.render(<Root store={store} />, root)
