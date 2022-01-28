@@ -5,17 +5,22 @@ import { Link, NavLink } from 'react-router-dom';
 class NavBar extends React.Component{
   constructor(props){
     super(props)
-    this.state = {department: ""}
     this.handleClick = this.handleClick.bind(this)
   }
 
+  
   handleClick(value){
-    console.log(this.props.filter)
+
      return()=>{
       this.props.updateFilter('department', value)
       //  this.props.fetchAllProducts(this.props.filter)
+       
     }
   }
+
+
+
+
   render(){
    
     return (

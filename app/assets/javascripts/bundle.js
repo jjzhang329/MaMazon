@@ -27,7 +27,6 @@ var changeFilter = function changeFilter(filter, value) {
 var updateFilter = function updateFilter(filter, value) {
   return function (dispatch, getState) {
     dispatch(changeFilter(filter, value));
-    debugger;
     return (0,_products_actions__WEBPACK_IMPORTED_MODULE_0__.fetchAllProducts)(getState().ui.filters)(dispatch);
   };
 };
@@ -70,7 +69,6 @@ var receiveProduct = function receiveProduct(product) {
 
 var fetchAllProducts = function fetchAllProducts(filter) {
   return function (dispatch) {
-    debugger;
     return _util_products_util__WEBPACK_IMPORTED_MODULE_0__.fetchAllProducts(filter).then(function (products) {
       return dispatch(receiveAllProducts(products));
     });
@@ -183,10 +181,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var App = function App() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router__WEBPACK_IMPORTED_MODULE_6__.Route, {
-    path: "/",
-    component: _home_home__WEBPACK_IMPORTED_MODULE_4__["default"]
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router__WEBPACK_IMPORTED_MODULE_6__.Switch, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_3__.AuthRoute, {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router__WEBPACK_IMPORTED_MODULE_6__.Switch, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_3__.AuthRoute, {
     path: "/login",
     component: _sessionForm_Login_container__WEBPACK_IMPORTED_MODULE_1__["default"]
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_3__.AuthRoute, {
@@ -195,6 +190,9 @@ var App = function App() {
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router__WEBPACK_IMPORTED_MODULE_6__.Route, {
     path: "/products",
     component: _products_search_container__WEBPACK_IMPORTED_MODULE_5__["default"]
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router__WEBPACK_IMPORTED_MODULE_6__.Route, {
+    path: "/",
+    component: _home_home__WEBPACK_IMPORTED_MODULE_4__["default"]
   })));
 };
 
@@ -337,6 +335,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 var Header = function Header() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "header"
@@ -447,9 +446,6 @@ var NavBar = /*#__PURE__*/function (_React$Component) {
     _classCallCheck(this, NavBar);
 
     _this = _super.call(this, props);
-    _this.state = {
-      department: ""
-    };
     _this.handleClick = _this.handleClick.bind(_assertThisInitialized(_this));
     return _this;
   }
@@ -459,7 +455,6 @@ var NavBar = /*#__PURE__*/function (_React$Component) {
     value: function handleClick(value) {
       var _this2 = this;
 
-      console.log(this.props.filter);
       return function () {
         _this2.props.updateFilter('department', value); //  this.props.fetchAllProducts(this.props.filter)
 
@@ -571,7 +566,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _home_header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../home/header */ "./frontend/components/home/header.jsx");
-/* harmony import */ var _home_nav_bar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../home/nav_bar */ "./frontend/components/home/nav_bar.jsx");
+/* harmony import */ var _home_nav_bar_container__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../home/nav_bar_container */ "./frontend/components/home/nav_bar_container.jsx");
 /* harmony import */ var _product_index_item__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./product_index_item */ "./frontend/components/products/product_index_item.jsx");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
@@ -605,21 +600,36 @@ var ProductIndex = /*#__PURE__*/function (_React$Component) {
 
   var _super = _createSuper(ProductIndex);
 
-  function ProductIndex() {
+  function ProductIndex(props) {
     _classCallCheck(this, ProductIndex);
 
-    return _super.apply(this, arguments);
+    return _super.call(this, props);
   }
 
   _createClass(ProductIndex, [{
+    key: "saveStateToLocalStorage",
+    value: function saveStateToLocalStorage() {
+      localStorage.setItem("filter", JSON.stringify(this.props.filter));
+    }
+  }, {
     key: "componentDidMount",
-    value: function componentDidMount() {// this.props.fetchAllProducts(this.props.filter)
+    value: function componentDidMount() {
+      var filter = localStorage.getItem("filter");
+      this.props.fetchAllProducts(JSON.parse(filter));
+      window.addEventListener("beforeunload", this.saveStateToLocalStorage.bind(this));
+    }
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      window.removeEventListener("beforeunload", this.saveStateToLocalStorage.bind(this));
+      this.saveStateToLocalStorage();
     }
   }, {
     key: "render",
     value: function render() {
+      console.log(this.props.filter);
       if (!this.props.products) return null;
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, this.props.products.map(function (product) {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_home_header__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_home_nav_bar_container__WEBPACK_IMPORTED_MODULE_2__["default"], null), this.props.products.map(function (product) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_product_index_item__WEBPACK_IMPORTED_MODULE_3__["default"], {
           product: product,
           key: product.id
@@ -712,7 +722,7 @@ __webpack_require__.r(__webpack_exports__);
 var mapStateToProps = function mapStateToProps(state) {
   return {
     products: Object.values(state.entities.products),
-    filter: state.ui.filters.department
+    filter: state.ui.filters
   };
 };
 

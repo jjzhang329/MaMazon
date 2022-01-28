@@ -1,19 +1,36 @@
 import React from 'react';
 import Header from '../home/header';
-import NavBar from '../home/nav_bar';
+import NavBarContainer from '../home/nav_bar_container'
 import ProductIndexItem from './product_index_item'
 class ProductIndex extends React.Component{
 
-    componentDidMount(){
-        // this.props.fetchAllProducts(this.props.filter)
+    constructor(props){
+        super(props)
     }
-    
+    saveStateToLocalStorage() {
+        
+        localStorage.setItem("filter", JSON.stringify(this.props.filter))
+
+    }
+    componentDidMount(){   
+        let filter = localStorage.getItem("filter")
+        this.props.fetchAllProducts(JSON.parse(filter))
+        window.addEventListener("beforeunload", this.saveStateToLocalStorage.bind(this))
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener("beforeunload",
+            this.saveStateToLocalStorage.bind(this)
+        )
+        this.saveStateToLocalStorage()
+    }
     render(){
+        console.log(this.props.filter)
         if(!this.props.products) return null;
         return(
             <div>
-                {/* <Header/> */}
-                {/* <NavBarCont/> */}
+                <Header/> 
+                <NavBarContainer/>
                 {this.props.products.map(product => {
                     return <ProductIndexItem product={product} key={product.id}/>
                 })}

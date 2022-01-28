@@ -2,6 +2,7 @@ import React from 'react';
 import GreetingContainer from '../greeting/Greeting_container';
 import{ GoSearch} from "react-icons/go"
 import { RiArrowDropDownFill} from 'react-icons/ri'
+import { Redirect } from 'react-router';
 const Header = () => {
   return (
     <div className='header'>

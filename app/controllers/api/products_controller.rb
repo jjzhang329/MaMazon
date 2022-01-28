@@ -1,10 +1,11 @@
 class Api::ProductsController < ApplicationController
     def index 
         # puts params[:filter]
-        debugger
+      
         if(params[:filter][:department] != "")
             @products = Product.where(department: params[:filter][:department]) 
         else
+            #   debugger
             @products = Product.all
         end 
         

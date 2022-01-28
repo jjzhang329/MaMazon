@@ -5,7 +5,7 @@ import Search from './search';
 
 const mapStateToProps = (state) => ({
     products: Object.values(state.entities.products),
-    filter: state.ui.filters.department
+    filter: state.ui.filters
 
 });
 
