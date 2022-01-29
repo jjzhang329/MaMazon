@@ -7,9 +7,14 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.destroy_all
-demo = User.create!(name: 'Demo', email:"plshireme@company.com", password:"password")
-
 Product.destroy_all
+Cart.destroy_all
+# user
+demo = User.create!(name: 'Demo', email:"plshireme@company.com", password:"password")
+michelle = User.create!(name: "Michelle", email:"michelle@gmail.com", password:"michelle")
+
+
+
 # baby
 
 baby1 = Product.create!(
@@ -72,3 +77,7 @@ Please note there are no fragrances or masking fragrances in Vanicream products.
     price: 13.49
 )
 beauty1.photo.attach(io: open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/beauty1.jpg"), filename:"beauty1")
+
+# cart
+demo_cart = Cart.create(user_id: 1, product_id: 1, quantity: 1)
+michelleCart = Cart.create(user_id: 2, product_id: 2, quantity: 2)

@@ -27,7 +27,7 @@ class ApplicationController < ActionController::Base
   end
 
   def require_logged_in
-   
+    
   end
 
 end
