@@ -13,11 +13,11 @@ export const createCart = (cart)=>{
     })
 }
 
-export const updateCart = (cartItemObject)=>{
+export const updateCart = (cart)=>{
   return  $.ajax({
         method: "PATCH",
-        url: `/api/carts/${cartItemObject.id}`,
-        data: { cartItemObject }
+        url: `/api/carts/${cart.id}`,
+        data: {cart}
     })
 }
 

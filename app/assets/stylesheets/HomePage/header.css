@@ -93,10 +93,10 @@
 .greeting-container{
     display: flex;
     flex-direction: column;
-     position:relative;
+    position:relative;
     flex-wrap: nowrap;
     height: 40px;
-    padding: 0 5px 10px 0;
+    padding: 2px 5px 10px 0;
     margin-bottom: 5px;
     margin-top: 5px;
     color:#fff;
@@ -126,9 +126,32 @@
     color:rgb(238, 163, 51)
 }
 
+.header-nav{
+    box-sizing: border-box;
+    display: flex;
+    height: 60px;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+    justify-content: center;
+    padding: 0, 9px, 11px, 9px;
+    -webkit-box-pack: center;
+}
+.cartcount-container{
+    display: flex;  
+    align-items: flex-start; 
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    position: relative;
+}
 .carticon{
     display: flex;
-    position:relative;    
+    position:relative;   
+    align-items: flex-start; 
     margin-top: 5px;
     margin-bottom: 4px;
     height: 36px;
@@ -139,11 +162,32 @@
 }
 
 .cartname{
+    display: flex;
+    align-items: center;
     font-size: 14px;
     font-weight: 700;
     color: #fff;
-    margin-top: 25px;
+    line-height: 15px;
+    margin-top: 15px;
     margin-left: -5px;
-    margin-right: 15px;
-}
+    margin-right: 10px;
 
+}
+.cartcount{
+    color: rgb(240,136,4);
+    font-size: 18px;
+    font-weight: 700;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    left: 16px;
+    line-height: 16px;
+    position: absolute;
+    text-align: center;
+    right: 8px;
+    text-size-adjust: 100%;
+    top: 21px;
+    bottom: 30px;
+    width: 18px;
+}

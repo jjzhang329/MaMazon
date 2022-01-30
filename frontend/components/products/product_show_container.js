@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import ProductShow from './product_show';
 import {fetchProduct} from "../../actions/products_actions"
-import {addItem} from '../../actions/cart_actions'
+import {addItem, updateCart} from '../../actions/cart_actions'
 
 const mapStateToProps = (state, {match}) => ({
     product: state.entities.products[match.params.id],
@@ -10,7 +10,8 @@ const mapStateToProps = (state, {match}) => ({
 
 const mapDispatchToProps = (dispatch)=>({
     fetchProduct: (id)=>dispatch(fetchProduct(id)),
-    addToCart: (newItem)=>dispatch(addItem(newItem))
+    addToCart: (newItem)=>dispatch(addItem(newItem)),
+    updateCart: (item)=>dispatch(updateCart(item))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProductShow);

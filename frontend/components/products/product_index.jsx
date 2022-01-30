@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from '../home/header';
 import NavBarContainer from '../home/nav_bar_container'
+import HeaderContainer from '../home/header_container'
 import ProductIndexItem from './product_index_item'
 class ProductIndex extends React.Component{
 
@@ -28,7 +28,7 @@ class ProductIndex extends React.Component{
         if(!this.props.products) return null;
         return(
             <div>
-                <Header/> 
+                <HeaderContainer/> 
                 <NavBarContainer/>
                 {this.props.products.map(product => {
                     return <ProductIndexItem product={product} key={product.id}/>

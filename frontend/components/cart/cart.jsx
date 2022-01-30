@@ -4,10 +4,18 @@ class Cart extends React.Component{
     constructor(props){
         super(props)
         this.state = {
-            user_id: this.props.user,
             product_id: "",
             quantity:""
         }
+    }
+
+    render(){
+
+        return(
+            <div className="cartcount">
+                {/* {this.props.cart.length} */}
+            </div>
+        )
     }
 }
 

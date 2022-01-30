@@ -12,23 +12,21 @@ class Api::CartsController < ApplicationController
     end
     
     def create 
-         debugger
         @item = current_user.carts.create(cart_params)
 
         if @item.save 
             render json: @item
-        else 
+        else
             render json: @cart.errors.full_messages, status:422
         end 
     end  
 
-    def edit 
-
-
-    end 
 
     def update 
-
+        debugger
+        cart  = current_user.carts
+        item = cart.where(product_id: params[:cart][:product_id])
+        item[quantity] += params[:cart][:quantity]
     end 
 
     def destroy
