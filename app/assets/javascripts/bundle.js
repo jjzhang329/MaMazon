@@ -705,6 +705,9 @@ var NavBar = /*#__PURE__*/function (_React$Component) {
       }, "Kitchen"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.NavLink, {
         to: "",
         className: "nav-bar-category"
+      }, "Maternity"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.NavLink, {
+        to: "",
+        className: "nav-bar-category"
       }, "Smart Home"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.NavLink, {
         to: "",
         className: "nav-bar-category"
