@@ -1083,9 +1083,15 @@ var ProductShow = /*#__PURE__*/function (_React$Component) {
         value: 4
       }, "4"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("option", {
         value: 5
-      }, "5")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+      }, "5")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "addtocart"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+        id: "addtocart",
         onClick: this.handleClick
-      }, "Add to Cart")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      }, "Add to Cart"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+        id: "buynow",
+        onClick: this.handleClick
+      }, "Buy Now"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "product-show-reviews"
       }, "reviews goes")));
     }

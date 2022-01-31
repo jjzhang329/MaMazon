@@ -84,7 +84,7 @@ class ProductShow extends React.Component{
                                     . Order within <span id='orderwithin'>{orderWithIn}</span>
                                     <div id="in-stock">In Stock</div>
                                     <div className='product-quantity'> 
-                                        {/* <div className='dropdown-container'> */}
+
                                             
                                             <select id="quantity" name="quantity" className='quantity-dropdown' >
                                                 <option id="dropdown-name" value="">Qty: 1</option>
@@ -94,10 +94,14 @@ class ProductShow extends React.Component{
                                                 <option value={4}>4</option>
                                                 <option value={5}>5</option>
                                             </select>
-                                        {/* </div> */}
+                                        
                                     </div>
                                 </div>
-                                <button onClick={this.handleClick}>Add to Cart</button>
+                                <div className='addtocart'>
+                                    <button id="addtocart" onClick={this.handleClick}>Add to Cart</button>
+                                    <button id="buynow" onClick={this.handleClick}>Buy Now</button>
+                                </div>
+                                
                             </div>
                         </div>
                         
