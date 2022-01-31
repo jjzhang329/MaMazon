@@ -30,9 +30,11 @@ class ProductIndex extends React.Component{
             <div>
                 <HeaderContainer/> 
                 <NavBarContainer/>
-                {this.props.products.map(product => {
-                    return <ProductIndexItem product={product} key={product.id}/>
-                })}
+                <div className='product-index-container'>
+                    {this.props.products.map(product => {
+                        return <ProductIndexItem product={product} key={product.id}/>
+                    })}
+                </div>
             </div>
         )
     }

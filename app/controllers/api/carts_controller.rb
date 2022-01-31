@@ -1,7 +1,6 @@
 class Api::CartsController < ApplicationController
 
     def index 
-        debugger
         if logged_in?
             @user = current_user
             # @items = current_user.items

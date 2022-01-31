@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+require 'open-uri'
 User.destroy_all
 Product.destroy_all
 Cart.destroy_all
@@ -13,8 +14,8 @@ Cart.destroy_all
 demo = User.create!(name: 'Demo', email:"plshireme@company.com", password:"password")
 michelle = User.create!(name: "Michelle", email:"michelle@gmail.com", password:"michelle")
 harsha = User.create!(name:"Harsha", email:"harsha@gmail.com", password:"harsha")
-perry = User.create!(name:"Perry", email:"perry@gmail.com", password:"perry")
-jack = User.create!(name:"Jack", email:"jack@gmail.com", password:"jack")
+perry = User.create!(name:"Perry", email:"perry@gmail.com", password:"perryxie")
+jack = User.create!(name:"Jack", email:"jack@gmail.com", password:"jacktomasik")
 daniel = User.create!(name:"Daniel", email:"daniel@gmail.com", password:"daniel")
 presely = User.create!(name:"Persely", email:"presely@gmail.com", password:"presely")
 jing = User.create!(name:"JingJing", email:"jj@gmail.com", password:"jingjing")
@@ -34,7 +35,7 @@ Packaging may vary from image shown",
     department: "baby", 
     price: 49.11}
 )
-file1 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/baby1_.jpg")
+file1 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/baby/baby1_.jpg")
 baby1.photo.attach(io: file1, filename:"baby1")
 
 baby2 = Product.create!(
@@ -49,7 +50,7 @@ New Look! Packaging may vary",
     department: "baby", 
     price: 11.12
 )
-file2 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/baby2.jpg")
+file2 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/baby/baby2.jpg")
 baby2.photo.attach(io: file2, filename:"baby2")
 
 baby3 = Product.create!(
@@ -65,7 +66,7 @@ Packaging and prints on diapers may vary",
     department: "baby", 
     price: 42.99
 )
-file3 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/baby3.jpg")
+file3 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/baby/baby3.jpg")
 baby3.photo.attach(io: file3, filename:"baby3")
 
 baby4 = Product.create!(name:"Papablic Archie Baby Swing, Bluetooth Portable Swing for Infants with 5 Natural Sway Speeds and 3 Recline Positions, Unique Breathable System, Remote Control", 
@@ -77,7 +78,7 @@ description:"👶 Give Your Arms A Rest: Swinging our baby in arms for hours upo
 ", 
 department:"baby", 
 price:149.92)
-file4 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/baby4.jpg")
+file4 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/baby/baby4.jpg")
 baby4.photo.attach(io: file4, filename:"baby4")
 
 baby5 = Product.create!(name:"Lansinoh Breastmilk Storage Bags, 100 Count", 
@@ -88,7 +89,7 @@ PUMP DIRECTLY - Breast milk storage bags can be pumped directly into with Lansin
 EASY STORAGE- Stand in the fridge for compact storage; lay flat to safely freeze",
 department:"baby",
 price:13.88)
-file5 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/baby5.jpg")
+file5 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/baby/baby5.jpg")
 baby5.photo.attach(io:file5, filename:"baby5")
 
 # beauty
@@ -103,7 +104,7 @@ Please note there are no fragrances or masking fragrances in Vanicream products.
     department: "beauty",
     price: 13.49
 )
-file6 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/beauty1.jpg")
+file6 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/beauty/beauty1.jpg")
 beauty1.photo.attach(io: file6, filename:"beauty1")
 
 beauty2 = Product.create!(name:"Oribe Gold Lust Collection Holiday Set",
@@ -149,7 +150,7 @@ Pull On closure
 Dry Clean Only
 EVENING GOWN: This floor length gown is the perfect addition to any closet. Fashioned with 100% polyester, a halter neck, and a fitted waist and flowy tiered skirt. Dry clean only.
 COMPOSITION: This high quality gown is true to size and is made from 100% polyester designed for maximum comfort without compromising style.
-HOW TO WEAR: This flowy, evening gown is perfect for your next special occasion. The high neck and tiered skirt offer elegant accents.,"
+HOW TO WEAR: This flowy, evening gown is perfect for your next special occasion. The high neck and tiered skirt offer elegant accents.",
 department:"fashion",
 price:39.95)
 file11 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/fashion/fashion1.jpg")
@@ -208,7 +209,7 @@ The subtly textured surface prevents hands and feet from slipping out of positio
 Made of SGS certified TPE material which is non-slip, odor-less and excellent in cushioning, unlike those cheap & traditional non-green PVC, NBR or EVA yoga mats.",
 department:"fitness",
 price:29.99)
-file16 = open()
+file16 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/fitness/Fitness1.jpg")
 fitness1.photo.attach(io:file16, filename:"fitness1")
 
 fitness2 = Product.create!(name:"Apple Watch Series 5 (GPS, 44mm) - Gold Aluminum Case with Pink Sport Band ",
@@ -224,7 +225,7 @@ Emergency SOS
 Fall detection",
 department:"fitness",
 price:239)
-file17 = open()
+file17 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/fitness/fitness2.jpg")
 fitness2.photo.attach(io:file17, filename:"fitness2")
 
 fitness3 = Product.create!(name:"Exercise Workout Bands, Resistance Bands for Women, 3 Levels Booty Bands for Legs and Butt",
@@ -236,7 +237,7 @@ Resistance bands set, it is 4 different resistance levels of light, medium and h
 ",
 department:"fitness",
 price:16.99)
-file18 = open()
+file18 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/fitness/fitness3.jpg")
 fitness3.photo.attach(io:file18, filename:"fitness3")
 
 fitness4 = Product.create!(name:"GalSports Exercise Ball (45cm-75cm), Yoga Ball Chair with Quick Pump, Stability Fitness Ball for Core Strength Training & Physical Therapy",
@@ -247,7 +248,7 @@ description:"🎄 BURST RESISTANT & SAFE DEFLATION - Our exercise ball is safety
 🎅 EASY TO INFLATE – Conveniently inflatable, comes with a quick inflation foot pump, a plug remover, a measuring tape, 2 air stoppers, and detailed instructions. Available in 4 sizes: 45cm, 55cm, 65cm, and 75cm to cater to your specific needs. Make the purchase decision based on your individual height. Also make sure you can comfortably hold the gym ball of the size chosen with your hands and squeeze it in between your feet conveniently if these moves will be often practiced.",
 department:"fitness",
 price:17.99)
-file19 = open()
+file19 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/fitness/fitness4.jpg")
 fitness4.photo.attach(io:file19, filename:"fitness4")
 
 fitness5 = Product.create!(name:"NordicTrack Commercial Studio Cycle",
@@ -258,14 +259,14 @@ SMR Silent Magnetic Resistance delivers a smooth, quiet workout with every use; 
 350-pound user weight capacity; Protected with a 10-year frame warranty, 2-year parts warranty, and 1-year labor warranty; 59” H x 22” W x 60” L",
 department:"fitness",
 price:1798)
-file20 = open()
+file20 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/fitness/fitness5.jpg")
 fitness5.photo.attach(io:file20, filename:"fitness5")
 
 # Home Decor
 homedecor1 = Product.create!(name:"Wood Home Sign for Wall Decor Wooden Home Letters with Wreath Artificial Eucalyptus Modern Decorative Hanging Home Letters Decor Farmhouse Home Sign for Living Room Kitchen Christmas Housewarming Gift",
 description:"👍GORGEOUS & CHANGEABLE HOME DECORATION: Welcome your guests with MAYICIVO Decorative Wood Home Sign for Wall Decor with Artificial Eucalyptus wreath, bringing a comfortable, welcoming and warm atmosphere to your home. Perfect home accessories. If you love to decorate for the season you can just change out the wreath with a seasonal one, festival one, a clock, etc. Perfect for all season and all holidays, such as spring, summer, fall, winter, birthday, Christmas, Anniversary, etc.
-🥇DURABLE & RELIABLE QUALITY: The home sign with wreath comes with wood letters "H", "M", "E" and artificial eucalyptus greenery wreath for "O". The wood home letters for wall decor is made of high-quality, durable MDF wood, sturdy, thick, no breaks and no fading. The vivid-looking wreath is made of high-quality cloth and plastic, silk , non-toxic, looks natural and never wither and fall. The whole set enhance warmth and charming feeling to your home.
-🎉EASY MOUNTING & PERFECT SIZE：The wall hanging home sign is easy to hang with two sawtooth hanger on the back of each letter and hanging hole of the the wreath. The letters can be showcased horizontally, vertically, tabletop display or any way you'd like. Size: Letter "H": 9.8''H x 9.3''W x 0.8''THK; Wreath "O": 13.8'' Diameter; Letter "M": 9.8''H x 10.2''W x 0.8''THK; Letter"E": 9.8''H x 8.2''W x 0.8''THK. Totally a gorgeous addition to any room in your house!
+🥇DURABLE & RELIABLE QUALITY: The home sign with wreath comes with wood letters 'H', 'M', 'E' and artificial eucalyptus greenery wreath for 'O'. The wood home letters for wall decor is made of high-quality, durable MDF wood, sturdy, thick, no breaks and no fading. The vivid-looking wreath is made of high-quality cloth and plastic, silk , non-toxic, looks natural and never wither and fall. The whole set enhance warmth and charming feeling to your home.
+🎉EASY MOUNTING & PERFECT SIZE：The wall hanging home sign is easy to hang with two sawtooth hanger on the back of each letter and hanging hole of the the wreath. The letters can be showcased horizontally, vertically, tabletop display or any way you'd like. Size: Letter 'H': 9.8''H x 9.3''W x 0.8''THK; Wreath 'O': 13.8'' Diameter; Letter 'M': 9.8''H x 10.2''W x 0.8''THK; Letter'E': 9.8''H x 8.2''W x 0.8''THK. Totally a gorgeous addition to any room in your house!
 🐾WIDE APPLICATION: The wooden home letters with wreath is simple and elegant wall art and a great addition to any decor, suitable for home indoor and outdoor decoration, beautiful decor for the wall of the living room, entryway, fireplace, kitchen, dinning room, corridor, wedding, party or anywhere in your home. Not only add warmth and beauty with this gorgeous home sign decor, but also create comfortable and inviting feeling to your home. A great addition to your modern or farmhouse home!
 🎁FABULOUS GIFT IDEA: Passionately designed, cut and engraved, this home wall decor Sign with elegant design and artificial Artificial Eucalyptus wreath, great for home decoration, matching with most home styles, will make a special housewarming gift, anniversary gift, birthday or Christmas gift for yourself, family, friends, couples or new neighbor! Any issue with our wood home letters decor, feel free to tell us directly for prompt replacement or refund.",
 department:"homedecor",
@@ -328,7 +329,7 @@ Servings: this premium French press Coffee maker makes 8 cups of Coffee, 4oz eac
 ",
 department:"kitchen",
 price:37.48)
-file26 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/kitchen/kitchen1.jpg")
+file26 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/kitchen/bodumreplace_.jpg")
 kitchen1.photo.attach(io:file26, filename:"kitchen1")
 
 kitchen2 = Product.create!(name:"Lodge Enameled Dutch Oven, 6 Qt, Indigo", 
@@ -336,7 +337,7 @@ description:"6-Quart Dutch oven made of cast iron with chip-resistant porcelain-
 Broil, braise, bake or roast in the oven up to 500 Degree F
 Cast-iron loop side handles for a safe, secure grip when transporting
 Smooth glass surface won't react to ingredients; hand wash only
-Lodge enameled cast iron Dutch oven measures: 10-3/4" diameter 4-1/2" deep
+Lodge enameled cast iron Dutch oven measures: '10-3/4' diameter: '4-1/2' deep
 Item Shape: Round",
 department:"kitchen",
 price:79.90)
@@ -385,7 +386,6 @@ Tie closure
 Wrap maternity dress with 3/4 sleeve and long length made from soft and stretchy material that makes this a perfect seasonal item for Autumn/Fall.
 Designed with style and comfort in mind for all stages of pregnancy and postpartum. Show off your beautiful baby bump at your baby shower, thanksgiving dinner, or any formal event! Or add more shine to your everyday wardrove for a casual, yet stylish look.
 Care instructions: Wash gentle cycle cold with like colors/do not bleach and dry low/iron low when needed
-Small: [Bust: 30", Waist: 24", Length: 55.2"] Medium: [ Bust: 32", Waist: 26", Length: 56"] Large: [ Bust: 34", Waist: 28", Length: 56.7"] X-Large: [Bust: 36", Waist: 30", Length: 57.5"]
 Some styles and color options imported.",
 department:"maternity",
 price:39.95)
@@ -513,4 +513,4 @@ quantity5 = 5
 michelleCart = Cart.create(user_id: michelle.id, product_id: kitchen1.id, quantity: quantity1)
 preselyCart = Cart.create(user_id: presely.id, product_id: smarthome1.id, quantity: quantity1)
 harshaCart = Cart.create(user_id: harsha.id, product_id:smarthome2.id, quantity: quantity2)
-jingjingCart = Cart.create(user_id: jingjing.id, product_id:beauty2.id, quantity: quantity2)
+jingjingCart = Cart.create(user_id: jing.id, product_id:beauty2.id, quantity: quantity2)
