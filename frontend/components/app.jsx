@@ -6,15 +6,21 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import Home from './home/home';
 import SearchContainer from "./products/search_container"
 import ProductShowContainer from './products/product_show_container'
-import CartContainer from './cart/cart_container'
+import CheckoutContainer from './cart/checkout_container'
+import HeaderContainer from './home/header_container';
+import NavBarContainer from './home/nav_bar_container';
+
 
 const App = ()=>(
     <div>
-        
+        <header>
+            <HeaderContainer />
+            <NavBarContainer />
+        </header>
         <Switch>
         <AuthRoute path="/login" component={LoginFormContainer} />
         <AuthRoute path="/signup" component={SignupFormContainer} />
-        <ProtectedRoute path='/cart' component={CartContainer}/>
+        <ProtectedRoute path='/checkout' component={CheckoutContainer}/>
         <Route path='/products/:id' component={ProductShowContainer} />
         <Route path='/products' component={SearchContainer}/>
         <Route path='/' component={Home} />  

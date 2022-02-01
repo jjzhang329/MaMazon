@@ -26,7 +26,7 @@ const ProductIndexItem = ({product}) => {
         <span id="shipping-1">Get is as soon as Tomorrow</span>
         <span id="shipping-2">FREE Shipping by Mamazon</span>
       </div>
-        {/* {product.description}    */}
+        
     </div>
     );
 };

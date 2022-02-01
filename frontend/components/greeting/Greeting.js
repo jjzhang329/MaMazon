@@ -5,7 +5,7 @@ const Greeting = ({currentUser, logout})=>{
     const display = currentUser ? (
     <div className="greeting-container">
         <span className="greeting">Hello, {currentUser.name}</span>
-        <button className="nav signout"onClick={logout}>Log Out</button>
+        <Link to="/" className="nav signout" onClick={logout}>Log Out</Link>
     </div>) : (
         <div className="greeting-container">
             <span className="greeting"> Hello, Guest</span>

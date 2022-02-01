@@ -140,6 +140,12 @@
     padding: 0, 9px, 11px, 9px;
     -webkit-box-pack: center;
 }
+.container:hover{
+    cursor: pointer;
+    /* border: 1px solid #fff;
+    border-radius: 2px;
+    margin: -1px; */
+}
 .cartcount-container{
     display: flex;  
     align-items: flex-start; 

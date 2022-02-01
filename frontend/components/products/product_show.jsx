@@ -1,30 +1,36 @@
 import React from 'react';
+import { Redirect } from 'react-router';
+import { NavLink } from 'react-router-dom';
 import HeaderContainer from '../home/header_container';
 import NavBarContainer from '../home/nav_bar_container';
 
 class ProductShow extends React.Component{
     constructor(props){
         super(props)
-        this.state = {count: ""}
+        this.state = {quantity: 1}
         this.handleClick = this.handleClick.bind(this)
+
     }
 
     componentDidMount(){
         this.props.fetchProduct(this.props.match.params.id)
     }
 
+    handleSelect(){    
+        return(e)=> {
+            this.setState({quantity: e.currentTarget.value})
+        }
+
+    }
+
     handleClick(e){
         e.preventDefault()
-        //  this.setState({count: this.state.count+=1})
         const product_id = this.props.product.id
         const alreadyInCart = this.props.cart
-        debugger
         if(alreadyInCart.includes(product_id)){
-            // this.props.updateCart({product_id: product_id, quantity: 1})
-           console.log('same product')
-            this.props.updateCart({ product_id: product_id, quantity: 1 })
+            this.props.updateCart({ product_id: product_id, quantity: this.state.quantity})
         }else{
-            this.props.addToCart({product_id: product_id, quantity: 1})
+            this.props.addToCart({product_id: product_id, quantity: this.state.quantity})
         }
     }
     
@@ -46,8 +52,8 @@ class ProductShow extends React.Component{
 
         return (
             <div>
-                <HeaderContainer />
-                <NavBarContainer />
+                {/* <HeaderContainer />
+                <NavBarContainer /> */}
                 <div className='product-show-container'>
                     <div className='product-show-main'>
                         <div className='product-show-left'>
@@ -86,20 +92,22 @@ class ProductShow extends React.Component{
                                     <div className='product-quantity'> 
 
                                             
-                                            <select id="quantity" name="quantity" className='quantity-dropdown' >
-                                                <option id="dropdown-name" value="">Qty: 1</option>
-                                                <option value={1}>1</option>
-                                                <option value={2}>2</option>
-                                                <option value={3}>3</option>
-                                                <option value={4}>4</option>
-                                                <option value={5}>5</option>
+                                            <select onChange ={this.handleSelect()} id="quantity" name="quantity" className='quantity-dropdown'>   
+                                                <option value={1}>Qty: 1</option>
+                                                <option value={2}>Qty: 2</option>
+                                                <option value={3}>Qty: 3</option>
+                                                <option value={4}>Qty: 4</option>
+                                                <option value={5}>Qty: 5</option>
+                                                <option value={6}>Qty: 6</option>
                                             </select>
                                         
                                     </div>
                                 </div>
                                 <div className='addtocart'>
                                     <button id="addtocart" onClick={this.handleClick}>Add to Cart</button>
-                                    <button id="buynow" onClick={this.handleClick}>Buy Now</button>
+                                    <NavLink to='/checkout'>
+                                    <button id="buynow">Buy Now</button>
+                                    </NavLink>
                                 </div>
                                 
                             </div>

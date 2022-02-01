@@ -510,6 +510,7 @@ quantity2 = 2
 quantity3 = 3
 quantity4 = 4
 quantity5 = 5
+
 michelleCart = Cart.create(user_id: michelle.id, product_id: kitchen1.id, quantity: quantity1)
 preselyCart = Cart.create(user_id: presely.id, product_id: smarthome1.id, quantity: quantity1)
 harshaCart = Cart.create(user_id: harsha.id, product_id:smarthome2.id, quantity: quantity2)

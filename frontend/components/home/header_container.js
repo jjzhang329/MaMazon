@@ -4,7 +4,7 @@ import Header from './header';
 const mapState = (state)=>{
     const currentUser = state.entities.users[state.session.id]
    return {
-       cartCount: currentUser ? currentUser.cart.length : 0}
+       cartCount: currentUser ? currentUser.cartCount : 0}
 }
 
 export default connect(mapState, null)(Header)

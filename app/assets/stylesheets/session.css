@@ -1,12 +1,13 @@
 *{
     box-sizing: border-box;
+    
 }
 .session-container{
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    background-color: #fff;
 }
 
 .session-logo{
@@ -40,6 +41,7 @@ h5{
     padding: 0px 0px 2px 3px;
     margin-top: 0px;
     font-weight: 700;
+    color: black;
 }
 
 

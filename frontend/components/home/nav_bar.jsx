@@ -13,7 +13,6 @@ class NavBar extends React.Component{
 
      return()=>{
       this.props.updateFilter('department', value)
-      //  this.props.fetchAllProducts(this.props.filter)
        
     }
   }

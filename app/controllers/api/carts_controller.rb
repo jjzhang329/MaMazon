@@ -3,8 +3,8 @@ class Api::CartsController < ApplicationController
     def index 
         if logged_in?
             @user = current_user
-            # @items = current_user.items
-            render "api/users/show"
+            @products = current_user.items
+            render "api/products/index"
         else
             render json:["Click below to sign-in"], status:422
         end 
@@ -12,7 +12,6 @@ class Api::CartsController < ApplicationController
     
     def create 
         @item = current_user.carts.create(cart_params)
-
         if @item.save 
             render json: @item
         else
@@ -22,10 +21,14 @@ class Api::CartsController < ApplicationController
 
 
     def update 
-        debugger
         cart  = current_user.carts
-        item = cart.where(product_id: params[:cart][:product_id])
-        item[quantity] += params[:cart][:quantity]
+        @user = current_user
+        @item = cart.where(product_id: params[:cart][:product_id])
+        new_quantity = @item[0].quantity + (params[:cart][:quantity].to_i)
+        if @item.update(quantity: new_quantity)
+            render "api/users/show"
+        end 
+
     end 
 
     def destroy
