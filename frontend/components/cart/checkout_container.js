@@ -6,7 +6,8 @@ const mapState = (state)=>{
    const currentUserId = state.session.id
     return{
         cartItems: state.entities.users[currentUserId].cart,
-        products: Object.values(state.entities.products)
+        products: Object.values(state.entities.products),
+        cartCount: state.entities.users[currentUserId].cartCount
     }
 }
 const mapDispatchToProps = (dispatch) => ({

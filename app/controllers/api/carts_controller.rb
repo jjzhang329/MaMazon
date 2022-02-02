@@ -2,7 +2,7 @@ class Api::CartsController < ApplicationController
 
     def index 
         if logged_in?
-            @user = current_user
+            @cart = current_user.carts
             @products = current_user.items
             render "api/products/index"
         else

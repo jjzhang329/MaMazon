@@ -9,10 +9,12 @@ import ProductShowContainer from './products/product_show_container'
 import CheckoutContainer from './cart/checkout_container'
 import HeaderContainer from './home/header_container';
 import NavBarContainer from './home/nav_bar_container';
+import Modal from './modal/modal'
 
 
 const App = ()=>(
     <div>
+        <Modal/>
         <header>
             <HeaderContainer />
             <NavBarContainer />

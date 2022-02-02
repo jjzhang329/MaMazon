@@ -105,9 +105,9 @@ class ProductShow extends React.Component{
                                 </div>
                                 <div className='addtocart'>
                                     <button id="addtocart" onClick={this.handleClick}>Add to Cart</button>
-                                    <NavLink to='/checkout'>
-                                    <button id="buynow">Buy Now</button>
-                                    </NavLink>
+                                   
+                                    <button id="buynow" onClick={()=>this.props.openModal('buynow')}>Buy Now</button>
+                                 
                                 </div>
                                 
                             </div>

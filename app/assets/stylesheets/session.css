@@ -45,7 +45,7 @@ h5{
 }
 
 
-input{
+.session-input{
     margin-top: 2px;
     height: 31px;
     margin-bottom: 10px;
@@ -59,7 +59,7 @@ input{
     font-size: 100%;
   
 }
-input:active{
+.session-input:active{
     border-color: #cb7d08;
 }
 
