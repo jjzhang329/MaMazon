@@ -28,8 +28,7 @@ class ProductIndex extends React.Component{
         if(!this.props.products) return null;
         return(
             <div>
-                {/* <HeaderContainer/> 
-                <NavBarContainer/> */}
+                
                 <div className='product-index-container'>
                     {this.props.products.map(product => {
                         return <ProductIndexItem product={product} key={product.id}/>

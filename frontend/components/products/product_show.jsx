@@ -1,8 +1,7 @@
 import React from 'react';
 import { Redirect } from 'react-router';
-import { NavLink } from 'react-router-dom';
-import HeaderContainer from '../home/header_container';
-import NavBarContainer from '../home/nav_bar_container';
+import { Link } from 'react-router-dom';
+import Review from '../reviews/reviews'
 
 class ProductShow extends React.Component{
     constructor(props){
@@ -49,11 +48,9 @@ class ProductShow extends React.Component{
         let slowdeliver = slow.slice(0, -6)
         let fastdeliver = fast.slice(0,-6)
         let orderWithIn = `${23- today.getHours()} hrs and ${59 - today.getMinutes()} mins.`
-
+    
         return (
             <div>
-                {/* <HeaderContainer />
-                <NavBarContainer /> */}
                 <div className='product-show-container'>
                     <div className='product-show-main'>
                         <div className='product-show-left'>
@@ -116,8 +113,33 @@ class ProductShow extends React.Component{
                       
                         
                     </div>
-                    <div className='product-show-reviews'>
-                        reviews goes     
+                    <div className='reviews-container'>
+                        <div className='reviews-left'>
+                            <div className='reviews-title'>
+                                Customer reviews
+                            </div>
+                            <div className='reviews-rating'>
+                                stars
+                                <div className='rating-bars'>
+                                    progress bar
+                                </div>
+                            </div>
+                            <div className='reviews-update'>
+                                <h2>Review this product</h2>
+                                <div><span>Share your thoughts with other customers</span></div>
+                                <div className='review-submit'>
+                                    <Link to={`/products/${product.id}/reviews/new`}>
+                                        <button className='review-button'>Write a customer review</button>
+                                    </Link>
+                                </div>
+                            </div>
+
+                        </div>
+                        {product.reviews && 
+                        <div className='reviews-right'>
+                            {product.reviews.map((review, idx) => <Review review={review} key={idx} />)}
+                        </div>}
+                        
                     </div>
                 </div>
             </div>

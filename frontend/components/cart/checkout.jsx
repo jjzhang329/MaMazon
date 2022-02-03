@@ -13,7 +13,7 @@ class CheckOut extends React.Component{
     }
 
     render(){
-        const {products, cartCount} = this.props
+        const {products, cartCount, updateCart} = this.props
         let totalPrice = 0;
         if (!products.length) return (<div>your cart is empty, keep shopping</div>)
         const items = products.map((product,idx)=>{

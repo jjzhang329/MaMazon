@@ -9,7 +9,7 @@
     min-width: 1000px;
     background-color: #fff;
     position: absolute;
-    height: 100%;
+    /* height: 100%; */
 }
 .product-show-main{
     display: flex;
@@ -19,6 +19,7 @@
     width: 80%;
     margin: 0 auto;
     margin-top: 20px;
+    margin-bottom: 50px;
 }
 
 .product-show-left{
@@ -26,7 +27,7 @@
     align-items: flex-start;
     position: sticky;
     margin-top: 20px;
-    min-width: 390px;
+    /* min-width: 390px; */
     width: 30%;
     left:0px;
     margin-left: 0;
@@ -40,9 +41,10 @@
     border-collapse: collapse;
     border:none;
     position: relative;
-    width: 100%;
+    width: 390px;
     height: 100%;
     object-fit: contain;
+    max-width: 390px;
     max-height: 390px;
 }
 

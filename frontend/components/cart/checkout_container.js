@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import CheckOut from "./checkout";
-import {fetchCartItems} from '../../actions/cart_actions'
+import {fetchCartItems, updateCart} from '../../actions/cart_actions'
 
 const mapState = (state)=>{
    const currentUserId = state.session.id

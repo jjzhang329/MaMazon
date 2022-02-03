@@ -5,7 +5,7 @@ import { useState } from "react";
 
 const CheckOutItems = ({ product, updateCart })=>{
     const [selected, setSelected] = useState(product.quantity);
-     console.log(selected) 
+     console.log(selected) //selected quantity
     return (
 
         <div className="checkout-products-row">

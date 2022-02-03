@@ -9,11 +9,7 @@ if user.items.length != 0
         count += cart.quantity
     end
     json.cartCount count
-        #user.items.each do |item|
-        #json.extract! item, :id, :name, :department, :description, :price 
-            #json.photoUrl url_for(item.photo)
-        #end
-        # json.array! user.items, :id                
+  
 else
     json.cart([])
 end
