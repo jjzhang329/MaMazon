@@ -26,7 +26,7 @@ class Api::CartsController < ApplicationController
         @item = cart.where(product_id: params[:cart][:product_id])
         new_quantity = @item[0].quantity + (params[:cart][:quantity].to_i)
         if @item.update(quantity: new_quantity)
-            debugger
+           
             render "api/users/show"
         end 
 

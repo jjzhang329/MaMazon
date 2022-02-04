@@ -9,7 +9,7 @@ class CheckOut extends React.Component{
     }
 
     componentDidMount(){
-        debugger
+    
         this.props.fetchCartItems()
     }
 

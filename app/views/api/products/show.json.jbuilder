@@ -1,11 +1,6 @@
 json.photoUrl url_for(@product.photo)
 json.extract! @product, :id, :name, :department, :description, :price 
 
-# json.reviews do 
-#     debugger
-#     @product.reviews 
-# end
-
 json.reviews do
 
     if(@product.reviews.length >= 1) 
