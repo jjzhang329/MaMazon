@@ -19,23 +19,23 @@ const Body = () => {
                 <div className='card-header'><h2>Time to treat yourself</h2></div>
                 <div className='card-body-multi'>
                   <div className='card-multi-row'>
-                    <Link to='/products/61'>
+                    <Link to='/products/59'>
                       
                       <img src="https://mamazon-seeds.s3.us-west-1.amazonaws.com/fashion/fashion2.jpg" />
           
                     </Link>
-                    <Link to="/products/62">
+                    <Link to="/products/60">
                       
                         <img src="https://mamazon-seeds.s3.us-west-1.amazonaws.com/fashion/fashion3.jpg" />
                       
                     </Link>
                   </div>
                   <div className='card-multi-row'>
-                    <Link to="/products/64">
+                    <Link to="/products/62">
                     <img src="https://mamazon-seeds.s3.us-west-1.amazonaws.com/fashion/fashion5.jpg" />
                     
                   </Link>
-                  <Link to="/products/65">
+                  <Link to="/products/63">
                     
                     <img src="https://mamazon-seeds.s3.us-west-1.amazonaws.com/fashion/fashion6.jpg" />
                   </Link>
@@ -47,7 +47,7 @@ const Body = () => {
             <div className='card'>
               <div className='card-detail'>
                 <div className='card-header'><h2>Let it do the dirty work</h2></div>
-              <Link to='/products/81'>
+              <Link to='/products/79'>
                   <div className='card-body'>
                   <img src="https://mamazon-seeds.s3.us-west-1.amazonaws.com/smart-home/smarthome1.jpg" />
                 </div>
@@ -62,7 +62,7 @@ const Body = () => {
               <div className='card-detail'>
                 <div className='card-header'><h2>Morning start with the coffee</h2></div>
                 
-                <Link to='/products/73'>
+                <Link to='/products/71'>
                 <div className='card-body'>
                   <img src="https://mamazon-seeds.s3.us-west-1.amazonaws.com/kitchen/bodumreplace_.jpg" />
                   
@@ -75,7 +75,7 @@ const Body = () => {
               <div className='card-detail'>
                 
                 <div className='card-header'><h2>Home Sweet home</h2></div>
-              <Link to="/products/71">
+              <Link to="/products/69">
                 <div className='card-body'>
                   <img src="https://mamazon-seeds.s3.us-west-1.amazonaws.com/home+decor/homedecor1.jpg" />
                 
@@ -91,7 +91,7 @@ const Body = () => {
             <div className='card wider-box'>
               <div className='card-detail'>
                 <div className='card-header'><h2>Hair Product set</h2></div>
-                <Link to='/products/48'>
+                <Link to='/products/46'>
                   <div className='card-body wider-box-image'>
                     <img src="https://mamazon-seeds.s3.us-west-1.amazonaws.com/splash/splash1.jpg" />
                     
@@ -104,7 +104,7 @@ const Body = () => {
             <div className='card'>
               <div className='card-detail'>
                 <div className='card-header'><h2>Baby on the way</h2></div>
-              <Link to="/products/80">
+              <Link to="/products/78">
                 <div className='card-body'>
                 <img src="https://mamazon-seeds.s3.us-west-1.amazonaws.com/maternity/maternity4.jpg" />
                 
@@ -116,7 +116,7 @@ const Body = () => {
             <div className='card'>
               <div className='card-detail'>
                 <div className='card-header'><h2>Baby Swing</h2><p>baby is not inclued !</p></div>
-              <Link to="/products/54">
+              <Link to="/products/52">
                 <div className='card-body'>
                 <img src="https://mamazon-seeds.s3.us-west-1.amazonaws.com/baby/baby4.jpg" />
                   

@@ -9,17 +9,17 @@ const splashImages = [
 
 const Slider=()=>{
      const [currentIdx, setCurrentIdx] = useState(0)
-    //  useEffect(()=>{
-    //     startSlider()
-    //  })
+     useEffect(()=>{
+        startSlider()
+     })
 
-    //  const startSlider=()=>{
-    //      setInterval(()=>{
-    //         handleNextClick()
-    //      }, 10000)
-    //  }
+     const startSlider=()=>{
+         setInterval(()=>{
+            handleNextClick()
+         }, 10000)
+     }
     let path
-    if (currentIdx === 1){path = 'products/'}
+    // if (currentIdx === 1){path = 'products/'}
     const handleNextClick = ()=>{
    
         const newIdx = Math.floor((currentIdx+1)%splashImages.length)
@@ -28,7 +28,7 @@ const Slider=()=>{
 
     return(
         <div className="carousel-inner">
-            <img className="carousel" src={splashImages[0]} alt="" />
+            <img className="carousel" src={splashImages[currentIdx]} alt="" />
             
             <div className="center-icon-div">
                 {/* <button className='previous-button' onClick={handleNextClick}>Previous</button>
