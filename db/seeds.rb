@@ -558,7 +558,7 @@ quantity4 = 4
 quantity5 = 5
 
 michelleCart = Cart.create(user_id: michelle.id, product_id: kitchen1.id, quantity: quantity1)
-preselyCart = Cart.create(user_id: presely.id, product_id: smarthome1.id, quantity: quantity1)
+preselyCart = Cart.create(user_id: presley.id, product_id: smarthome1.id, quantity: quantity1)
 harshaCart = Cart.create(user_id: harsha.id, product_id:smarthome2.id, quantity: quantity2)
 jingjingCart = Cart.create(user_id: jing.id, product_id:beauty2.id, quantity: quantity2)
 
@@ -568,7 +568,7 @@ review2 = Review.create(user_id: jingjing.id, product_id: kitchen2.id, rating: q
 review3 = Review.create(user_id: harsha.id, product_id: kitchen2.id, rating: quantity4, body:"hello, this is perfect")
 review4 = Review.create(user_id: jack.id, product_id: kitchen2.id, rating: quantity5, body:"hello, this is perfect")
 review5 = Review.create(user_id: perry.id, product_id: kitchen2.id, rating: quantity5, body:"hello, this is perfect")
-review1 = Review.create(user_id: presely.id, product_id: kitchen2.id, rating: quantity5, body:"hello, this is perfect")
+review1 = Review.create(user_id: presley.id, product_id: kitchen2.id, rating: quantity5, body:"hello, this is perfect")
 review2 = Review.create(user_id: daniel.id, product_id: kitchen2.id, rating: quantity4, body:"hello, this is perfect")
 
 
@@ -577,7 +577,7 @@ review2 = Review.create(user_id: jingjing.id, product_id: smarthome1.id, rating:
 review3 = Review.create(user_id: harsha.id, product_id: smarthome1.id, rating: quantity3, body:"hello, this is perfect")
 review4 = Review.create(user_id: jack.id, product_id: smarthome1.id, rating: quantity4, body:"hello, this is perfect")
 review5 = Review.create(user_id: perry.id, product_id: smarthome1.id, rating: quantity5, body:"hello, this is perfect")
-review1 = Review.create(user_id: presely.id, product_id: smarthome1.id, rating: quantity5, body:"hello, this is perfect")
+review1 = Review.create(user_id: presley.id, product_id: smarthome1.id, rating: quantity5, body:"hello, this is perfect")
 review2 = Review.create(user_id: daniel.id, product_id: smarthome1.id, rating: quantity5, body:"hello, this is perfect")
 
 review1 = Review.create(user_id: michelle.id, product_id: beauty2.id, rating: quantity1, body:"hello, this is perfect")
@@ -585,7 +585,7 @@ review2 = Review.create(user_id: jingjing.id, product_id: beauty2.id, rating: qu
 review3 = Review.create(user_id: harsha.id, product_id: beauty2.id, rating: quantity3, body:"hello, this is perfect")
 review4 = Review.create(user_id: jack.id, product_id: beauty2.id, rating: quantity4, body:"hello, this is perfect")
 review5 = Review.create(user_id: perry.id, product_id: beauty2.id, rating: quantity5, body:"hello, this is perfect")
-review1 = Review.create(user_id: presely.id, product_id: beauty2.id, rating: quantity5, body:"hello, this is perfect")
+review1 = Review.create(user_id: presley.id, product_id: beauty2.id, rating: quantity5, body:"hello, this is perfect")
 review2 = Review.create(user_id: daniel.id, product_id: beauty2.id, rating: quantity5, body:"hello, this is perfect")
 
 review1 = Review.create(user_id: michelle.id, product_id: homedecor2.id, rating: quantity1, body:"hello, this is perfect")
@@ -593,7 +593,7 @@ review2 = Review.create(user_id: jingjing.id, product_id: homedecor2.id, rating:
 review3 = Review.create(user_id: harsha.id, product_id: homedecor2.id, rating: quantity3, body:"hello, this is perfect")
 review4 = Review.create(user_id: jack.id, product_id: homedecor2.id, rating: quantity4, body:"hello, this is perfect")
 review5 = Review.create(user_id: perry.id, product_id: homedecor2.id, rating: quantity5, body:"hello, this is perfect")
-review1 = Review.create(user_id: presely.id, product_id: homedecor2.id, rating: quantity5, body:"hello, this is perfect")
+review1 = Review.create(user_id: presley.id, product_id: homedecor2.id, rating: quantity5, body:"hello, this is perfect")
 review2 = Review.create(user_id: daniel.id, product_id: homedecor2.id, rating: quantity5, body:"hello, this is perfect")
 
 review1 = Review.create(user_id: michelle.id, product_id:kitchen5.id, rating: quantity1, body:"hello, this is perfect")
@@ -601,7 +601,7 @@ review2 = Review.create(user_id: jingjing.id, product_id:kitchen5.id, rating: qu
 review3 = Review.create(user_id: harsha.id, product_id:kitchen5.id, rating: quantity3, body:"hello, this is perfect")
 review4 = Review.create(user_id: jack.id, product_id: kitchen5.id, rating: quantity4, body:"hello, this is perfect")
 review5 = Review.create(user_id: perry.id, product_id:kitchen5.id, rating: quantity5, body:"hello, this is perfect")
-review1 = Review.create(user_id: presely.id, product_id:kitchen5.id, rating: quantity5, body:"hello, this is perfect")
+review1 = Review.create(user_id: presley.id, product_id:kitchen5.id, rating: quantity5, body:"hello, this is perfect")
 review2 = Review.create(user_id: daniel.id, product_id:kitchen5.id, rating: quantity5, body:"hello, this is perfect")
 
 review1 = Review.create(user_id: michelle.id, product_id: homedecor4.id, rating: quantity1, body:"hello, this is perfect")
@@ -609,7 +609,7 @@ review2 = Review.create(user_id: jingjing.id, product_id: homedecor4.id, rating:
 review3 = Review.create(user_id: harsha.id, product_id: homedecor4.id, rating: quantity3, body:"hello, this is perfect")
 review4 = Review.create(user_id: jack.id, product_id: homedecor4.id, rating: quantity4, body:"hello, this is perfect")
 review5 = Review.create(user_id: perry.id, product_id: homedecor4.id, rating: quantity5, body:"hello, this is perfect")
-review1 = Review.create(user_id: presely.id, product_id: homedecor4.id, rating: quantity5, body:"hello, this is perfect")
+review1 = Review.create(user_id: presley.id, product_id: homedecor4.id, rating: quantity5, body:"hello, this is perfect")
 review2 = Review.create(user_id: daniel.id, product_id: homedecor4.id, rating: quantity5, body:"hello, this is perfect")
 
 review1 = Review.create(user_id: michelle.id, product_id: baby1.id, rating: quantity1, body:"hello, this is perfect")
@@ -617,5 +617,5 @@ review2 = Review.create(user_id: jingjing.id, product_id: baby1.id, rating: quan
 review3 = Review.create(user_id: harsha.id, product_id: baby1.id, rating: quantity3, body:"hello, this is perfect")
 review4 = Review.create(user_id: jack.id, product_id: baby1.id, rating: quantity4, body:"hello, this is perfect")
 review5 = Review.create(user_id: perry.id, product_id: baby1.id, rating: quantity5, body:"hello, this is perfect")
-review1 = Review.create(user_id: presely.id, product_id: baby1.id, rating: quantity5, body:"hello, this is perfect")
+review1 = Review.create(user_id: presley.id, product_id: baby1.id, rating: quantity5, body:"hello, this is perfect")
 review2 = Review.create(user_id: daniel.id, product_id: baby1.id, rating: quantity5, body:"hello, this is perfect")
