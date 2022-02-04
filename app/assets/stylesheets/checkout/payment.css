@@ -10,7 +10,8 @@ main{
     height:1000px;
     background: white;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    flex-direction: column;
     padding-top: 10%;
     
 }
@@ -25,6 +26,7 @@ main{
     background: white;
     align-items: center;
     flex-direction: column;
+    margin: 0 auto;
 }
 .checkmark{
      display: flex;

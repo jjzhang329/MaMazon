@@ -1,6 +1,7 @@
 import { connect } from "react-redux";
 import { closeModal } from "../../actions/modal_actions";
 import React from "react"
+import { Link } from "react-router-dom";
 
 const BuyNow = ({product, currentUser, closeModal})=>{
     const today = new Date()
@@ -46,9 +47,11 @@ const BuyNow = ({product, currentUser, closeModal})=>{
                     <span className="modal-price">${product.price}</span></div>
             </div>
             <div className="modal-footer">
+                <Link to='/payment'>
                 <div className="place-order-button">
                     <button id="modal-checkout-button">Place your order</button>
                 </div>
+                </Link>
             </div>
         </div>
     )

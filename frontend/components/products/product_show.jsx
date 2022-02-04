@@ -15,6 +15,7 @@ class ProductShow extends React.Component{
     }
 
     handleSelect(){    
+        // debugger
         return(e)=> {
             this.setState({quantity: e.currentTarget.value})
         }
@@ -27,6 +28,7 @@ class ProductShow extends React.Component{
         const product_id = this.props.product.id
         const alreadyInCart = this.props.cart
         if(alreadyInCart.includes(product_id)){
+            // debugger
             this.props.updateCart({ product_id: product_id, quantity: this.state.quantity})
         }else{
             this.props.addToCart({product_id: product_id, quantity: this.state.quantity})
@@ -91,7 +93,7 @@ class ProductShow extends React.Component{
                                     <div className='product-quantity'> 
 
                                             
-                                            <select onChange ={this.handleSelect} id="quantity" name="quantity" className='quantity-dropdown'>   
+                                            <select onChange ={this.handleSelect()} id="quantity" name="quantity" className='quantity-dropdown'>   
                                                 <option value={1}>Qty: 1</option>
                                                 <option value={2}>Qty: 2</option>
                                                 <option value={3}>Qty: 3</option>
