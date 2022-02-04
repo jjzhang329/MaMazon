@@ -10,6 +10,7 @@ require 'open-uri'
 User.destroy_all
 Product.destroy_all
 Cart.destroy_all
+Review.destroy_all
 # user
 demo = User.create!(name: 'Demo', email:"plshireme@company.com", password:"password")
 michelle = User.create!(name: "Michelle", email:"michelle@gmail.com", password:"michelle")
@@ -22,6 +23,58 @@ jing = User.create!(name:"JingJing", email:"jj@gmail.com", password:"jingjing")
 
 # baby
 
+
+
+
+
+#product1#beauty
+beauty2 = Product.create!(name:"Oribe Gold Lust Collection Holiday Set",
+description:"Gold Lust Shampoo rejuvenates with our revolutionary -restorative complex, while Gold Lust Conditioner undoes the damage of time. A drop of Gold Lust Nourishing Hair Oil before heat styling seals in sleekness and shine.",
+department:"beauty",
+price: 200)
+file7 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/beauty/beauty2.jpg")
+beauty2.photo.attach(io:file7, filename:"beauty2")
+
+#product2#homedecor
+
+homedecor2 = Product.create!(name:"Eastern Rock White Ceramic Vase Modern Minimalist Abstraction Vase,for Centerpieces,Kitchen,Office, Living Room,Wedding,Gifts,Modern Geometric Vases Perfect Home Decor Vase(O Shape)",
+description:"Applicable scene:living room,office，dining table, bedroom, tabletop, bed head,ect. it adds a stylish and artistic look to your home.
+High quality：The vase adopts the biscuit firing process, which is made of excellent porcelain clay by tens of processes such as high-temperature firing, and the surface shows matte frosted texture, not reflective, not shiny, and have more comfortable visual experienceSimple and unique abstract shaped design will make the vase beautiful both with and without flowers. The plain color is suitable for both dried flowers and silk flowers.
+Unglazed: ceramic vases made by traditional handicrafts are stronger in texture.The rustic and natural surface of each looks slightly different, each is actually a unique vase, which is the charm of handmade.I'm sure you'll appreciate its beauty.
+Great gift：It is an ideal gift for family and friends, especially for those who like unique decorative vases and modern minimalist vases.
+Eastern Rock：Design according to the needs of the times, pay attention to the unity of the use function and aesthetic function of the product.",
+department:"homedecor",
+price:29.5)
+file22 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/home+decor/homedecor2.jpg")
+homedecor2.photo.attach(io:file22, filename:"homedecor2")
+
+#product3#ktichen
+kitchen5 = Product.create!(name:"Fellow Stagg EKG Electric Gooseneck Kettle - Pour-Over Coffee and Tea Pot, Stainless Steel, Quick Heating, Matte Black with Walnut Wood Handle, 0.9 Liter", 
+description:"STAGG EKG ELECTRIC POUR OVER KETTLE - Simple aesthetic meets powerful design! A stainless steel gooseneck kettle that pours as good as it looks for the ultimate brewing experience
+PRECISION POUR - Stagg EKG's sleek pointed spout is designed for a powerful but precise stream for the optimal pour over flow rate, and the counterbalanced handle provides a sturdy grip encouraging a slower pour
+TEMPERATURE MATTERS - Speed up your brewing process with Stagg EKG and its 1200 watt quick-heating element for boiling water. Stagg EKG’s to-the-degree temperature control makes perfecting your manual cup of coffee or steeped tea a breeze
+BREW LIKE A PRO - A sleek LCD display screen indicates the desired Set Temp & Real-Time Temp for your drip coffee or tea; use the built-in Brew Stopwatch to time your tea or coffee extraction; engage the hold toggle, and your water will keep hot for up to 60 min
+WELL CRAFTED KETTLE - Aesthetically beautiful and quality made 304 stainless steel kettle body and lid with a minimalist base; Has a 0.9 Liter boiling capacity; Kettle comes with a 1-Year warranty backed by our outstanding customer service",
+department:"kitchen",
+price:189)
+file30 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/kitchen/kitchen5.jpg")
+kitchen5.photo.attach(io:file30, filename:"kitchen5")
+
+#product4#home
+
+homedecor4 = Product.create!(name:"LA JOLIE MUSE Woody Jasmine Scented Candle, Candles Gifts for Women, Natural Wax, 80 Hours Long Burning",
+description:"SIZE AND BURN TIME - 12.3oz/350g. Featuring natural wax and a lead-free cotton wick, our vegan and cruelty-free candle sends you on a pleasant sensory journey for 70-80 hours. Paraben-free and paraffin-free.
+FLORAL FULLNESS - Immerse yourself in a harmonious floral chord of jasmine, violet, and gardenia infused with woody and musky notes that add mellowness to this refreshing bouquet. Let the scent of jasmine reinvigorate your day and brighten up your morning routine.
+BLISSFUL INDULGENCE - The fragrance diffuses quickly for an almost instant indulgence with a guaranteed clean and even burn.
+DELICATE GLASSWARE - Designed in a fluted glass jar with stylish packaging, this candle is perfect for home decor and a brilliant gift for any occasion. Reuse the jar as an exquisite vessel for small items.
+SATISFACTION GUARANTEED - Experience thoughtful customer service and full refund & return if there are any problems upon receiving the product.",
+department:"homedecor",
+price:27.99)
+file24 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/home+decor/homedecor4.jpg")
+homedecor4.photo.attach(io:file24, filename:"homedecor4")
+
+
+#product5#baby
 baby1 = Product.create!(
     {name:"Huggies Baby Diapers, Little Movers, Multi-Color, Size 3, 156 Count", 
     description:"Huggies Little Movers baby diapers size 3 fit babies 16-28 lb. (7-13 kg)
@@ -37,6 +90,44 @@ Packaging may vary from image shown",
 )
 file1 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/baby/baby1_.jpg")
 baby1.photo.attach(io: file1, filename:"baby1")
+
+#product6#maternity
+maternity5 = Product.create!(name:"Fetal Heartbeat Monitor,Baby Heartbeat Monitor Pregnancy Doppler Fetal Monitor for Pregnancy Easy to Use with Gel",
+description:"Easy USE
+Easy To Use, High Performance Baby Heartbeat Monitor .
+New Moms can operate the Fetal Doppler by themselves to hear fetal heart sound and calculate FHR to realize the purpose of pre-monitoring and fetus caring.
+Equipped with a full high definition color LCD display. One button to choose Data Digital display or Curve display interface.
+Easy to find the baby position quickly as early as 12 weeks, the best time for use is 16 weeks into pregnancy.
+Safe and Accuracy: High sensitivity probe, no radiation, low power, safe to baby.",
+department:"maternity",
+price:79.98)
+file35 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/maternity/maternity5.jpg")
+maternity5.photo.attach(io:file35, filename:"maternity5")
+
+#product7#smarthome
+smarthome5 = Product.create!(name:"Security Camera 2K, blurams Baby Monitor Dog Camera 360-degree for Home Security w/ Smart Motion Tracking, Phone App, IR Night Vision, Siren, Works with Alexa & Google Assistant & IFTTT, 2-Way Audio",
+description:"360°Coverage with 2K Resolution - blurams security camera automatically tracks the motion if detect motion. Features in IR-CUT function to capture crisp videos and photos from the day to night, even in the dim condition. Turn on privacy mode to protect your privacy.
+Smart AI Detection & Instant Alerts - Receive instant alerts on your phone if human, motion or abnormal sound detected in your house. Automatically record a 10-15 seconds alert video to the cloud and it will be saved for 24 hours (no subscription or monthly fees required).
+Smart Integration - Use your simple voice command to view blurams baby monitor live stream on Alexa or Google Assistant device with a screen or on your iPhone or iPad. Works with IFTTT lets you link just about any set of smart devices so they can work together, make your home more relaxing.
+Enhanced blurams App - Live viewing 4 dog cameras simultaneously on App or official web portal. Share your camera with unlimited family members. Two-way audio allows you to receive and transmit audio from anywhere at any time. Works with 2.4GHz Wi-Fi networks only (does not support 5GHz Wi-Fi).
+Optional Cloud & Local Storage - 24/7 CVR enables the indoor security camera to keep a nonstop recording in the cloud, avoid the risk of losing video footage from a SD card. According to the time, events type or the camera name’s to search the specific event quickly. Supports up to 128GB SD card(buy separately).
+",
+department:"smarthome",
+price:40.98)
+file40 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/smart-home/smarthome5.jpg")
+smarthome5.photo.attach(io:file40, filename:"smarthome5")
+
+#product8#smarthome
+smarthome4 = Product.create!(name:"Echo Dot (4th Gen, 2020 release) | Smart speaker with Alexa | Charcoal",
+description:"Meet the Echo Dot - Our most popular smart speaker with Alexa. The sleek, compact design delivers crisp vocals and balanced bass for full sound.
+Voice control your entertainment - Stream songs from Amazon Music, Apple Music, Spotify, SiriusXM, and others. Play music, audiobooks, and podcasts throughout your home with multi-room music.
+Ready to help - Ask Alexa to tell a joke, play music, answer questions, play the news, check the weather, set alarms, and more.
+Control your smart home - Use your voice to turn on lights, adjust thermostats, and lock doors with compatible devices.
+Start Routines with your motion - Turn on compatible lights, play your Flash Briefing, or turn on the coffee maker when you walk into the room.
+Connect with others hands-free - Call friends and family who have the Alexa app or an Echo device. Instantly drop in on other rooms or announce to the whole house that dinner's ready.
+Designed to protect your privacy – Amazon is not in the business of selling your personal information to others. Built with multiple layers of privacy controls including a mic off button.",
+department:"smarthome",
+price:49.99)
 
 baby2 = Product.create!(
     name:"Pampers Choose Your Count, Sensitive Water Based Baby Diaper Wipes, Hypoallergenic and Unscented, (Packaging May Vary) White, 336 Count", 
@@ -187,18 +278,32 @@ price:750)
 file14 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/fashion/fashion4.jpg")
 fashion4.photo.attach(io:file14, filename:"fashion4")
 
-fashion5 = Product.create!(name:"STAUD Women's Rey Bag",
-description:"Suede,Leather
-Imported
-Leather: Croc-embossed cowhide
-Structured silhouette , Suede lining
-Length: 10.25in / 26cm
-Height: 10.75in / 27cm
-Button closure",
+fashion5 = Product.create!(name:"Coach Crossbody Bag Saddle Leather Cross Body",
+description:"Leather
+Refined pebble leather
+Inside multifunction pockets
+Snap closure, fabric lining, Outside zip pocket
+Adjustable strap with 22 inches drop for shoulder or crossbody wear
+7 3/4' (L) x 6 3/4' (H) x 3' (W)'",
 department:"fashion",
-price:325)
+price:244.62)
 file15 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/fashion/fashion5.jpg")
 fashion5.photo.attach(io:file15, filename:"fashion5")
+
+fashion6 = Product.create!(name:"Ross-Simons 0.25 ct. t.w. Diamond Openwork Bolo Bracelet in Sterling Silver",
+description:" DIAMONDS + STERLING SILVER — .25 ct. t.w. diamond openwork bolo bracelet in sterling silver. Polished finish. Length adjusts to fit most wrists. 1/2 in. wide. Features a 1.7mm wheat chain with 4mm end beads.
+THE FINISHING TOUCH — With its vintage-inspired design, this diamond openwork bolo bracelet adds a feminine accent to any style. Pair it with your casual or formal attire.
+ROSS-SIMONS QUALITY — Treat yourself to the luxury of Ross-Simons fine jewelry. Whether your selection is made of 14kt gold, 18kt gold or gorgeous sterling silver, our jewelry always makes a lasting statement.
+THE PERFECT GIFT FOR HER — This is the ideal gift for your sister, daughter, mom, wife, niece, aunt, best friend, girlfriend — or yourself! Whether she prefers modern or traditional jewelry, Ross-Simons has a wide selection of bracelets, earrings, necklaces and rings to choose from.
+GIFT BOX INCLUDED — Ross-Simons jewelry arrives beautifully packaged in a gift box, ready to delight for any occasion, including birthdays, Christmas, Mother’s Day, anniversaries, 
+Valentine’s Day, weddings, graduations and much more! Due to the naturally occurring characteristics of diamonds, 
+each is unique and may exhibit imperfections such as inclusions, blemishes and cloudiness, as well as color variations.",
+department: "fashion",
+price: 169)
+file16 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/fashion/fashion6.jpg")
+fashion5.photo.attach(io:file16, filename:"fashion6")
+
+
 
 # Fitness
 fitness1 = Product.create!(name:"Victor Fitness Eco Friendly Yoga mat Made from a Premium TPE Material That Provides Non-Slip Texture Perfect for Indoor and Outdoor Workouts. Great for hot Yoga, Pilates, and Bikram",
@@ -274,16 +379,6 @@ price:32.99)
 file21 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/home+decor/homedecor1.jpg")
 homedecor1.photo.attach(io:file21, filename:"homedecor1")
 
-homedecor2 = Product.create!(name:"Eastern Rock White Ceramic Vase Modern Minimalist Abstraction Vase,for Centerpieces,Kitchen,Office, Living Room,Wedding,Gifts,Modern Geometric Vases Perfect Home Decor Vase(O Shape)",
-description:"Applicable scene:living room,office，dining table, bedroom, tabletop, bed head,ect. it adds a stylish and artistic look to your home.
-High quality：The vase adopts the biscuit firing process, which is made of excellent porcelain clay by tens of processes such as high-temperature firing, and the surface shows matte frosted texture, not reflective, not shiny, and have more comfortable visual experienceSimple and unique abstract shaped design will make the vase beautiful both with and without flowers. The plain color is suitable for both dried flowers and silk flowers.
-Unglazed: ceramic vases made by traditional handicrafts are stronger in texture.The rustic and natural surface of each looks slightly different, each is actually a unique vase, which is the charm of handmade.I'm sure you'll appreciate its beauty.
-Great gift：It is an ideal gift for family and friends, especially for those who like unique decorative vases and modern minimalist vases.
-Eastern Rock：Design according to the needs of the times, pay attention to the unity of the use function and aesthetic function of the product.",
-department:"homedecor",
-price:29.5)
-file22 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/home+decor/homedecor2.jpg")
-homedecor2.photo.attach(io:file22, filename:"homedecor2")
 
 homedecor3 = Product.create!(name:"Well Woven Fairmont Huntington Retro Marble Border Black Glam 7'10' x 9'10' Area Rug",
 description:"Abstract geometric patterns accented with shimmer yarn.
@@ -296,16 +391,6 @@ price:200.88)
 file23 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/home+decor/homedecor3.jpg")
 homedecor3.photo.attach(io:file23, filename:"homedecor3")
 
-homedecor4 = Product.create!(name:"LA JOLIE MUSE Woody Jasmine Scented Candle, Candles Gifts for Women, Natural Wax, 80 Hours Long Burning",
-description:"SIZE AND BURN TIME - 12.3oz/350g. Featuring natural wax and a lead-free cotton wick, our vegan and cruelty-free candle sends you on a pleasant sensory journey for 70-80 hours. Paraben-free and paraffin-free.
-FLORAL FULLNESS - Immerse yourself in a harmonious floral chord of jasmine, violet, and gardenia infused with woody and musky notes that add mellowness to this refreshing bouquet. Let the scent of jasmine reinvigorate your day and brighten up your morning routine.
-BLISSFUL INDULGENCE - The fragrance diffuses quickly for an almost instant indulgence with a guaranteed clean and even burn.
-DELICATE GLASSWARE - Designed in a fluted glass jar with stylish packaging, this candle is perfect for home decor and a brilliant gift for any occasion. Reuse the jar as an exquisite vessel for small items.
-SATISFACTION GUARANTEED - Experience thoughtful customer service and full refund & return if there are any problems upon receiving the product.",
-department:"homedecor",
-price:27.99)
-file24 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/home+decor/homedecor4.jpg")
-homedecor4.photo.attach(io:file24, filename:"homedecor4")
 
 homedecor5 = Product.create!(name:"Amazon Brand- Rivet Mid-Century Ceramic Planter with Stand, 14'H, White",
 description:"This two-tone round stoneware planter is an attractive piece on its own. Combined with an iron shelf/stand, it makes a mid-century style statement in addition to holding plants. Planter and shelf can be used together or separately.
@@ -367,16 +452,7 @@ price:98.25)
 file29 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/kitchen/kitchen4.jpg")
 kitchen4.photo.attach(io:file29, filename:"kitchen4")
 
-kitchen5 = Product.create!(name:"Fellow Stagg EKG Electric Gooseneck Kettle - Pour-Over Coffee and Tea Pot, Stainless Steel, Quick Heating, Matte Black with Walnut Wood Handle, 0.9 Liter", 
-description:"STAGG EKG ELECTRIC POUR OVER KETTLE - Simple aesthetic meets powerful design! A stainless steel gooseneck kettle that pours as good as it looks for the ultimate brewing experience
-PRECISION POUR - Stagg EKG's sleek pointed spout is designed for a powerful but precise stream for the optimal pour over flow rate, and the counterbalanced handle provides a sturdy grip encouraging a slower pour
-TEMPERATURE MATTERS - Speed up your brewing process with Stagg EKG and its 1200 watt quick-heating element for boiling water. Stagg EKG’s to-the-degree temperature control makes perfecting your manual cup of coffee or steeped tea a breeze
-BREW LIKE A PRO - A sleek LCD display screen indicates the desired Set Temp & Real-Time Temp for your drip coffee or tea; use the built-in Brew Stopwatch to time your tea or coffee extraction; engage the hold toggle, and your water will keep hot for up to 60 min
-WELL CRAFTED KETTLE - Aesthetically beautiful and quality made 304 stainless steel kettle body and lid with a minimalist base; Has a 0.9 Liter boiling capacity; Kettle comes with a 1-Year warranty backed by our outstanding customer service",
-department:"kitchen",
-price:189)
-file30 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/kitchen/kitchen5.jpg")
-kitchen5.photo.attach(io:file30, filename:"kitchen5")
+
 
 # maternity
 maternity1 = Product.create!(name:"Mother Bee Maternity 3/4 Sleeve Ruched Dress with Empire Waist for Baby Showers or Casual Wear",
@@ -423,17 +499,7 @@ price:69.99)
 file34 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/maternity/maternity4.jpg")
 maternity4.photo.attach(io:file34, filename:"maternity4")
 
-maternity5 = Product.create!(name:"Fetal Heartbeat Monitor,Baby Heartbeat Monitor Pregnancy Doppler Fetal Monitor for Pregnancy Easy to Use with Gel",
-description:"Easy USE
-Easy To Use, High Performance Baby Heartbeat Monitor .
-New Moms can operate the Fetal Doppler by themselves to hear fetal heart sound and calculate FHR to realize the purpose of pre-monitoring and fetus caring.
-Equipped with a full high definition color LCD display. One button to choose Data Digital display or Curve display interface.
-Easy to find the baby position quickly as early as 12 weeks, the best time for use is 16 weeks into pregnancy.
-Safe and Accuracy: High sensitivity probe, no radiation, low power, safe to baby.",
-department:"maternity",
-price:79.98)
-file35 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/maternity/maternity5.jpg")
-maternity5.photo.attach(io:file35, filename:"maternity5")
+
 
 
 # smart-home
@@ -478,30 +544,11 @@ price:29.99)
 file38 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/smart-home/smarthome3.jpg")
 smarthome3.photo.attach(io:file38, filename:"smarthome3")
 
-smarthome4 = Product.create!(name:"Echo Dot (4th Gen, 2020 release) | Smart speaker with Alexa | Charcoal",
-description:"Meet the Echo Dot - Our most popular smart speaker with Alexa. The sleek, compact design delivers crisp vocals and balanced bass for full sound.
-Voice control your entertainment - Stream songs from Amazon Music, Apple Music, Spotify, SiriusXM, and others. Play music, audiobooks, and podcasts throughout your home with multi-room music.
-Ready to help - Ask Alexa to tell a joke, play music, answer questions, play the news, check the weather, set alarms, and more.
-Control your smart home - Use your voice to turn on lights, adjust thermostats, and lock doors with compatible devices.
-Start Routines with your motion - Turn on compatible lights, play your Flash Briefing, or turn on the coffee maker when you walk into the room.
-Connect with others hands-free - Call friends and family who have the Alexa app or an Echo device. Instantly drop in on other rooms or announce to the whole house that dinner's ready.
-Designed to protect your privacy – Amazon is not in the business of selling your personal information to others. Built with multiple layers of privacy controls including a mic off button.",
-department:"smarthome",
-price:49.99)
+
 file39 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/smart-home/smarthome4.jpg")
 smarthome4.photo.attach(io:file39, filename:"smarthome4")
 
-smarthome5 = Product.create!(name:"Security Camera 2K, blurams Baby Monitor Dog Camera 360-degree for Home Security w/ Smart Motion Tracking, Phone App, IR Night Vision, Siren, Works with Alexa & Google Assistant & IFTTT, 2-Way Audio",
-description:"360°Coverage with 2K Resolution - blurams security camera automatically tracks the motion if detect motion. Features in IR-CUT function to capture crisp videos and photos from the day to night, even in the dim condition. Turn on privacy mode to protect your privacy.
-Smart AI Detection & Instant Alerts - Receive instant alerts on your phone if human, motion or abnormal sound detected in your house. Automatically record a 10-15 seconds alert video to the cloud and it will be saved for 24 hours (no subscription or monthly fees required).
-Smart Integration - Use your simple voice command to view blurams baby monitor live stream on Alexa or Google Assistant device with a screen or on your iPhone or iPad. Works with IFTTT lets you link just about any set of smart devices so they can work together, make your home more relaxing.
-Enhanced blurams App - Live viewing 4 dog cameras simultaneously on App or official web portal. Share your camera with unlimited family members. Two-way audio allows you to receive and transmit audio from anywhere at any time. Works with 2.4GHz Wi-Fi networks only (does not support 5GHz Wi-Fi).
-Optional Cloud & Local Storage - 24/7 CVR enables the indoor security camera to keep a nonstop recording in the cloud, avoid the risk of losing video footage from a SD card. According to the time, events type or the camera name’s to search the specific event quickly. Supports up to 128GB SD card(buy separately).
-",
-department:"smarthome",
-price:40.98)
-file40 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/smart-home/smarthome5.jpg")
-smarthome5.photo.attach(io:file40, filename:"smarthome5")
+
 
 # cart
 quantity1 = 1
@@ -514,3 +561,4 @@ michelleCart = Cart.create(user_id: michelle.id, product_id: kitchen1.id, quanti
 preselyCart = Cart.create(user_id: presely.id, product_id: smarthome1.id, quantity: quantity1)
 harshaCart = Cart.create(user_id: harsha.id, product_id:smarthome2.id, quantity: quantity2)
 jingjingCart = Cart.create(user_id: jing.id, product_id:beauty2.id, quantity: quantity2)
+

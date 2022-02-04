@@ -1,5 +1,5 @@
 footer{
-    position: fixed;
+    position: inherit;
     bottom: 0;
     width: -webkit-fill-available;
 }
