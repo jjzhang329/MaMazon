@@ -1,12 +1,13 @@
 *{
     box-sizing: border-box;
+    
 }
 .session-container{
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    background-color: #fff;
 }
 
 .session-logo{
@@ -40,10 +41,11 @@ h5{
     padding: 0px 0px 2px 3px;
     margin-top: 0px;
     font-weight: 700;
+    color: black;
 }
 
 
-input{
+.session-input{
     margin-top: 2px;
     height: 31px;
     margin-bottom: 10px;
@@ -57,7 +59,7 @@ input{
     font-size: 100%;
   
 }
-input:active{
+.session-input:active{
     border-color: #cb7d08;
 }
 

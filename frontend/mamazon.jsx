@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom'
 import configureStore from './store/store';
 import Root from './components/root'
-import * as actions from './actions/products_actions'
+import * as reviewActions from './actions/review_actions'
 
 document.addEventListener("DOMContentLoaded", ()=>{
     const root = document.getElementById('root')
@@ -21,9 +21,9 @@ document.addEventListener("DOMContentLoaded", ()=>{
     }
  
     window.store = store 
-    window.fetchAllProducts= actions.fetchAllProducts;
-    window.fetchProduct = actions.fetchProduct
-    
+    window.addReview = reviewActions.addReview
+    window.editReview = reviewActions.editReview
+    window.deleteReview = reviewActions.deleteReview
     ReactDOM.render(<Root store={store} />, root)
 })
 

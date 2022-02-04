@@ -13,13 +13,9 @@ class NavBar extends React.Component{
 
      return()=>{
       this.props.updateFilter('department', value)
-      //  this.props.fetchAllProducts(this.props.filter)
        
     }
   }
-
-
-
 
   render(){
    
@@ -34,6 +30,7 @@ class NavBar extends React.Component{
                 <NavLink to='' className="nav-bar-category">Fitness</NavLink>
                 <NavLink to='' className="nav-bar-category">Home Decor</NavLink>
                 <NavLink to='' className="nav-bar-category">Kitchen</NavLink>
+                <NavLink to='' className="nav-bar-category">Maternity</NavLink>
                 <NavLink to='' className="nav-bar-category">Smart Home</NavLink>
                 <NavLink to='' className="nav-bar-category">Gift Idea</NavLink>    
           </div>

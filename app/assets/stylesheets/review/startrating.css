@@ -1,0 +1,11 @@
+input[type="radio"]{
+    display: none;
+}
+
+.stars{
+    transition: color 200ms;
+    border-color: #fea41d;
+}
+.stars:hover{
+    cursor: pointer;
+}
