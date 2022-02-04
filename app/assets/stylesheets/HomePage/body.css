@@ -117,7 +117,7 @@ display: flex;
     height: 100%;
     position: relative;
 }
-.card-multi-row > img{
+.card-multi-row > a > img{
   margin: 5px;
     width: 150px;
     height: 80%;

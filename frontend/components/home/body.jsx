@@ -20,17 +20,23 @@ const Body = () => {
                 <div className='card-body-multi'>
                   <div className='card-multi-row'>
                     <Link to='/products/19'>
-                    <img src="https://mamazon-seeds.s3.us-west-1.amazonaws.com/fashion/fashion2.jpg" />
+                      
+                      <img src="https://mamazon-seeds.s3.us-west-1.amazonaws.com/fashion/fashion2.jpg" />
+          
                     </Link>
                     <Link to="/products/20">
-                      <img src="https://mamazon-seeds.s3.us-west-1.amazonaws.com/fashion/fashion3.jpg" />
+                      
+                        <img src="https://mamazon-seeds.s3.us-west-1.amazonaws.com/fashion/fashion3.jpg" />
+                      
                     </Link>
                   </div>
                   <div className='card-multi-row'>
-                    <Link to="products/23">
+                    <Link to="/products/23">
                     <img src="https://mamazon-seeds.s3.us-west-1.amazonaws.com/fashion/fashion5.jpg" />
+                    
                   </Link>
-                  <Link to="products/24">
+                  <Link to="/products/24">
+                    
                     <img src="https://mamazon-seeds.s3.us-west-1.amazonaws.com/fashion/fashion6.jpg" />
                   </Link>
                 </div>
