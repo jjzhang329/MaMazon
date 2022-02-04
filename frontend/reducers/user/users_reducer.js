@@ -19,7 +19,7 @@ const usersReducer = (state = {}, action) => {
             debugger
             const user_id = action.quantity.id
             const count = action.quantity.cartCount
-            nextState[user_id].cartCount = count
+            nextState[user_id].cartCount += count
              return nextState
 
         case LOGOUT_CURRENT_USER:
