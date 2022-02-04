@@ -124,13 +124,13 @@ display: flex;
   object-fit: contain;
   padding: 10px;
 }
-.card-body > img{
+.card-body >  img{
   width: 80%;
   height: 80%;
   object-fit: contain;
   
 }
-.wider-box-image > img{
+.wider-box-image > a> img{
  width: 600px;
     height: 100%;
     padding-bottom: 10px;

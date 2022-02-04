@@ -6,7 +6,7 @@ import CheckOutItems from './checkout_items'
 class CheckOut extends React.Component{
     constructor(props){
         super(props)
-  
+        this.handleCheckout = this.handleCheckout.bind(this)
     }
 
     componentDidMount(){
@@ -14,6 +14,17 @@ class CheckOut extends React.Component{
         this.props.fetchCartItems()
     }
 
+    handleCheckout(){
+
+        this.props.products.map(product=>{
+           const clear = { product_id: product.id, quantity: 0 }
+            return (e) => {
+                debugger
+                e.preventDefault()
+                this.props.updateCart(clear)
+            }
+        })
+    }
     render(){
         const {products, cartCount, updateCart} = this.props
         let totalPrice = 0;
@@ -42,7 +53,7 @@ class CheckOut extends React.Component{
                                 <span className="totalprice"> ${totalPrice.toLocaleString('en-US', { maximumFractionDigits: 2 })}</span>
                             </div>
                             <Link to='/payment'>
-                                <button className="checkout-button">Proceed to checkout</button>
+                                <button onClick={this.handleCheckout()} className="checkout-button">Proceed to checkout</button>
                             </Link>
                         </div>
                     </div>

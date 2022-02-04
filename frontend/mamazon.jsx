@@ -20,10 +20,8 @@ document.addEventListener("DOMContentLoaded", ()=>{
         store = configureStore();
     }
  
-    window.store = store 
-    window.addReview = reviewActions.addReview
-    window.editReview = reviewActions.editReview
-    window.deleteReview = reviewActions.deleteReview
+    
+ 
     ReactDOM.render(<Root store={store} />, root)
 })
 
