@@ -27,16 +27,7 @@ jing = User.create!(name:"JingJing", email:"jj@gmail.com", password:"jingjing")
 
 
 
-#product1#beauty
-beauty2 = Product.create!(name:"Oribe Gold Lust Collection Holiday Set",
-description:"Gold Lust Shampoo rejuvenates with our revolutionary -restorative complex, while Gold Lust Conditioner undoes the damage of time. A drop of Gold Lust Nourishing Hair Oil before heat styling seals in sleekness and shine.",
-department:"beauty",
-price: 200)
-file7 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/beauty/beauty2.jpg")
-beauty2.photo.attach(io:file7, filename:"beauty2")
-
-#product2#homedecor
-
+#product1#homedecor
 homedecor2 = Product.create!(name:"Eastern Rock White Ceramic Vase Modern Minimalist Abstraction Vase,for Centerpieces,Kitchen,Office, Living Room,Wedding,Gifts,Modern Geometric Vases Perfect Home Decor Vase(O Shape)",
 description:"Applicable scene:living room,office，dining table, bedroom, tabletop, bed head,ect. it adds a stylish and artistic look to your home.
 High quality：The vase adopts the biscuit firing process, which is made of excellent porcelain clay by tens of processes such as high-temperature firing, and the surface shows matte frosted texture, not reflective, not shiny, and have more comfortable visual experienceSimple and unique abstract shaped design will make the vase beautiful both with and without flowers. The plain color is suitable for both dried flowers and silk flowers.
@@ -47,6 +38,21 @@ department:"homedecor",
 price:29.5)
 file22 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/home+decor/homedecor2.jpg")
 homedecor2.photo.attach(io:file22, filename:"homedecor2")
+
+
+
+#product2#homedecor
+homedecor5 = Product.create!(name:"Amazon Brand- Rivet Mid-Century Ceramic Planter with Stand, 14'H, White",
+description:"This two-tone round stoneware planter is an attractive piece on its own. Combined with an iron shelf/stand, it makes a mid-century style statement in addition to holding plants. Planter and shelf can be used together or separately.
+100% stoneware with iron stand
+Durable piece designed for house plants, but also stands alone as a decorative container.
+With stand: 10' diameter x 14' high; without stand: 8' diameter x 8.27' high
+Planter does not have drainage holes",
+department:"homedecor",
+price: 58.49)
+file25 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/home+decor/homedecor5.jpg")
+homedecor5.photo.attach(io:file25, filename:"homedecor5")
+
 
 #product3#ktichen
 kitchen5 = Product.create!(name:"Fellow Stagg EKG Electric Gooseneck Kettle - Pour-Over Coffee and Tea Pot, Stainless Steel, Quick Heating, Matte Black with Walnut Wood Handle, 0.9 Liter", 
@@ -89,7 +95,15 @@ Packaging may vary from image shown",
     price: 49.11}
 )
 file1 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/baby/baby1_.jpg")
+
+#product#beauty
 baby1.photo.attach(io: file1, filename:"baby1")
+beauty2 = Product.create!(name:"Oribe Gold Lust Collection Holiday Set",
+description:"Gold Lust Shampoo rejuvenates with our revolutionary -restorative complex, while Gold Lust Conditioner undoes the damage of time. A drop of Gold Lust Nourishing Hair Oil before heat styling seals in sleekness and shine.",
+department:"beauty",
+price: 200)
+file7 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/beauty/beauty2.jpg")
+beauty2.photo.attach(io:file7, filename:"beauty2")
 
 #product6#maternity
 maternity5 = Product.create!(name:"Fetal Heartbeat Monitor,Baby Heartbeat Monitor Pregnancy Doppler Fetal Monitor for Pregnancy Easy to Use with Gel",
@@ -197,13 +211,6 @@ Please note there are no fragrances or masking fragrances in Vanicream products.
 )
 file6 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/beauty/beauty1.jpg")
 beauty1.photo.attach(io: file6, filename:"beauty1")
-
-beauty2 = Product.create!(name:"Oribe Gold Lust Collection Holiday Set",
-description:"Gold Lust Shampoo rejuvenates with our revolutionary -restorative complex, while Gold Lust Conditioner undoes the damage of time. A drop of Gold Lust Nourishing Hair Oil before heat styling seals in sleekness and shine.",
-department:"beauty",
-price: 200)
-file7 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/beauty/beauty2.jpg")
-beauty2.photo.attach(io:file7, filename:"beauty2")
 
 beauty3 = Product.create!(name:"NuFACE Petite Facial Toning Device | Mini Facial Trainer Device + Hydrating Skin Care | Skin Care Device to Lift Contour Tone Skin + Reduce Look of Wrinkles | FDA-Cleared At-Home System",
 description:"Unlock the magic of microcurrent with the NuFACE Mini Hydrate + Contour Gift Set in limited-edition Platinum Shimmer—the ultimate starter device to tone, lift, and contour the face and neck.",
@@ -392,16 +399,7 @@ file23 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/home+decor/homed
 homedecor3.photo.attach(io:file23, filename:"homedecor3")
 
 
-homedecor5 = Product.create!(name:"Amazon Brand- Rivet Mid-Century Ceramic Planter with Stand, 14'H, White",
-description:"This two-tone round stoneware planter is an attractive piece on its own. Combined with an iron shelf/stand, it makes a mid-century style statement in addition to holding plants. Planter and shelf can be used together or separately.
-100% stoneware with iron stand
-Durable piece designed for house plants, but also stands alone as a decorative container.
-With stand: 10' diameter x 14' high; without stand: 8' diameter x 8.27' high
-Planter does not have drainage holes",
-department:"homedecor",
-price: 58.49)
-file25 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/home+decor/homedecor5.jpg")
-homedecor5.photo.attach(io:file25, filename:"homedecor5")
+
 
 
 # Kitchen
@@ -568,8 +566,8 @@ review2 = Review.create(user_id: jing.id, product_id: kitchen2.id, rating: quant
 review3 = Review.create(user_id: harsha.id, product_id: kitchen2.id, rating: quantity4, body:"hello, this is perfect")
 review4 = Review.create(user_id: jack.id, product_id: kitchen2.id, rating: quantity5, body:"hello, this is perfect")
 review5 = Review.create(user_id: perry.id, product_id: kitchen2.id, rating: quantity5, body:"hello, this is perfect")
-review1 = Review.create(user_id: presley.id, product_id: kitchen2.id, rating: quantity5, body:"hello, this is perfect")
-review2 = Review.create(user_id: daniel.id, product_id: kitchen2.id, rating: quantity4, body:"hello, this is perfect")
+review6 = Review.create(user_id: presley.id, product_id: kitchen2.id, rating: quantity5, body:"hello, this is perfect")
+review7 = Review.create(user_id: daniel.id, product_id: kitchen2.id, rating: quantity4, body:"hello, this is perfect")
 
 
 review1 = Review.create(user_id: michelle.id, product_id: smarthome1.id, rating: quantity1, body:"hello, this is perfect")
@@ -577,45 +575,101 @@ review2 = Review.create(user_id: jing.id, product_id: smarthome1.id, rating: qua
 review3 = Review.create(user_id: harsha.id, product_id: smarthome1.id, rating: quantity3, body:"hello, this is perfect")
 review4 = Review.create(user_id: jack.id, product_id: smarthome1.id, rating: quantity4, body:"hello, this is perfect")
 review5 = Review.create(user_id: perry.id, product_id: smarthome1.id, rating: quantity5, body:"hello, this is perfect")
-review1 = Review.create(user_id: presley.id, product_id: smarthome1.id, rating: quantity5, body:"hello, this is perfect")
-review2 = Review.create(user_id: daniel.id, product_id: smarthome1.id, rating: quantity5, body:"hello, this is perfect")
+review6 = Review.create(user_id: presley.id, product_id: smarthome1.id, rating: quantity5, body:"hello, this is perfect")
+review7 = Review.create(user_id: daniel.id, product_id: smarthome1.id, rating: quantity5, body:"hello, this is perfect")
 
 review1 = Review.create(user_id: michelle.id, product_id: beauty2.id, rating: quantity1, body:"hello, this is perfect")
 review2 = Review.create(user_id: jing.id, product_id: beauty2.id, rating: quantity2, body:"hello, this is perfect")
 review3 = Review.create(user_id: harsha.id, product_id: beauty2.id, rating: quantity3, body:"hello, this is perfect")
 review4 = Review.create(user_id: jack.id, product_id: beauty2.id, rating: quantity4, body:"hello, this is perfect")
 review5 = Review.create(user_id: perry.id, product_id: beauty2.id, rating: quantity5, body:"hello, this is perfect")
-review1 = Review.create(user_id: presley.id, product_id: beauty2.id, rating: quantity5, body:"hello, this is perfect")
-review2 = Review.create(user_id: daniel.id, product_id: beauty2.id, rating: quantity5, body:"hello, this is perfect")
+review6 = Review.create(user_id: presley.id, product_id: beauty2.id, rating: quantity5, body:"hello, this is perfect")
+review7 = Review.create(user_id: daniel.id, product_id: beauty2.id, rating: quantity5, body:"hello, this is perfect")
 
 review1 = Review.create(user_id: michelle.id, product_id: homedecor2.id, rating: quantity1, body:"hello, this is perfect")
 review2 = Review.create(user_id: jing.id, product_id: homedecor2.id, rating: quantity2, body:"hello, this is perfect")
 review3 = Review.create(user_id: harsha.id, product_id: homedecor2.id, rating: quantity3, body:"hello, this is perfect")
 review4 = Review.create(user_id: jack.id, product_id: homedecor2.id, rating: quantity4, body:"hello, this is perfect")
 review5 = Review.create(user_id: perry.id, product_id: homedecor2.id, rating: quantity5, body:"hello, this is perfect")
-review1 = Review.create(user_id: presley.id, product_id: homedecor2.id, rating: quantity5, body:"hello, this is perfect")
-review2 = Review.create(user_id: daniel.id, product_id: homedecor2.id, rating: quantity5, body:"hello, this is perfect")
+review6 = Review.create(user_id: presley.id, product_id: homedecor2.id, rating: quantity5, body:"hello, this is perfect")
+review7 = Review.create(user_id: daniel.id, product_id: homedecor2.id, rating: quantity5, body:"hello, this is perfect")
 
 review1 = Review.create(user_id: michelle.id, product_id:kitchen5.id, rating: quantity1, body:"hello, this is perfect")
 review2 = Review.create(user_id: jing.id, product_id:kitchen5.id, rating: quantity2, body:"hello, this is perfect")
 review3 = Review.create(user_id: harsha.id, product_id:kitchen5.id, rating: quantity3, body:"hello, this is perfect")
 review4 = Review.create(user_id: jack.id, product_id: kitchen5.id, rating: quantity4, body:"hello, this is perfect")
 review5 = Review.create(user_id: perry.id, product_id:kitchen5.id, rating: quantity5, body:"hello, this is perfect")
-review1 = Review.create(user_id: presley.id, product_id:kitchen5.id, rating: quantity5, body:"hello, this is perfect")
-review2 = Review.create(user_id: daniel.id, product_id:kitchen5.id, rating: quantity5, body:"hello, this is perfect")
+review6 = Review.create(user_id: presley.id, product_id:kitchen5.id, rating: quantity5, body:"hello, this is perfect")
+review7 = Review.create(user_id: daniel.id, product_id:kitchen5.id, rating: quantity5, body:"hello, this is perfect")
 
 review1 = Review.create(user_id: michelle.id, product_id: homedecor4.id, rating: quantity1, body:"hello, this is perfect")
 review2 = Review.create(user_id: jing.id, product_id: homedecor4.id, rating: quantity2, body:"hello, this is perfect")
 review3 = Review.create(user_id: harsha.id, product_id: homedecor4.id, rating: quantity3, body:"hello, this is perfect")
 review4 = Review.create(user_id: jack.id, product_id: homedecor4.id, rating: quantity4, body:"hello, this is perfect")
 review5 = Review.create(user_id: perry.id, product_id: homedecor4.id, rating: quantity5, body:"hello, this is perfect")
-review1 = Review.create(user_id: presley.id, product_id: homedecor4.id, rating: quantity5, body:"hello, this is perfect")
-review2 = Review.create(user_id: daniel.id, product_id: homedecor4.id, rating: quantity5, body:"hello, this is perfect")
+review6 = Review.create(user_id: presley.id, product_id: homedecor4.id, rating: quantity5, body:"hello, this is perfect")
+review7 = Review.create(user_id: daniel.id, product_id: homedecor4.id, rating: quantity5, body:"hello, this is perfect")
 
 review1 = Review.create(user_id: michelle.id, product_id: baby1.id, rating: quantity1, body:"hello, this is perfect")
 review2 = Review.create(user_id: jing.id, product_id: baby1.id, rating: quantity2, body:"hello, this is perfect")
 review3 = Review.create(user_id: harsha.id, product_id: baby1.id, rating: quantity3, body:"hello, this is perfect")
 review4 = Review.create(user_id: jack.id, product_id: baby1.id, rating: quantity4, body:"hello, this is perfect")
 review5 = Review.create(user_id: perry.id, product_id: baby1.id, rating: quantity5, body:"hello, this is perfect")
-review1 = Review.create(user_id: presley.id, product_id: baby1.id, rating: quantity5, body:"hello, this is perfect")
-review2 = Review.create(user_id: daniel.id, product_id: baby1.id, rating: quantity5, body:"hello, this is perfect")
+review6 = Review.create(user_id: presley.id, product_id: baby1.id, rating: quantity5, body:"hello, this is perfect")
+review7 = Review.create(user_id: daniel.id, product_id: baby1.id, rating: quantity5, body:"hello, this is perfect")
+
+review1 = Review.create(user_id: michelle.id, product_id: fashion1.id, rating: quantity1, body:"hello, this is perfect")
+review2 = Review.create(user_id: jing.id, product_id: fashion1.id, rating: quantity2, body:"hello, this is perfect")
+review3 = Review.create(user_id: harsha.id, product_id: fashion1.id, rating: quantity3, body:"hello, this is perfect")
+review4 = Review.create(user_id: jack.id, product_id: fashion1.id, rating: quantity4, body:"hello, this is perfect")
+review5 = Review.create(user_id: perry.id, product_id: fashion1.id, rating: quantity5, body:"hello, this is perfect")
+review6 = Review.create(user_id: presley.id, product_id: fashion1.id, rating: quantity5, body:"hello, this is perfect")
+review7 = Review.create(user_id: daniel.id, product_id: fashion1.id, rating: quantity5, body:"hello, this is perfect")
+
+review1 = Review.create(user_id: michelle.id, product_id: fashion2.id, rating: quantity1, body:"hello, this is perfect")
+review2 = Review.create(user_id: jing.id, product_id: fashion2.id, rating: quantity2, body:"hello, this is perfect")
+review3 = Review.create(user_id: harsha.id, product_id: fashion2.id, rating: quantity3, body:"hello, this is perfect")
+review4 = Review.create(user_id: jack.id, product_id: fashion2.id, rating: quantity4, body:"hello, this is perfect")
+review5 = Review.create(user_id: perry.id, product_id: fashion2.id, rating: quantity5, body:"hello, this is perfect")
+review6 = Review.create(user_id: presley.id, product_id: fashion2.id, rating: quantity5, body:"hello, this is perfect")
+review7 = Review.create(user_id: daniel.id, product_id: fashion2.id, rating: quantity5, body:"hello, this is perfect")
+
+review1 = Review.create(user_id: michelle.id, product_id: fashion5.id, rating: quantity1, body:"hello, this is perfect")
+review2 = Review.create(user_id: jing.id, product_id: fashion5.id, rating: quantity2, body:"hello, this is perfect")
+review3 = Review.create(user_id: harsha.id, product_id: fashion5.id, rating: quantity3, body:"hello, this is perfect")
+review4 = Review.create(user_id: jack.id, product_id: fashion5.id, rating: quantity4, body:"hello, this is perfect")
+review5 = Review.create(user_id: perry.id, product_id: fashion5.id, rating: quantity5, body:"hello, this is perfect")
+review6 = Review.create(user_id: presley.id, product_id: fashion5.id, rating: quantity5, body:"hello, this is perfect")
+review7 = Review.create(user_id: daniel.id, product_id: fashion5.id, rating: quantity5, body:"hello, this is perfect")
+
+review1 = Review.create(user_id: michelle.id, product_id: fashion6.id, rating: quantity1, body:"hello, this is perfect")
+review2 = Review.create(user_id: jing.id, product_id: fashion6.id, rating: quantity2, body:"hello, this is perfect")
+review3 = Review.create(user_id: harsha.id, product_id: fashion6.id, rating: quantity3, body:"hello, this is perfect")
+review4 = Review.create(user_id: jack.id, product_id: fashion6.id, rating: quantity4, body:"hello, this is perfect")
+review5 = Review.create(user_id: perry.id, product_id: fashion6.id, rating: quantity4, body:"hello, this is perfect")
+review6 = Review.create(user_id: presley.id, product_id: fashion6.id, rating: quantity5, body:"hello, this is perfect")
+review7 = Review.create(user_id: daniel.id, product_id: fashion6.id, rating: quantity5, body:"hello, this is perfect")
+
+review4 = Review.create(user_id: jack.id, product_id: homedecor1.id, rating: quantity4, body:"hello, this is perfect")
+review5 = Review.create(user_id: perry.id, product_id: homedecor1.id, rating: quantity5, body:"hello, this is perfect")
+review6 = Review.create(user_id: presley.id, product_id: homedecor1.id, rating: quantity5, body:"hello, this is perfect")
+review7 = Review.create(user_id: daniel.id, product_id: homedecor1.id, rating: quantity5, body:"hello, this is perfect")
+
+review6 = Review.create(user_id: presley.id, product_id: kitchen1.id, rating: quantity5, body:"hello, this is perfect")
+review7 = Review.create(user_id: daniel.id, product_id: kitchen1.id, rating: quantity1, body:"hello, this is perfect")
+
+review1 = Review.create(user_id: michelle.id, product_id: baby4.id, rating: quantity1, body:"hello, this is perfect")
+review2 = Review.create(user_id: jing.id, product_id: baby4.id, rating: quantity2, body:"hello, this is perfect")
+review3 = Review.create(user_id: harsha.id, product_id: baby4.id, rating: quantity2, body:"hello, this is perfect")
+review4 = Review.create(user_id: jack.id, product_id: baby4.id, rating: quantity4, body:"hello, this is perfect")
+review5 = Review.create(user_id: perry.id, product_id: baby4.id, rating: quantity5, body:"hello, this is perfect")
+review6 = Review.create(user_id: presley.id, product_id: baby4.id, rating: quantity5, body:"hello, this is perfect")
+review7 = Review.create(user_id: daniel.id, product_id: baby4.id, rating: quantity5, body:"hello, this is perfect")
+
+review1 = Review.create(user_id: michelle.id, product_id: maternity4.id, rating: quantity4, body:"hello, this is perfect")
+review2 = Review.create(user_id: jing.id, product_id: maternity4.id, rating: quantity5, body:"hello, this is perfect")
+review3 = Review.create(user_id: harsha.id, product_id: maternity4.id, rating: quantity3, body:"hello, this is perfect")
+review4 = Review.create(user_id: jack.id, product_id: maternity4.id, rating: quantity4, body:"hello, this is perfect")
+review5 = Review.create(user_id: perry.id, product_id: maternity4.id, rating: quantity5, body:"hello, this is perfect")
+review6 = Review.create(user_id: presley.id, product_id: maternity4.id, rating: quantity5, body:"hello, this is perfect")
+review7 = Review.create(user_id: daniel.id, product_id: maternity4.id, rating: quantity5, body:"hello, this is perfect")
