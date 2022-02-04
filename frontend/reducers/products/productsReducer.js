@@ -15,11 +15,6 @@ const productsReducer = (state={}, action)=>{
             return Object.assign(nextState, {[action.product.id]: action.product})
         case RECEIVE_ITEMS:
             return action.items;
-        // case CREATE_REVIEW:
-        //     debugger
-        //     nextState[action.review.product_id].reviews.push(action.reviews)
-        //     return nextState
-        // case DELETE_REVIEW:
 
 
         default:

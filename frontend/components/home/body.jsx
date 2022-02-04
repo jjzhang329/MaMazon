@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Slider from './carousel';
-
+import Footer from '../footer';
 const Body = () => {
   return (
     <div className='home-body'>
@@ -129,6 +129,9 @@ const Body = () => {
           </div>
           
         </div>
+      {/* <footer>
+        <Footer />
+      </footer> */}
     
     </div>
   )

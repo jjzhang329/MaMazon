@@ -29,7 +29,7 @@ class ReviewForm extends React.Component {
         this.props.fetchProduct(this.state.review.product_id)
     }
     handleUpdate(key) {
-        // debugger
+        
         return (e) => {
             e.preventDefault()
             let review = { ...this.state.review }

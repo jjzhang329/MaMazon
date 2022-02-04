@@ -12,7 +12,7 @@ export const addNewItem = (newItem) => ({
     newItem
 });
 export const changeQuantity = (quantity) => {
-    // debugger
+   
     return {type: UPDATE_CART,
     quantity}
 };

@@ -15,14 +15,10 @@ class CheckOut extends React.Component{
     }
 
     handleCheckout(){
-
+        
         this.props.products.map(product=>{
-           const clear = { product_id: product.id, quantity: 0 }
-            return (e) => {
-                debugger
-                e.preventDefault()
-                this.props.updateCart(clear)
-            }
+           const clear = { product_id: product.id, quantity: 0 }         
+            this.props.updateCart(clear)
         })
     }
     render(){
@@ -53,7 +49,7 @@ class CheckOut extends React.Component{
                                 <span className="totalprice"> ${totalPrice.toLocaleString('en-US', { maximumFractionDigits: 2 })}</span>
                             </div>
                             <Link to='/payment'>
-                                <button onClick={this.handleCheckout()} className="checkout-button">Proceed to checkout</button>
+                                <button onClick={this.handleCheckout} className="checkout-button">Proceed to checkout</button>
                             </Link>
                         </div>
                     </div>

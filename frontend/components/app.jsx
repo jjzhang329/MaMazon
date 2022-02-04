@@ -15,7 +15,7 @@ import Footer from './footer'
 import Payment from './cart/payment';
 
 const App = ()=>(
-    <div>
+    <div >
         <Modal/>
         <header>
             <HeaderContainer />
@@ -32,7 +32,9 @@ const App = ()=>(
         <Route path='/' component={Home} />  
         </Switch>
         
-        
+        {/* <footer>
+            <Footer />
+        </footer> */}
     </div>
 )
 

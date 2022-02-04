@@ -29,7 +29,7 @@ class Api::CartsController < ApplicationController
               new_quantity = (params[:cart][:quantity].to_i)
             
         elsif params[:cart][:quantity].to_i == 0
-            debugger
+           
             destroy(@item)
         else
            new_quantity = @item[0].quantity + (params[:cart][:quantity].to_i)

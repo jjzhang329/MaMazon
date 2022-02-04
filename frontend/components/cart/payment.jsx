@@ -4,7 +4,7 @@ import React from 'react'
 import Footer from '../footer'
 const Payment=()=>{
     return(
-      
+      <div>
         <div className="payment-box">
             <div className="payment-confirm">
                <div className='checkmark'>
@@ -23,13 +23,15 @@ const Payment=()=>{
                     </span>
                 </div>
             </div>
-                <footer>
-                    <Footer />
-                </footer>
-
+                
+                
+        </div>
+            <footer>
+                <Footer />
+            </footer>
         </div>
         
-        
+       
           
     )
 }
