@@ -1,0 +1,57 @@
+main{
+    height: 100vh;
+}
+#root > div{
+    /* height: 100%; */
+    position: relative;
+}
+.payment-box{
+    
+    height:1000px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    padding-top: 10%;
+    
+}
+.payment-confirm{
+
+    height: 120px;
+    border-radius: 8px;
+    border: 1px solid #007600;  
+    display: flex;
+    justify-content: center;
+    width: 600px;   
+    background: white;
+    align-items: center;
+    flex-direction: column;
+}
+.checkmark{
+     display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.checkmark > p{
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: 700;
+   
+}
+
+.personal-message{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.right-icon{
+    padding: 3px;
+}
+
+.personal-message >span >a{
+    margin-right: 5px;
+    text-decoration: none;
+    color:gray
+    
+}

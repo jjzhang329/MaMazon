@@ -1,0 +1,11 @@
+.center-icon-div{
+    top: 130px;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.center-icon-div > button{
+    width: 40px;
+    z-index: 100;
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import CheckOutItems from './checkout_items'
 
@@ -18,10 +19,11 @@ class CheckOut extends React.Component{
         let totalPrice = 0;
         if (!products.length) return (<div>your cart is empty, keep shopping</div>)
         const items = products.map((product,idx)=>{
+            
             let rounded = (product.price * product.quantity).toFixed(2)
             totalPrice += parseInt(rounded)
             
-            return <CheckOutItems product={product} key={idx} updateCart={updateCart}/>
+            return (product.quantity && <CheckOutItems product={product} key={idx} updateCart={updateCart}/>)
         })
         return(
 
@@ -39,7 +41,9 @@ class CheckOut extends React.Component{
                                 <span className="title">Subtotal {`(${cartCount} Items)`}:</span>
                                 <span className="totalprice"> ${totalPrice.toLocaleString('en-US', { maximumFractionDigits: 2 })}</span>
                             </div>
-                            <button className="checkout-button">Proceed to checkout</button>
+                            <Link to='/payment'>
+                                <button className="checkout-button">Proceed to checkout</button>
+                            </Link>
                         </div>
                     </div>
                 </div>

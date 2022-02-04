@@ -1,5 +1,5 @@
 import { RECEIVE_CURRENT_USER, LOGOUT_CURRENT_USER } from "../../actions/session_actions";
-import { RECEIVE_ITEMS, ADD_TO_CART, UPDATE_CART } from "../../actions/cart_actions";
+import { RECEIVE_ITEMS, ADD_TO_CART, UPDATE_CART, DELETE_CART } from "../../actions/cart_actions";
 
 const usersReducer = (state = {}, action) => {
     Object.freeze(state);
@@ -16,12 +16,13 @@ const usersReducer = (state = {}, action) => {
             return nextState;
 
         case UPDATE_CART:
-            debugger
+         
             const user_id = action.quantity.id
             const count = action.quantity.cartCount
             nextState[user_id].cartCount = count
-             return nextState
-
+             return nextState;
+        // case DELETE_CART:
+        //     return nextState
         case LOGOUT_CURRENT_USER:
             return {}
         default:

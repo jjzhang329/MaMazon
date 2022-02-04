@@ -136,9 +136,12 @@
     flex-direction: row;
     flex-wrap: nowrap;
     box-sizing: border-box;
-    justify-content: center;
+    justify-content: left;
     padding: 0, 9px, 11px, 9px;
     -webkit-box-pack: center;
+    margin-top: 5px;
+    width:100px;
+
 }
 .container:hover{
     cursor: pointer;
@@ -193,7 +196,6 @@
     text-align: center;
     right: 8px;
     text-size-adjust: 100%;
-    top: 21px;
-    bottom: 30px;
+        top: 8px;
     width: 18px;
 }

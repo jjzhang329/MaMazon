@@ -3,9 +3,10 @@ import Dropdown from "../dropdown/dropdown";
 import { useState } from "react";
 
 
+
 const CheckOutItems = ({ product, updateCart })=>{
-    const [selected, setSelected] = useState(product.quantity);
-     console.log(selected) //selected quantity
+    const [selected, setSelected] = useState(0);
+   //selected quantity
     return (
 
         <div className="checkout-products-row">
@@ -22,12 +23,17 @@ const CheckOutItems = ({ product, updateCart })=>{
                     </div>
                     <div className="checkout-product-info">
                         <div className='checkout-product-name'>
-                            {product.name}
+                            <span>{product.name}</span>
                         </div>
-                        <span className="message">Shipped from: <span className="color">Mamazon</span></span>
-                        <span>Department: </span><span>{product.department}</span>                                
-                        <Dropdown select={selected} setSelected={setSelected} product={product} updateCart={updateCart}/>
-                    </div>                    
+                        <div className="in-stock">In stock</div>
+                        <div className="free-return"><span className="color">FREE Returns <span style={{color:"black"}}>&</span> FREE Delivery</span></div>
+                        <div className="message">Shipped from: <span className="color">Mamazon</span></div> 
+                        <span className="text-bold">Department: <span className="text-small">{product.department}</span></span> 
+                        <div className="check-out-dropdown">
+                            <Dropdown select={selected} setSelected={setSelected} product={product} updateCart={updateCart} />
+                        </div>                                   
+                    </div> 
+                                     
             </div>
             <div className="checkout-price">
                 <span className="checkout-product-price">

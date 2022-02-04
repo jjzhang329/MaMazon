@@ -11,10 +11,11 @@ export const addNewItem = (newItem) => ({
     type: ADD_TO_CART,
     newItem
 });
-export const changeQuantity = (quantity) => ({
-    type: UPDATE_CART,
-    quantity
-});
+export const changeQuantity = (quantity) => {
+    // debugger
+    return {type: UPDATE_CART,
+    quantity}
+};
 
 
 export const fetchCartItems = () => dispatch =>(

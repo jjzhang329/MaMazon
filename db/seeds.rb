@@ -332,15 +332,14 @@ price:37.48)
 file26 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/kitchen/bodumreplace_.jpg")
 kitchen1.photo.attach(io:file26, filename:"kitchen1")
 
-kitchen2 = Product.create!(name:"Lodge Enameled Dutch Oven, 6 Qt, Indigo", 
-description:"6-Quart Dutch oven made of cast iron with chip-resistant porcelain-enamel finish
-Broil, braise, bake or roast in the oven up to 500 Degree F
-Cast-iron loop side handles for a safe, secure grip when transporting
-Smooth glass surface won't react to ingredients; hand wash only
-Lodge enameled cast iron Dutch oven measures: '10-3/4' diameter: '4-1/2' deep
-Item Shape: Round",
+kitchen2 = Product.create!(name:"Staub Cast Iron 5-qt Tall Cocotte - Cherry, Made in France", 
+description:"5-quart cocotte for soups, stews, and braises and deep-frying without messy stove splatters. Ideal for cooking tall bone-in cuts, layered dishes, and desserts that rise.
+Large capacity and slim profile that doesn’t take up valuable stovetop space and stores efficiently. Textured black matte enamel interior requires no seasoning and ensures exceptional browning, and heat retention and distribution.
+Smooth enamel bottom works on all stovetops, including induction.
+Heavy weight, tight-fitting lid retains moisture, spikes on the lid create a rain-forest effect evenly returning juices back onto food.
+Oven safe up to 500°F. Dishwasher safe, hand wash recommended. Made in France.",
 department:"kitchen",
-price:79.90)
+price:199.95)
 file27 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/kitchen/kitchen2.jpg")
 kitchen2.photo.attach(io:file27, filename:"kitchen2")
 
