@@ -7,10 +7,12 @@ json.extract! @product, :id, :name, :department, :description, :price
 # end
 
 json.reviews do
-    if(@product.reviews.length > 1) 
+
+    if(@product.reviews.length >= 1) 
         json.array! @product.reviews, :user, :id, :body, :rating, :product_id, :created_at, :updated_at           
     else 
-       []
+       
+       ([])
     end
     
 end

@@ -1,9 +1,11 @@
 import React from 'react'
 import { MdOutlineStar} from 'react-icons/md';
 import { useState } from 'react';
-const StarRating = ({updateStars})=>{
- 
-    const [rating, setRating] = useState(null)
+const StarRating = ({updateStars, presetRating, size})=>{
+    
+    presetRating ? presetRating : null
+    
+    const [rating, setRating] = useState(presetRating)
     const [hover, setHover] = useState(null)
     const updateRating = (ratingValue) => {
         setRating(ratingValue);
@@ -20,7 +22,7 @@ const StarRating = ({updateStars})=>{
                             onClick={() => updateRating(ratingValue)}
                             />
                         <MdOutlineStar className='stars' 
-                            size={40}
+                            size={size ? size : 40}
                             onMouseEnter={() => setHover(ratingValue)}
                             onMouseLeave={() => setHover(null)}
                             color={ratingValue <= (hover || rating) ? "#fea41d" : "rgb(234,237,237)"} />

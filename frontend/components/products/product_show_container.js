@@ -6,9 +6,10 @@ import {openModal} from '../../actions/modal_actions'
 
 const mapStateToProps = (state, {match}) => {
     const currentUser = state.entities.users[state.session.id]
+    const product = state.entities.products[match.params.id]
     return {
-        product: state.entities.products[match.params.id],
-        cart: currentUser ? currentUser.cart : []
+        product: product,
+        cart: currentUser ? currentUser.cart : [],
     }     
 };
 

@@ -1,8 +1,7 @@
 import React from 'react';
-import { Redirect } from 'react-router';
 import { Link } from 'react-router-dom';
-import Review from '../reviews/reviews'
 
+import ProductShowReview from './product_show_reviews'
 class ProductShow extends React.Component{
     constructor(props){
         super(props)
@@ -22,6 +21,7 @@ class ProductShow extends React.Component{
 
     }
 
+    
     handleClick(e){
         e.preventDefault()
         const product_id = this.props.product.id
@@ -54,7 +54,9 @@ class ProductShow extends React.Component{
                 <div className='product-show-container'>
                     <div className='product-show-main'>
                         <div className='product-show-left'>
-                            <img className="product-show-image" src={product.photoUrl} />
+                            <div className='product-show-image-div'>
+                                <img className="product-show-image" src={product.photoUrl} />
+                            </div>
                         </div>
                         <div className='product-show-center'>
                             <div className='product-show-name'>{product.name}</div>
@@ -89,7 +91,7 @@ class ProductShow extends React.Component{
                                     <div className='product-quantity'> 
 
                                             
-                                            <select onChange ={this.handleSelect()} id="quantity" name="quantity" className='quantity-dropdown'>   
+                                            <select onChange ={this.handleSelect} id="quantity" name="quantity" className='quantity-dropdown'>   
                                                 <option value={1}>Qty: 1</option>
                                                 <option value={2}>Qty: 2</option>
                                                 <option value={3}>Qty: 3</option>
@@ -110,37 +112,9 @@ class ProductShow extends React.Component{
                             </div>
                         </div>
                         
-                      
-                        
                     </div>
-                    <div className='reviews-container'>
-                        <div className='reviews-left'>
-                            <div className='reviews-title'>
-                                Customer reviews
-                            </div>
-                            <div className='reviews-rating'>
-                                stars
-                                <div className='rating-bars'>
-                                    progress bar
-                                </div>
-                            </div>
-                            <div className='reviews-update'>
-                                <h2>Review this product</h2>
-                                <div><span>Share your thoughts with other customers</span></div>
-                                <div className='review-submit'>
-                                    <Link to={`/products/${product.id}/reviews/new`}>
-                                        <button className='review-button'>Write a customer review</button>
-                                    </Link>
-                                </div>
-                            </div>
-
-                        </div>
-                        {product.reviews && 
-                        <div className='reviews-right'>
-                            {product.reviews.map((review, idx) => <Review review={review} key={idx} />)}
-                        </div>}
-                        
-                    </div>
+                    {/* reviews section */}
+                        <ProductShowReview reviews={product.reviews} productId={product.id}/>
                 </div>
             </div>
         );
