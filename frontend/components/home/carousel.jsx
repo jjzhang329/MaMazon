@@ -1,5 +1,8 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
+
+
 const splashImages = [
     "https://mamazon-seeds.s3.us-west-1.amazonaws.com/splash/amazon_filretv.jpg",
     "https://mamazon-seeds.s3.us-west-1.amazonaws.com/splash/splashnew1.jpg",
@@ -8,32 +11,48 @@ const splashImages = [
 ]
 
 const Slider=()=>{
-     const [currentIdx, setCurrentIdx] = useState(0)
+    const [currentIdx, setCurrentIdx] = useState(0)
      useEffect(()=>{
-        startSlider()
-     })
+        //  setInterval((e) => {
+        //      const newIdx = Math.floor((currentIdx + 1) % splashImages.length)
+        //      setCurrentIdx(newIdx)
+        //  }, 10000)
+         
+    })
 
-     const startSlider=()=>{
-         setInterval(()=>{
-            handleNextClick()
-         }, 10000)
-     }
+    
     let path
-    // if (currentIdx === 1){path = 'products/'}
-    const handleNextClick = ()=>{
-   
-        const newIdx = Math.floor((currentIdx+1)%splashImages.length)
-        {setCurrentIdx(newIdx)}
-    }
+    if (currentIdx === 0){path = 'products/83'}
+    if(currentIdx === 1){path = 'products/48'}
+    if (currentIdx === 2) { path = 'products/48' }
 
+    const handleNextClick = ()=>{ 
+        const newIdx = Math.floor((currentIdx+1)%splashImages.length)
+        setCurrentIdx(newIdx)
+    }
+    const handlePreviousClick = (e) => {
+        e.preventDefault()
+        let newIdx = Math.floor((currentIdx-1)%splashImages.length)
+        if(newIdx < 0) newIdx = splashImages.length - 1
+        setCurrentIdx(newIdx) 
+    }
+   
     return(
+        
         <div className="carousel-inner">
-            <img className="carousel" src={splashImages[currentIdx]} alt="" />
-            
-            <div className="center-icon-div">
-                {/* <button className='previous-button' onClick={handleNextClick}>Previous</button>
-                <button >Right</button> */}
+            <Link to={`/${path}`}>
+                <img id="carousel" src={splashImages[currentIdx]} alt=""/>
+            </Link>
+         
+            <div className='carousel-button left' onClick={(e)=>{handlePreviousClick(e)}}>
+        
+                <img src={window.leftURL}></img>
+                    
             </div>
+            <div className='carousel-button right' onClick={(e)=>{handleNextClick(e)}}>
+                <img src={window.rightURL}></img>
+            </div>
+          
        
         </div>
     )

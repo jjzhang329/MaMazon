@@ -10,7 +10,7 @@ const Dropdown= ({select, setSelected, product, updateCart})=>{
         {setIsActive(false)}
         
     })
-   console.log(select)
+   
     return (
         
         <div className ="quantity-dropdown">

@@ -143,6 +143,9 @@ Designed to protect your privacy – Amazon is not in the business of selling yo
 department:"smarthome",
 price:49.99)
 
+file39 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/smart-home/smarthome4.jpg")
+smarthome4.photo.attach(io:file39, filename:"smarthome4")
+
 baby2 = Product.create!(
     name:"Pampers Choose Your Count, Sensitive Water Based Baby Diaper Wipes, Hypoallergenic and Unscented, (Packaging May Vary) White, 336 Count", 
     description:"Pampers Sensitive wipes are clinically proven for sensitive skin
@@ -542,9 +545,21 @@ price:29.99)
 file38 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/smart-home/smarthome3.jpg")
 smarthome3.photo.attach(io:file38, filename:"smarthome3")
 
+smarthome6 = Product.create!(name:"Introducing Amazon Glow, Interactive Projector + Video Calling, Designed for Togetherness, with Tangram Bits, Kids 3+
+",
+description:"Introducing Amazon Glow - A new interactive projector and video-calling device designed to build rich family connections by transforming the way children bond with remote loved ones.
+Read, play, draw together - The included 1 year of Amazon Kids+ with purchase gives access to thousands of books, dozens of games and visual arts activities, and more. Your subscription will then automatically renew every month starting at just $2.99 per month plus applicable tax. You may cancel at any time by visiting the Amazon Parent Dashboard or contacting Customer Service.
+This bundle contains Amazon Glow (not a toy) and Tangram Bits.
+2-year worry-free guarantee - If it breaks, return it, and we’ll replace it for free.
+Physical meets digital – Enjoy a hands-on learning experience with Tangram Bits, and transform favorite toys into digital stickers with scanning.
+Kid-friendly and private - Enjoy a virtual environment for kids ages 3+ with curated, age-appropriate content. Plus, instantly disable cameras and microphones on the device by simply closing the privacy shutter.
+Easy to setup and connect - Use the free Amazon Glow app, available on select iOS, Android, and FireOS devices, to setup the child's device or to connect with little ones. See complete compatibility details in the technical specifications.
+",
+department:"smarthome",
+price:249.99)
+filesmarthome6 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/smart-home/smarthome6.jpg")
+smarthome6.photo.attach(io:filesmarthome6, filename:"smarthome6")
 
-file39 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/smart-home/smarthome4.jpg")
-smarthome4.photo.attach(io:file39, filename:"smarthome4")
 
 
 

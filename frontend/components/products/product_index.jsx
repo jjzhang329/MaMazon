@@ -13,7 +13,8 @@ class ProductIndex extends React.Component{
 
     }
     componentDidMount(){   
-        let filter = localStorage.getItem("filter")
+        
+        let filter = localStorage.getItem("filter")    
         this.props.fetchAllProducts(JSON.parse(filter))
         window.addEventListener("beforeunload", this.saveStateToLocalStorage.bind(this))
     }

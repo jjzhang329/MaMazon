@@ -111,11 +111,11 @@ const ProductShowReview=({reviews, productId})=>{
                     </div>
                 </div>
             </div>
-            {reviews &&
-                <div className='reviews-right'>
-                    {reviews.map((review, idx) => <Review review={review} key={idx} />)}   
-                
-                </div>}
+            {reviews ? <div className='reviews-right'>
+                    {reviews.map((review, idx) => <Review review={review} key={idx} />)}
+                </div> :
+                <div className='reviews-right'><h2>No reviews for this prodcut</h2></div>
+            }
 
             <div className='reviews-empty'>
                 "fjgoijeriojgoijsdg jdkljg;ositjhiojsgklfjskl;jgioerjioglkjkljdfkljgijshiotjsljrkldnsgjkdfgoigjskdjg;kljsirjhjyhioejojhlk"

@@ -41,9 +41,9 @@ export default class SessionForm extends React.Component {
   }
 
   handleSubmit(){
-     this.props.action(this.state).fail(() => { 
+    this.props.action(this.state).fail(() => { 
         
-      this.setState({errors: this.props.errors})}) 
+    this.setState({errors: this.props.errors})}) 
   }
 
 

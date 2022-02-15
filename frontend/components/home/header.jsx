@@ -5,7 +5,7 @@ import { RiArrowDropDownFill} from 'react-icons/ri'
 import { Link, NavLink } from 'react-router-dom';
 const Header = (props) => {
   
-
+  
   return (
     
     <div className='header'>
@@ -27,7 +27,7 @@ const Header = (props) => {
             <NavLink to='/checkout'>
               <div className='container cart'>
                 <div className='cartcount-container'>
-                  <span className='cartcount'>{props.cartCount}</span>
+                  <span className='cartcount'>{props.cartCount ?  props.cartCount : 0}</span>
                   <img src={cartURL} className='carticon'/>
                 </div>
                 <div className='cartname'>Cart</div>  
