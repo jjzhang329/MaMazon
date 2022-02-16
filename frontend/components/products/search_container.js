@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { fetchAllProducts } from '../../actions/products_actions';
 import { updateFilter} from '../../actions/filter_actions'
-import Search from './search';
+import Filter from './filter';
 
 
 const mapStateToProps = (state) => ({
@@ -15,4 +15,4 @@ const mapDispatchToProps = dispatch =>({
     updateFilter: (filter)=>dispatch(updateFilter(filter))
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(Search);
+export default connect(mapStateToProps, mapDispatchToProps)(Filter);
