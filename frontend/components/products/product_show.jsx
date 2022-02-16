@@ -14,12 +14,6 @@ class ProductShow extends React.Component{
     componentDidMount(){
         this.props.fetchProduct(this.props.match.params.id)
     }
-    componentDidUpdate(prevState){
-        console.log(prevState)
-        if(prevState.cart.length !== this.props.cart.length){
-            console.log(changed)
-        }
-    }
 
     handleSelect(){    
         // debugger
@@ -37,15 +31,19 @@ class ProductShow extends React.Component{
            console.log(this.props.currentUser)
            this.props.history.push('/login')
         }else{
-            alert('Added to cart')
+            
             const product_id = this.props.product.id
             const alreadyInCart = this.props.cart
             if (alreadyInCart.includes(product_id)) {
 
                 this.props.updateCart({ product_id: product_id, quantity: this.state.quantity })
+                    
             } else {
                 this.props.addToCart({ product_id: product_id, quantity: this.state.quantity })
+               
             }
+
+            // this.props.openModal('addtocart')
         }
        
     }
@@ -157,7 +155,7 @@ class ProductShow extends React.Component{
                                     <button id="addtocart" onClick={this.handleClick}>Add to Cart</button>
                                    
                                     <button id="buynow" onClick={()=>{
-                                        if(!this.props.curerntUser){
+                                        if(!this.props.currentUser){
                                             this.props.history.push('/login')
                                         }else{
                                             this.props.openModal('buynow')
