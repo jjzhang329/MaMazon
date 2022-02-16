@@ -11,9 +11,9 @@ const Header = (props) => {
       <Link to='/'>
         <img className="logo" src={window.homelogoURL}/>
       </Link>
-        <div className='searchbar-container'>
+  
         <SearchBar/>
-        </div>
+        
         
         <div className='header-nav'>
             <GreetingContainer/>
