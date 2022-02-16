@@ -43,7 +43,7 @@ class ProductShow extends React.Component{
                
             }
 
-            // this.props.openModal('addtocart')
+            this.props.openModal('addtocart')
         }
        
     }
@@ -92,9 +92,6 @@ class ProductShow extends React.Component{
                                   
                                         count = product.reviews.length
                                     }
-                                  
-                                   
-                                   
                                     
                                     
                                     averageRating = Math.floor(total / count)
@@ -152,6 +149,7 @@ class ProductShow extends React.Component{
                                     </div>
                                 </div>
                                 <div className='addtocart'>
+                                   
                                     <button id="addtocart" onClick={this.handleClick}>Add to Cart</button>
                                    
                                     <button id="buynow" onClick={()=>{

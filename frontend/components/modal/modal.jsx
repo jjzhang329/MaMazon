@@ -13,6 +13,9 @@ function Modal({ modal, closeModal }) {
         case 'buynow':
             component = <BuyNowContainer/>;
         break;
+        case 'addtocart':
+            component = <AddedToCart/>
+        break;
         default:
             return null;
     }

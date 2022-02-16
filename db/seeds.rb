@@ -560,7 +560,58 @@ price:249.99)
 filesmarthome6 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/smart-home/smarthome6.jpg")
 smarthome6.photo.attach(io:filesmarthome6, filename:"smarthome6")
 
+#gift-set
 
+gift1 = Product.create!(name:"Birthday Gifts for Women,Friend Gifts for Women,Spa Wine Tumbler Holiday Gift Box,Birthday Gift Baskets for Mom,Wife,Sister,Friend (Blue)", 
+description:"💖 FEMININE AND STYLISH GIFTSET: Beautifully designed with a modern and elegant touch, our giftbox is made to impress every lady at first sight. Filled with lovely and thoughtful gifts inside, this set once opened will bring her the sweetest surprise and make her feel so loved on her special day.
+🎉 COMPLETE SPA GIFTSET FOR YOUR SPECIAL LADY: one 12 oz Blue insulated stainless steel tumbler with a “Not A Day Over Fabulous” quote (with straw and straw cleaner), one premium bath bomb, one Rainbow Cloud Bath Bombs,one premium Lavender bar soap, one 3.9oz Soy Wax lavender scented candle one 'Not a Day Over Fabulous' rose gold compact mirror ,one soft cupcake socks and a card for your special message.
+🌸 HIGH QUALITY AND PREMIUM PRODUCTS: Made from nourishing and soothing ingredients such as essential flower oil and 100% soy wax, the giftset all together will bring her a luxurious and sublime home spa experience, where she could pamper and indulge herself with a deluxe floral bubble bath while enjoying her favorite drink for the special occasion.
+💖 “This is a perfect gift to make someone feel special”- Imagine the surprise of receiving this gift on her birthday, Valentine’s day, Mother’s day, your anniversary. she could pamper and indulge herself with a deluxe floral bubble bath while enjoying her favorite drink for the special occasion in the fresh fragrance atmosphere.
+🎁 PERFECT GIFTBOX FOR EVERY OCCASION: Every item in our set has been selected and curated with thought and care to create the most special moment for that lady in your life. Whether you’re looking to surprise your Wife, Girlfriend, Mom, Best Friend, Sister or co-worker, we will help you show them all the love and appreciation they deserve.",
+department:"gift",
+price:29.99)
+filegift1 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/gift/gift1.jpg")
+gift1.photo.attach(io: filegift1, filename:"gift1")
+
+gift2 = Product.create!(name:"Spa Gift Baskets, Spa Luxetique Spa Gifts for Women, 15pcs Spa Gift Set Includes Bath Bombs, Essential Oil, Hand Cream, Bath Salt and Luxury Tote Bag, Gifts Set for Women", 
+description:"🛀 Nourishing Spa Gift Basket - The luxury 15pc bath set moisturize dry skin deeply and lastingly with the natural and nourishing ingredients.
+🛀 Essential Oil - High-quality, 100% natural tea tree essential oil can help moisturize and soothe the skin and repair acne. When used with an aroma diffuser, its special and clean fragrance will make you feel relaxed and calm.
+🛀 Luxurious 15pc Home Spa Set - Item includes: Shower Gel, Bubble Bath, 6 Soap Petals, Hand Cream, Body Lotion, 2 Jelly Bath Bombs, Body Butter, Bath Salt, Essential Oil, Shampoo Bar, Pouf Sponge, Shower Cap, Body Brush, Cloth Tote Bag.
+🛀 Beautiful Gift Tote Bag - Our beautiful gift bag of bath is made of durable burlap and oxford cloth. The tote bag can be used in many different ways, such as going shopping, dating and running errands.
+🛀 Special Bath Sets for Her - Finding a way to win woman’s heart? Our beautiful packaging and high-quality bath and body daily care products are the perfect gift for your Mom, Sister, Girlfriend or Wife. Also, this bath set makes a wonderful present for Birthdays, Holidays, Anniversaries, Christmas, Mother’s Day and Valentine’s Day.",
+department:"gift",
+price:39.96)
+filegift2 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/gift/gift2.jpg")
+gift2.photo.attach(io: filegift2, filename:"gift2")
+
+gift3 = Product.create!(name:"Candles 12 Pack Scented Candles Gift Set for Women , Candles for Home Scented Soy Wax Aromatherapy Candle Sets 2.5 Oz Birthday Gift Mother Gift Christmas Gifts for Women Perfect Gifts for Her…", 
+description:"Scented Candles Set 12 Natural Fragrances: Lavender, Mediterranean Fig, Bergamot, Strawberry, Spring, Jasmine, Rose, Gardenia Peppermint, Peony Cherry Blossom, English Pear &Freesia, Wood Sage & Sea Salt Use Natural Essential oil The proportion of essential oils is as high as 7%, The scent is long-lasting and scented through the whole process.
+Candles for Home Scented: 2.5oz scented candle, Working hours are15 hours. 8 Pack More than 120hours in total. Trimming the wick to increase time and Uniform combustion.
+Soy Wax Candles: 100% Soy Wax and Natural fiber wick provide a clean and uniform combustion process. No black smoke. Does not contain any harmful chemicals or additives, a great choice for meditation, yoga, dance, aromatherapy, general relaxation, and stress relief.
+Candles for Home Portable And Exquisite Jar： Each scented candle has a jar with exquisite artistic patterns, suitable for decorating your house or storing small things after use. For example, jewelry earrings or decorative storage container flower pots.
+Perfect Candles Gift for Women Packaging： The candle gift set comes with a beautiful gift box, suitable for any holiday or special event, such as Mother’s Day, Father’s Day, Valentine’s Day, Children’s Day, Anniversary, Thanksgiving, Birthday Gifts, Christmas, Teachers, Ideal gift for female friends.",
+department:"gift",
+price: 24.99)
+filegift3 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/gift/gift3.jpg")
+gift3.photo.attach(io: filegift3, filename:"gift3")
+
+gift4 = Product.create!(name:"Gucci Bloom for Women 3 Piece Set Includes: 3.3 oz Eau de Parfum Spray + 3.3 oz Body Lotion + 0.25 oz Eau de Parfum Fragrance Rollerball", 
+description:"Gucci Bloom for Women Set
+Gucci Bloom for Women 3 Piece Set Includes:
+3.3 oz Eau de Parfum Spray + 3.3 oz Body Lotion + 0.25 oz Eau de Parfum Fragrance Rollerball.
+Type: Eau De Parfum,Lotion
+",
+department:"gift",
+price: 147.95)
+filegift4 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/gift/gift4.jpg")
+gift4.photo.attach(io: filegift4, filename:"gift4")
+
+gift5 = Product.create!(name:"Estee Lauder 2021 Holiday Gift Set $550 Resilience Multi-effect Creme", 
+description:"29 Beauty Essentials, inlcude: 2 Advanced Night Repair Face Serums, full-size (1 oz./30ml) and deluxe travel size (.24 oz./7ml); 2 Advanced Night Repair Eye Supercharged Complex Gel Cremes, full-size (.5 oz./15ml) and deluxe travel size (.17 oz./5ml); 2 Resilience Multi-Effect Cremes, full-size (1 oz./30ml) and deluxe travel size (.24 oz./7ml); 2 Pure Color Envy Palettes in CANDY GLOW (9 shades) and CANDY GLAM (9 shades)—18 essential shades in all for eyes and cheeks (total net wt. for each palette .18 oz./6g) .1 oz./3.7g 1 Full-Size Sumptuous Extreme Mascara, (.27 oz./8ml) 2 Full-Size Pure Color Envy Lipsticks, (.12 oz./3.5geach) in 539 Excite and 111 Tiger Eye 1 Full-Size Eye Makeup Remover, (3.4 oz./100ml) Train Case",
+department:"gift",
+price:124.88)
+filegift5 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/gift/gift5.jpg")
+gift5.photo.attach(io: filegift5, filename:"gift5")
 
 
 # cart

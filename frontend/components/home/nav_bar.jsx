@@ -32,7 +32,7 @@ class NavBar extends React.Component{
                 <NavLink to='/products' onClick={this.handleClick('kitchen')} className="nav-bar-category">Kitchen</NavLink>
                 <NavLink to='/products' onClick={this.handleClick('maternity')} className="nav-bar-category">Maternity</NavLink>
                 <NavLink to='/products' onClick={this.handleClick('smarthome')} className="nav-bar-category">Smart Home</NavLink>
-                <NavLink to='/products' onClick={this.handleClick('')} className="nav-bar-category">Gift Idea</NavLink>    
+                <NavLink to='/products' onClick={this.handleClick('gift')} className="nav-bar-category">Gift Idea</NavLink>    
           </div>
       </div>
     )
