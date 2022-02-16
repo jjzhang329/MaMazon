@@ -40,7 +40,9 @@ class ReviewForm extends React.Component {
 
     handleRating(value){
         let review = { ...this.state.review}
+        
         review.rating += value
+        // review.rating = Math.floor(review.rating  4) 
         this.setState({ review })
     }
 

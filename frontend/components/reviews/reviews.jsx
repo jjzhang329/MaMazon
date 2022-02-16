@@ -1,5 +1,5 @@
 import React from 'react'
-import StarRating from './starRating';
+import {MdOutlineStar} from 'react-icons/md';
 
 
 const Reviews = ({review})=>{
@@ -16,10 +16,21 @@ const Reviews = ({review})=>{
                 <div className="review-username">{review.user.name}</div>
             </div>
             <div className='reviews-rating'>
-                <StarRating presetRating={review.rating} size={18}/>
+                <div className="rating-stars">
+                    {[...Array(5)].map((start, idx) => {
+                        const ratingValue = idx + 1
+                        return (
+                            <label key={idx}>
+                                <MdOutlineStar className="stars" size={15}
+                                    color={ratingValue <= review.rating ? "#fea41d" : "rgb(234,237,237)"} />
+                            </label>
+                        )
+                    })}
+                </div>
             </div>
             <span className='review-date'>Reviewed in the United States on {date}</span>
             <div className='reviews-detail'>{review.body}</div>
+            
         </div>
     )
 }

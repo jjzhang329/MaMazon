@@ -13,7 +13,7 @@ const mapState = (state, ownProps) => ({
                 user_id: state.session.id,
                 product_id: parseInt(ownProps.match.params.id),
                 body: "",
-                rating:"",
+                rating: 0,
                 },
             product: state.entities.products,
             formType: "Create Review",

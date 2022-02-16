@@ -24,11 +24,9 @@ class Api::CartsController < ApplicationController
         cart  = current_user.carts
         @user = current_user
         @item = cart.where(product_id: params[:cart][:product_id])
-        if @item[0].quantity > params[:cart][:quantity].to_i
-            
-              new_quantity = (params[:cart][:quantity].to_i)
-            
-        elsif params[:cart][:quantity].to_i == 0
+        if params[:cart][:quantity].to_i == 0
+        #     @item[0].quantity > params[:cart][:quantity].to_i       
+        #     new_quantity = (params[:cart][:quantity].to_i)        
            
             destroy(@item)
         else

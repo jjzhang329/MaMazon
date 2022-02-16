@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { MdOutlineStar  } from 'react-icons/md';
 
 import ProductShowReview from './product_show_reviews'
 class ProductShow extends React.Component{
@@ -52,7 +52,7 @@ class ProductShow extends React.Component{
         let orderWithIn = `${23- today.getHours()} hrs and ${59 - today.getMinutes()} mins.`
     
         return (
-            <div>
+           
                 <div className='product-show-container'>
                     <div className='product-show-main'>
                         <div className='product-show-left'>
@@ -62,7 +62,20 @@ class ProductShow extends React.Component{
                         </div>
                         <div className='product-show-center'>
                             <div className='product-show-name'>{product.name}</div>
-                            <div className='product-show-rating'>starts here</div>
+                        <div className='product-show-rating'>
+                            <div className="rating-stars">
+                                {[...Array(5)].map((start, idx) => {
+                                    const ratingValue = idx + 1
+                                    return (
+                                        <label key={idx}>
+                                            <MdOutlineStar className="stars" size={15}
+                                                color={ratingValue <= Math.floor(product.reviews[0].rating/4) ? "#fea41d" : "rgb(234,237,237)"} />
+                                                
+                                        </label>
+                                    )
+                                })}
+                            </div>
+                        </div>
                             <div className='product-show-price-row'> 
                                 <span>Price</span> 
                                 <span className="product-show-price">${product.price}</span>
@@ -118,7 +131,7 @@ class ProductShow extends React.Component{
                     {/* reviews section */}
                         <ProductShowReview reviews={product.reviews} productId={product.id}/>
                 </div>
-            </div>
+            
         );
     }
   
