@@ -84,7 +84,7 @@ class ReviewForm extends React.Component {
                             <h3>Overall Rating</h3>
                             <StarRating updateStars={this.handleRating}/>
                         </div>
-                        <div className='rate-features'>
+                        {/* <div className='rate-features'>
                             <h3>Rate features</h3>
                             <div className='rate-feature-row'>
                                 <div className='rate-feature-title'>Easy to use</div>
@@ -99,14 +99,14 @@ class ReviewForm extends React.Component {
                                 <StarRating updateStars={this.handleRating} />
                             </div>
                            
-                        </div>
+                        </div> */}
                         <div className='form-row-subtitle'>
                             <label><h3>Add a headline</h3></label>
                             <div className="headline-input">
-                                <input type="text"placeholder="What's most important to know?"/>
+                                <input value={this.state.review.headline} onChange={this.handleUpdate("headline")}type="text"placeholder="What's most important to know?"/>
                             </div>
                         </div>
-                        <div className='form-row-subtitle'>
+                        {/* <div className='form-row-subtitle'>
                             <label><h3>Add a photo or video</h3></label>
                             <span>Shoppers find images and videos more helpful than text alone</span>
                             <div className='photo-submit-box'>
@@ -114,7 +114,7 @@ class ReviewForm extends React.Component {
                                     <IoMdAdd size={30} color={"#aab7b8"}/>
                                 </button>
                             </div>
-                        </div>
+                        </div> */}
                         <div className="form-row-subtitle">
                             <label><h3>Add a written review</h3></label>
                             

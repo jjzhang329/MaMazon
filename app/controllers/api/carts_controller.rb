@@ -12,8 +12,10 @@ class Api::CartsController < ApplicationController
     
     def create 
         @item = current_user.carts.create(cart_params)
+        @user = current_user
         if @item.save 
             render json: @item
+            # render "api/users/show"
         else
             render json: @cart.errors.full_messages, status:422
         end 
@@ -25,23 +27,25 @@ class Api::CartsController < ApplicationController
         @user = current_user
         @item = cart.where(product_id: params[:cart][:product_id])
         if params[:cart][:quantity].to_i == 0
+        
         #     @item[0].quantity > params[:cart][:quantity].to_i       
         #     new_quantity = (params[:cart][:quantity].to_i)        
            
-            destroy(@item)
+            destroy(@item[0])
         else
            new_quantity = @item[0].quantity + (params[:cart][:quantity].to_i)
+             
+            if @item.update(quantity: new_quantity)
+                render "api/users/show"
+            end 
            
         end 
-         
-        
-        if @item.update(quantity: new_quantity)
-            render "api/users/show"
-        end 
+      
 
     end 
 
     def destroy(item)
+        
         if item.destroy 
             render "api/users/show"
         end 

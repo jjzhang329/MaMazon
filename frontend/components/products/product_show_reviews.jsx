@@ -22,7 +22,7 @@ const ProductShowReview=({reviews, productId})=>{
         let count1 = 0
        count = reviews.length
         reviews.forEach(review=> {
-            total += Math.floor(review.rating/4)
+            total += Math.floor(review.rating)
 
             if (review.rating === 5) {count5 += 1; }        
             else if(review.rating === 4){count4 += 1;}                  
@@ -31,7 +31,7 @@ const ProductShowReview=({reviews, productId})=>{
             else if (review.rating === 1) { count1 += 1; }
              
         })
-
+ 
         averageRating = Math.floor(total / count)
         value5 = Math.floor((count5 / count)*100)
         value4 = Math.floor((count4 / count)*100)

@@ -1,5 +1,6 @@
 import React from 'react';
 import { MdOutlineStar  } from 'react-icons/md';
+import { Redirect } from 'react-router';
 
 import ProductShowReview from './product_show_reviews'
 class ProductShow extends React.Component{
@@ -13,6 +14,12 @@ class ProductShow extends React.Component{
     componentDidMount(){
         this.props.fetchProduct(this.props.match.params.id)
     }
+    componentDidUpdate(prevState){
+        console.log(prevState)
+        if(prevState.cart.length !== this.props.cart.length){
+            console.log(changed)
+        }
+    }
 
     handleSelect(){    
         // debugger
@@ -25,17 +32,26 @@ class ProductShow extends React.Component{
     
     handleClick(e){
         e.preventDefault()
-        const product_id = this.props.product.id
-        const alreadyInCart = this.props.cart
-        if(alreadyInCart.includes(product_id)){
-            // debugger
-            this.props.updateCart({ product_id: product_id, quantity: this.state.quantity})
+        
+        if(!this.props.currentUser){
+           console.log(this.props.currentUser)
+           this.props.history.push('/login')
         }else{
-            this.props.addToCart({product_id: product_id, quantity: this.state.quantity})
+            alert('Added to cart')
+            const product_id = this.props.product.id
+            const alreadyInCart = this.props.cart
+            if (alreadyInCart.includes(product_id)) {
+
+                this.props.updateCart({ product_id: product_id, quantity: this.state.quantity })
+            } else {
+                this.props.addToCart({ product_id: product_id, quantity: this.state.quantity })
+            }
         }
+       
     }
     
     render(){
+        
         const {product} = this.props
         if(!product) return null;
         //delivery eta date format
@@ -66,10 +82,30 @@ class ProductShow extends React.Component{
                             <div className="rating-stars">
                                 {[...Array(5)].map((start, idx) => {
                                     const ratingValue = idx + 1
+                                
+                                    let total = 0
+                                    let averageRating = 0
+                                    let count = 0
+                                    if(product.reviews){
+                                        
+                                            product.reviews.forEach(review => {
+                                                total += Math.floor(review.rating)
+                                            })
+                                  
+                                        count = product.reviews.length
+                                    }
+                                  
+                                   
+                                   
+                                    
+                                    
+                                    averageRating = Math.floor(total / count)
+                                   
+                                     
                                     return (
                                         <label key={idx}>
                                             <MdOutlineStar className="stars" size={15}
-                                                color={ratingValue <= Math.floor(product.reviews[0].rating/4) ? "#fea41d" : "rgb(234,237,237)"} />
+                                                color={ratingValue <= averageRating ? "#fea41d" : "rgb(234,237,237)"} />
                                                 
                                         </label>
                                     )
@@ -120,7 +156,14 @@ class ProductShow extends React.Component{
                                 <div className='addtocart'>
                                     <button id="addtocart" onClick={this.handleClick}>Add to Cart</button>
                                    
-                                    <button id="buynow" onClick={()=>this.props.openModal('buynow')}>Buy Now</button>
+                                    <button id="buynow" onClick={()=>{
+                                        if(!this.props.curerntUser){
+                                            this.props.history.push('/login')
+                                        }else{
+                                            this.props.openModal('buynow')
+                                        }
+                                        
+                                        }}>Buy Now</button>
                                  
                                 </div>
                                 

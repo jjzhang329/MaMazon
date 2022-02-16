@@ -7,6 +7,7 @@ const Reviews = ({review})=>{
     var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
     date = new Intl.DateTimeFormat('en-US', options).format(date)
     date = date.split(",").slice(1)
+ 
     return(
         <div className='reviews-row'>
             <div className='reviews-user'>
@@ -15,7 +16,7 @@ const Reviews = ({review})=>{
                 </div>
                 <div className="review-username">{review.user.name}</div>
             </div>
-            <div className='reviews-rating'>
+            <div className='reviews-rating-stars'>
                 <div className="rating-stars">
                     {[...Array(5)].map((start, idx) => {
                         const ratingValue = idx + 1
@@ -27,6 +28,7 @@ const Reviews = ({review})=>{
                         )
                     })}
                 </div>
+                <span className='review-headline'>{review.headline}</span>
             </div>
             <span className='review-date'>Reviewed in the United States on {date}</span>
             <div className='reviews-detail'>{review.body}</div>

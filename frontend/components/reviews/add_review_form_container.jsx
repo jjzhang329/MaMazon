@@ -14,6 +14,7 @@ const mapState = (state, ownProps) => ({
                 product_id: parseInt(ownProps.match.params.id),
                 body: "",
                 rating: 0,
+                headline: ""
                 },
             product: state.entities.products,
             formType: "Create Review",

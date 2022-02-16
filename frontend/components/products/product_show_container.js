@@ -10,6 +10,7 @@ const mapStateToProps = (state, {match}) => {
     return {
         product: product,
         cart: currentUser ? currentUser.cart : [],
+        currentUser: currentUser
     }     
 };
 
