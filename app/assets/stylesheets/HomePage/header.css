@@ -38,7 +38,7 @@
     background-color: rgb(243,243,243);
     border-radius: 4px 0 0 4px;
     margin-bottom: 4px;
-    border-right: 1px solid rgb(205,205,205);   
+      
 }
 .dropdown-wrapper{
     display: flex;
@@ -55,12 +55,13 @@
     background-color: rgb(243,243,243);
     opacity: 0.96;
     border-radius: 4px;
+    width: 140px;
+    z-index: 2;
 }
 .dropdown-item{
- padding-left: 10px;
-    padding-right: 10px;
-  padding-top: 7px;
-    padding-bottom: 5px;
+     padding-left: 20px;
+    padding-right: 15px;
+ padding-top: 10px;
     font-size: 14px;
 }
 .dropdown-item:hover{
@@ -69,7 +70,8 @@
 
 }
 .all{
-    display: block;
+    display: flex;
+    align-items: center;
     justify-content: center;
     color: rgb(85,85,85);
     font-size: 13px;
@@ -85,6 +87,17 @@
     margin-top: 8px;
     margin-left: 0px;
 }
+
+.search-arrow-icon{
+    background: rgb(243,243,243);
+    border-right: 1px solid rgb(205,205,205); 
+}
+
+.search-center{
+    display: flex;
+    flex: 1;
+    position: relative;
+}
 .searchinput{
     display: flex;
     box-sizing: border-box;
@@ -95,6 +108,24 @@
     border-radius: 0 0 0 0;  
     border: none;
     font-size: 20px;  
+}
+.result-list-container{
+    position: absolute;
+    background: white;
+    border: 1px solid #bbb;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    bottom: -32px;
+    list-style: none;
+    border-radius: 0 0 4px 4px;
+    font-size: 14px;
+    height: fit-content;
+    line-height: 20px;
+}
+.search-result-list:hover{
+    cursor: pointer;
+    background-color: #bbb;
 }
 
 .searchicon{

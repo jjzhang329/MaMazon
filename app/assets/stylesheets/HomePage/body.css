@@ -1,11 +1,11 @@
 .home-body{
    display: flex; 
    margin: 0 auto;
-    width: 1500px; 
-    max-width: 1500px;
-    height: 100vh;
-    min-width: 200px;
-    
+  width: 1500px; 
+  max-width: 1500px;
+    /* height: 100vh; */
+  min-width: 200px;
+  height: 1300px;
     
 }
 .carousel-container{ 

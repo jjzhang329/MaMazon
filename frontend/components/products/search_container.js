@@ -12,7 +12,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = dispatch =>({
     fetchAllProducts: (filter)=> dispatch(fetchAllProducts(filter)),
-    updateFilter: (filter)=>dispatch(updateFilter(filter))
+    updateFilter: (filter, value)=>dispatch(updateFilter(filter, value))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Filter);

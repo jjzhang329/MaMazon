@@ -25,6 +25,7 @@ class ProductIndex extends React.Component{
         if (prevState.filter.department !== JSON.parse(filter).department){
             // this.props.fetchAllProducts(this.props.filter)
             this.saveStateToLocalStorage()
+            this.componentDidMount()
             console.log('need to redirect')
         }
     }

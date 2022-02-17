@@ -4,6 +4,12 @@ class User < ApplicationRecord
   validates :name, :email, :password_digest, :session_token, presence: true
   validates :name, :email, uniqueness: true
   validates :password, length: { minimum: 6 }, allow_nil: true
+  
+  validates :email,
+  format: { with: /\A[\w+-.]+@[a-z\d-]+(.[a-z\d-]+)*.[a-z]+\z/i, message: "invalid"  },
+            uniqueness: { case_sensitive: false },
+            length: { minimum: 4, maximum: 254 }
+
   before_validation :ensure_session_token
 
   has_many :carts

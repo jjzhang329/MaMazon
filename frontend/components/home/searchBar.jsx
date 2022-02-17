@@ -1,29 +1,37 @@
 import React, { useEffect, useState } from "react";
 import { fetchAllProducts } from "../../actions/products_actions";
 import { connect } from "react-redux";
-import { updateFilter } from "../../actions/filter_actions";
+import { changeFilter, updateFilter } from "../../actions/filter_actions";
 import { GoSearch } from "react-icons/go";
 import { openModal } from "../../actions/modal_actions";
 import SearchDrop from './searchDrop'
+import ResultDrop from "./resultDrop";
 
-const SearchBar = ({fetchAllProducts, products, filter, updateFilter})=>{
-    const [search, setsearch] = useState(filter)
-    
-
-    
+const SearchBar = ({changeFilter, products, filter, updateFilter, fetchAllProducts})=>{
+    const [input, setInput] = useState('')
+    const [result, setResult] = useState([])
+    const [toggle, setToggle] = useState(true)
+    const [resultActive, setResultActive] = useState(false)
     // useEffect(()=>{
+    //     console.log('this should only run once')
     //     fetchAllProducts(filter)
-    // }, [])
-    // useEffect(() => {
-    //     console.log(search)
-    //     fetchAllProducts(filter)
-    // }, [search])
+    // },[])
+    const search = {'name': input}
+    const searchFilter = {...filter, ...search}
 
+    useEffect(()=>{
+       fetchAllProducts(searchFilter).then((docs)=>setResult(Object.values(docs.products)))
+    }, [input])
     return (
         <div className='searchbar'>
-                <SearchDrop filter={filter} updateFilter={updateFilter}/>
-            <input className='searchinput' type="text" />
+            <SearchDrop toggle={toggle} setToggle={setToggle} filter={filter} updateFilter={updateFilter} changeFilter={changeFilter}/>
+            <div className="search-center">
+                <input className='searchinput' value={input} type="text" onChange={(e)=>setInput(e.currentTarget.value)} 
+                onClick={()=>setToggle(false)}/>
+                {result.length && input && <ResultDrop result={result}/>}
+            </div>
             <GoSearch className='searchicon' />
+            
         </div>
     )
 }
@@ -35,6 +43,7 @@ const mapState = (state)=>({
 const mapDispatch = (dispatch) => ({
     fetchAllProducts: (filter)=>dispatch(fetchAllProducts(filter)),
     openModal: (modal)=>dispatch(openModal(modal)),
-    updateFilter: (filter)=> dispatch(updateFilter(filter))
+    updateFilter: (filter, value)=> dispatch(updateFilter(filter, value)),
+    changeFilter: (filter, value)=>dispatch(changeFilter(filter, value))
 })
 export default connect(mapState, mapDispatch)(SearchBar);

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { RiArrowDropDownFill } from 'react-icons/ri'
-const SearchDrop = ({ filter, updateFilter})=>{
+const SearchDrop = ({ filter,toggle, changeFilter, setToggle})=>{
     const [active, setActive] = useState(false)
-
+    const [department, setDepartment] = useState('All')
     const options = [
         "All Department", 
         'Baby', 
@@ -16,25 +16,36 @@ const SearchDrop = ({ filter, updateFilter})=>{
         'Gift'
     ]
     
-    
+    // console.log(department)
     return(
         <div className='dropdown'>
-            <div className="dropdown-wrapper" onClick={()=>{setActive(true)}}>
+            <div className="dropdown-wrapper" onClick={()=>{
+                setActive(true)
+                setToggle(true)
+                }}>
                 <div className="all">{
-                    filter.department === '' ? 'All' : filter.department
-                }</div>
-
-                <RiArrowDropDownFill className='dropdownicon' />
+                   department 
+                }
+                </div>
+                <div className="search-arrow-icon">
+                    <RiArrowDropDownFill className='dropdownicon' />
+                </div>
+                
             </div>
 
-                {active && 
+                {active && toggle &&
                     <div className="dropdown-options" >
 
                        { options.map((option, idx)=>{
                             return <div key={idx} className="dropdown-item"
                             onClick={()=>{
                                 setActive(!active)
-                                updateFilter({'department': option.toLowerCase()})
+                                
+                               setDepartment(option)
+                          
+                              option = (option === 'All Department' ? '' : option)
+                             
+                              changeFilter("department",option.toLocaleLowerCase())
                             }}>{option}</div>
                         })}
                     </div>
