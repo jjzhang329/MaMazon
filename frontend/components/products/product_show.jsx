@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { MdOutlineStar  } from 'react-icons/md';
+import { Redirect } from 'react-router';
 
 import ProductShowReview from './product_show_reviews'
 class ProductShow extends React.Component{
@@ -25,17 +26,30 @@ class ProductShow extends React.Component{
     
     handleClick(e){
         e.preventDefault()
-        const product_id = this.props.product.id
-        const alreadyInCart = this.props.cart
-        if(alreadyInCart.includes(product_id)){
-            // debugger
-            this.props.updateCart({ product_id: product_id, quantity: this.state.quantity})
+        
+        if(!this.props.currentUser){
+           console.log(this.props.currentUser)
+           this.props.history.push('/login')
         }else{
-            this.props.addToCart({product_id: product_id, quantity: this.state.quantity})
+            
+            const product_id = this.props.product.id
+            const alreadyInCart = this.props.cart
+            if (alreadyInCart.includes(product_id)) {
+
+                this.props.updateCart({ product_id: product_id, quantity: this.state.quantity })
+                    
+            } else {
+                this.props.addToCart({ product_id: product_id, quantity: this.state.quantity })
+               
+            }
+
+            this.props.openModal('addtocart')
         }
+       
     }
     
     render(){
+        
         const {product} = this.props
         if(!product) return null;
         //delivery eta date format
@@ -52,7 +66,7 @@ class ProductShow extends React.Component{
         let orderWithIn = `${23- today.getHours()} hrs and ${59 - today.getMinutes()} mins.`
     
         return (
-            <div>
+           
                 <div className='product-show-container'>
                     <div className='product-show-main'>
                         <div className='product-show-left'>
@@ -62,7 +76,37 @@ class ProductShow extends React.Component{
                         </div>
                         <div className='product-show-center'>
                             <div className='product-show-name'>{product.name}</div>
-                            <div className='product-show-rating'>starts here</div>
+                        <div className='product-show-rating'>
+                            <div className="rating-stars">
+                                {[...Array(5)].map((start, idx) => {
+                                    const ratingValue = idx + 1
+                                
+                                    let total = 0
+                                    let averageRating = 0
+                                    let count = 0
+                                    if(product.reviews){
+                                        
+                                            product.reviews.forEach(review => {
+                                                total += Math.floor(review.rating)
+                                            })
+                                  
+                                        count = product.reviews.length
+                                    }
+                                    
+                                    
+                                    averageRating = Math.floor(total / count)
+                                   
+                                     
+                                    return (
+                                        <label key={idx}>
+                                            <MdOutlineStar className="stars" size={15}
+                                                color={ratingValue <= averageRating ? "#fea41d" : "rgb(234,237,237)"} />
+                                                
+                                        </label>
+                                    )
+                                })}
+                            </div>
+                        </div>
                             <div className='product-show-price-row'> 
                                 <span>Price</span> 
                                 <span className="product-show-price">${product.price}</span>
@@ -105,9 +149,17 @@ class ProductShow extends React.Component{
                                     </div>
                                 </div>
                                 <div className='addtocart'>
+                                   
                                     <button id="addtocart" onClick={this.handleClick}>Add to Cart</button>
                                    
-                                    <button id="buynow" onClick={()=>this.props.openModal('buynow')}>Buy Now</button>
+                                    <button id="buynow" onClick={()=>{
+                                        if(!this.props.currentUser){
+                                            this.props.history.push('/login')
+                                        }else{
+                                            this.props.openModal('buynow')
+                                        }
+                                        
+                                        }}>Buy Now</button>
                                  
                                 </div>
                                 
@@ -118,7 +170,7 @@ class ProductShow extends React.Component{
                     {/* reviews section */}
                         <ProductShowReview reviews={product.reviews} productId={product.id}/>
                 </div>
-            </div>
+            
         );
     }
   

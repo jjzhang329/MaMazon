@@ -14,7 +14,7 @@ const CheckOutItems = ({ product, updateCart })=>{
                     <div className="wrapper">
                         <div className="item-checkbox">
                             <label>
-                                <input id="checkbox" type='checkbox' />
+                                <input id="checkbox" type='checkbox'  />
                             </label>
                         </div>
                         <div className="checkout-product-image">

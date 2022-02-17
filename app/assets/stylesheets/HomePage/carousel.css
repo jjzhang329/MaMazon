@@ -1,11 +1,19 @@
-.center-icon-div{
-    top: 130px;
+
+.carousel-button{
+    top: 50px;
     position: absolute;
-    width: 100%;
+    width: 80px;
+    height: 250px;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    padding: 1px;
+    justify-content: center;
 }
-.center-icon-div > button{
-    width: 40px;
-    z-index: 100;
+
+.right{
+    left: calc(100% - 80px);
+}
+.carousel-button > img{
+    width: 34px;
+    height: 34px;
 }

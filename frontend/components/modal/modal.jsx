@@ -2,8 +2,10 @@ import React from 'react';
 import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import BuyNowContainer from './buynow'
+import AddedToCart from './addedToCart'
 
-function Modal({ modal, closeModal }) {
+
+function Modal({ modal, closeModal, filter, updateFilter }) {
     if (!modal) {
         return null;
     }
@@ -12,6 +14,10 @@ function Modal({ modal, closeModal }) {
         case 'buynow':
             component = <BuyNowContainer/>;
         break;
+        case 'addtocart':
+            component = <AddedToCart/>
+        break;
+       
         default:
             return null;
     }
@@ -26,13 +32,15 @@ function Modal({ modal, closeModal }) {
 
 const mapStateToProps = state => {
     return {
-        modal: state.ui.modal
+        modal: state.ui.modal,
+        filter: state.ui.filters
     };
 };
 
 const mapDispatchToProps = dispatch => {
     return {
-        closeModal: () => dispatch(closeModal())
+        closeModal: () => dispatch(closeModal()),
+        updateFilter: (filter) => dispatch(updateFilter(filter))
     };
 };
 

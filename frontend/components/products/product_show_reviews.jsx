@@ -3,7 +3,8 @@ import React from 'react';
 import Review from '../reviews/reviews'
 import StarRating from '../reviews/starRating';
 import { Link } from "react-router-dom";
-import { MdBorderAll } from "react-icons/md";
+import { MdOutlineStar } from "react-icons/md";
+
 const ProductShowReview=({reviews, productId})=>{
     let averageRating = 0
     let count = 0
@@ -21,7 +22,7 @@ const ProductShowReview=({reviews, productId})=>{
         let count1 = 0
        count = reviews.length
         reviews.forEach(review=> {
-            total += review.rating
+            total += Math.floor(review.rating)
 
             if (review.rating === 5) {count5 += 1; }        
             else if(review.rating === 4){count4 += 1;}                  
@@ -30,7 +31,8 @@ const ProductShowReview=({reviews, productId})=>{
             else if (review.rating === 1) { count1 += 1; }
              
         })
-        averageRating = Math.floor(total/count)
+ 
+        averageRating = Math.floor(total / count)
         value5 = Math.floor((count5 / count)*100)
         value4 = Math.floor((count4 / count)*100)
         value3 = Math.floor((count3 / count)*100)
@@ -52,7 +54,18 @@ const ProductShowReview=({reviews, productId})=>{
                     </div>
                     <div className='reviews-rating'>
                         <div className="average-rating-container">
-                            <StarRating presetRating={averageRating} size={25} />
+        
+                            <div className="rating-stars">
+                                {[...Array(5)].map((start, idx)=>{
+                                    const ratingValue = idx + 1
+                                    return (
+                                        <label key={idx}>
+                                            <MdOutlineStar className="stars" size={25}
+                                                color={ratingValue <= averageRating ? "#fea41d" : "rgb(234,237,237)"}/>
+                                        </label>
+                                    )
+                                })}
+                            </div>
                             <div className="average-rating">
                                 <span>{averageRating} out of 5</span> 
                             </div>
@@ -111,11 +124,11 @@ const ProductShowReview=({reviews, productId})=>{
                     </div>
                 </div>
             </div>
-            {reviews &&
-                <div className='reviews-right'>
-                    {reviews.map((review, idx) => <Review review={review} key={idx} />)}   
-                
-                </div>}
+            {reviews ? <div className='reviews-right'>
+                    {reviews.reverse().map((review, idx) => <Review review={review} key={idx} />)}
+                </div> :
+                <div className='reviews-right'><h2 style={{fontSize: "20px"}}>No reviews for this prodcut</h2></div>
+            }
 
             <div className='reviews-empty'>
                 "fjgoijeriojgoijsdg jdkljg;ositjhiojsgklfjskl;jgioerjioglkjkljdfkljgijshiotjsljrkldnsgjkdfgoigjskdjg;kljsirjhjyhioejojhlk"

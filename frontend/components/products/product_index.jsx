@@ -13,9 +13,20 @@ class ProductIndex extends React.Component{
 
     }
     componentDidMount(){   
-        let filter = localStorage.getItem("filter")
+        
+        let filter = localStorage.getItem("filter")    
         this.props.fetchAllProducts(JSON.parse(filter))
         window.addEventListener("beforeunload", this.saveStateToLocalStorage.bind(this))
+    }
+
+    componentDidUpdate(prevState){
+        console.log(prevState)
+        let filter = localStorage.getItem("filter") 
+        if (prevState.filter.department !== JSON.parse(filter).department){
+            // this.props.fetchAllProducts(this.props.filter)
+            this.saveStateToLocalStorage()
+            console.log('need to redirect')
+        }
     }
 
     componentWillUnmount() {

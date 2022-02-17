@@ -22,6 +22,17 @@
   background: #fff;
   border-radius: 8px 8px 8px 8px;
 }
+#addedtocart-modal{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 50px;
+  transform: translateY(0px);
+  background: #fff;
+  border-radius: 8px 8px 8px 8px;
+  margin-top: -300px;
+}
 
 .modal-header{
   border-radius: 8px 8px 0 0;
