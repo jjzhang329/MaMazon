@@ -3,7 +3,7 @@ import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import BuyNowContainer from './buynow'
 import AddedToCart from './addedToCart'
-import SearchOptions from './searchOptions';
+
 
 function Modal({ modal, closeModal, filter, updateFilter }) {
     if (!modal) {
@@ -17,9 +17,7 @@ function Modal({ modal, closeModal, filter, updateFilter }) {
         case 'addtocart':
             component = <AddedToCart/>
         break;
-        case 'dropdown':
-            component= <SearchOptions filter={filter} updateFilter={updateFilter}/>
-        break;
+       
         default:
             return null;
     }

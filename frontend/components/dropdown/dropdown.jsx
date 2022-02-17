@@ -6,7 +6,7 @@ const Dropdown= ({select, setSelected, product, updateCart})=>{
     
 
             document.addEventListener("click", (e) => {
-                console.log(e.target.className.baseVal)
+                
                 if (e.target.className !== "dropdown-btn" && e.target.className.baseVal !== "icon") { setIsActive(false) }
 
             })
@@ -33,10 +33,11 @@ const Dropdown= ({select, setSelected, product, updateCart})=>{
                         <div onClick={() => {
                             // setIsActive(false)
                             setSelected(option)
-                            
-                            if(option < product.quantity) option = -(product.quantity - parseInt(option))
+                           debugger
+                            if(parseInt(option) < product.quantity) option = -(product.quantity - parseInt(option))
                             option = (option === "0 (Delete)") ? "0" : option
-                            if(parseInt(option) < 0) option = 0
+                            console.log(option)
+                            
                             updateCart({ product_id: product.id, quantity: option})
                             
 
