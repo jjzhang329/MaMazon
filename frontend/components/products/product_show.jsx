@@ -28,7 +28,7 @@ class ProductShow extends React.Component{
         e.preventDefault()
         
         if(!this.props.currentUser){
-           console.log(this.props.currentUser)
+          
            this.props.history.push('/login')
         }else{
             

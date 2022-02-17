@@ -36,7 +36,7 @@ const Dropdown= ({select, setSelected, product, updateCart})=>{
                            debugger
                             if(parseInt(option) < product.quantity) option = -(product.quantity - parseInt(option))
                             option = (option === "0 (Delete)") ? "0" : option
-                            console.log(option)
+                        
                             
                             updateCart({ product_id: product.id, quantity: option})
                             
