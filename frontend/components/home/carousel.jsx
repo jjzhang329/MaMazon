@@ -22,9 +22,9 @@ const Slider=()=>{
 
     
     let path
-    if (currentIdx === 0){path = 'products/83'}
-    if(currentIdx === 1){path = 'products/48'}
-    if (currentIdx === 2) { path = 'products/48' }
+    if (currentIdx === 0){path = 'products/41'}
+    if(currentIdx === 1){path = 'products/6'}
+    if (currentIdx === 2) { path = 'products/42' }
 
     const handleNextClick = ()=>{ 
         const newIdx = Math.floor((currentIdx+1)%splashImages.length)
