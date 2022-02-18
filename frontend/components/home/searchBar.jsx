@@ -6,29 +6,42 @@ import { GoSearch } from "react-icons/go";
 import { openModal } from "../../actions/modal_actions";
 import SearchDrop from './searchDrop'
 import ResultDrop from "./resultDrop";
+import { NavLink } from "react-router-dom";
 
 const SearchBar = ({changeFilter, products, filter, updateFilter, fetchAllProducts})=>{
     const [input, setInput] = useState('')
     const [result, setResult] = useState([])
     const [toggle, setToggle] = useState(true)
-    const [resultActive, setResultActive] = useState(false)
+    const [resultActive, setResultActive] = useState(true)
     // useEffect(()=>{
     //     console.log('this should only run once')
     //     fetchAllProducts(filter)
     // },[])
     const search = {'name': input}
     const searchFilter = {...filter, ...search}
-
+    
     useEffect(()=>{
+        console.log(searchFilter)
        fetchAllProducts(searchFilter).then((docs)=>setResult(Object.values(docs.products)))
+       
+       
     }, [input])
+    
     return (
         <div className='searchbar'>
             <SearchDrop toggle={toggle} setToggle={setToggle} filter={filter} updateFilter={updateFilter} changeFilter={changeFilter}/>
             <div className="search-center">
                 <input className='searchinput' value={input} type="text" onChange={(e)=>setInput(e.currentTarget.value)} 
-                onClick={()=>setToggle(false)}/>
-                {result.length && input && <ResultDrop result={result}/>}
+                onClick={()=>{
+                    setResultActive(true)
+                    setToggle(false)
+                    }}/>
+                {result.length && input && resultActive && <ResultDrop result={result} setInput={setInput} setResultActive={setResultActive}/>}
+                {input && !result.length && (<div className="result-list-container"><NavLink to='/products' onClick={() => {
+                    setResultActive(false)
+                    setInput("")
+                }}
+                className="search-result-list">No Result Found</NavLink></div>)}
             </div>
             <GoSearch className='searchicon' />
             

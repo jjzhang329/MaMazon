@@ -8,9 +8,9 @@ class Api::ProductsController < ApplicationController
                 products = Product.where(department: params[:filter][:department]).to_a
                 @products = []
                products.map do |product| 
-                    # debugger
+                
                     name = product.name.split(' ')[0].downcase
-                    filter = params[:filter][:name].downcase
+                    filter = params[:filter][:name].split(' ')[0].downcase
                     @products.push(product)if(name.start_with?(filter))
                       
                 end 
@@ -28,7 +28,7 @@ class Api::ProductsController < ApplicationController
            @products= []
            products.map do |product| 
                 name = product.name.split(" ")[0].downcase
-                filter = params[:filter][:name].downcase
+                filter = params[:filter][:name].split(' ')[0].downcase
                 if(name.start_with?(filter))
                     
                     @products.push(product)

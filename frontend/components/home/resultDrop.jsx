@@ -1,9 +1,16 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
-const ResultDrop = ({result})=>{
+const ResultDrop = ({ result, setInput,setResultActive})=>{
 
    const list= result.map((product, idx) =>{
-        return <li key={idx} className='search-result-list'>{product.name.split(" ").slice(0, 5).join(' ')}</li>
+       const name = product.name.split(" ").slice(0, 5).join(' ')
+        return <NavLink to={`/products/${product.id}`}key={idx} 
+        className='search-result-list'
+        onClick={()=>{
+            setResultActive(false)
+            setInput(name)
+        }}>{name}</NavLink>
     })
     return(
         <div className='result-list-container'>

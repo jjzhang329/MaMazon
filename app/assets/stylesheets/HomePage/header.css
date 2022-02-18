@@ -116,12 +116,17 @@
     padding: 10px;
     width: 100%;
     box-sizing: border-box;
-    bottom: -32px;
+    top: 38px;
     list-style: none;
     border-radius: 0 0 4px 4px;
     font-size: 14px;
     height: fit-content;
     line-height: 20px;
+}
+.search-result-list{
+    text-decoration: none;
+    color: black;
+    display: flex;
 }
 .search-result-list:hover{
     cursor: pointer;
