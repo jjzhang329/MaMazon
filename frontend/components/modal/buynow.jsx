@@ -49,7 +49,7 @@ const BuyNow = ({product, currentUser, closeModal})=>{
             <div className="modal-footer">
                 <Link to='/payment'>
                 <div className="place-order-button">
-                    <button id="modal-checkout-button">Place your order</button>
+                    <button id="modal-checkout-button" onClick={() => closeModal()}>Place your order</button>
                 </div>
                 </Link>
             </div>
