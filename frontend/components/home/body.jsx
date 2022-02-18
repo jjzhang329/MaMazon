@@ -41,7 +41,7 @@ const Body = () => {
                   </Link>
                 </div>
                 </div>
-                <div className='card-message'>See More</div>
+                {/* <div className='card-message'>See More</div> */}
               </div>
             </div>
             <div className='card'>
@@ -55,7 +55,7 @@ const Body = () => {
 
                  
                 
-                <div className='card-message'>See More</div>
+                {/* <div className='card-message'>See More</div> */}
               </div>
             </div>
             <div className='card'>
@@ -68,7 +68,7 @@ const Body = () => {
                   
                 </div>
                 </Link>
-                <div className='card-message'>See More</div>
+                {/* <div className='card-message'>See More</div> */}
               </div>
             </div>
             <div className='card'>
@@ -81,7 +81,7 @@ const Body = () => {
                 
                 </div>
               </Link>
-                <div className='card-message'>See More</div>
+                {/* <div className='card-message'>See More</div> */}
               </div>
             </div>
             
@@ -97,7 +97,7 @@ const Body = () => {
                     
                   </div>
                 </Link>
-                <div className='card-message'>See More</div>
+                {/* <div className='card-message'>See More</div> */}
               </div>
             </div>
             
@@ -110,7 +110,7 @@ const Body = () => {
                 
                 </div>
               </Link>
-                <div className='card-message'>See More</div>
+                {/* <div className='card-message'>See More</div> */}
               </div>
             </div>
             <div className='card'>
@@ -122,7 +122,7 @@ const Body = () => {
                   
                 </div>
               </Link>
-                <div className='card-message'>See More</div>
+                {/* <div className='card-message'>See More</div> */}
               </div>
             </div>
             
