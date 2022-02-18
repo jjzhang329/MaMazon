@@ -10,7 +10,10 @@ export default class SessionForm extends React.Component {
       this.handleSubmit = this.handleSubmit.bind(this)
   }
   handleInput(key){
-      return(e)=>this.setState({[key]: e.currentTarget.value})
+      return(e)=>{
+        e.preventDefault()
+        this.setState({[key]: e.currentTarget.value})
+      }
       
   }
  
@@ -40,7 +43,8 @@ export default class SessionForm extends React.Component {
    
   }
 
-  handleSubmit(){
+  handleSubmit(e){
+    e.preventDefault()
     this.props.action(this.state).fail(() => { 
         
     this.setState({errors: this.props.errors})}) 

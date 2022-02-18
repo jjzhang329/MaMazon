@@ -26,7 +26,8 @@ const Slider=()=>{
     if(currentIdx === 1){path = 'products/6'}
     if (currentIdx === 2) { path = 'products/42' }
 
-    const handleNextClick = ()=>{ 
+    const handleNextClick = (e)=>{ 
+        e.preventDefault()
         const newIdx = Math.floor((currentIdx+1)%splashImages.length)
         setCurrentIdx(newIdx)
     }

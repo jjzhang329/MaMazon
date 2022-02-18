@@ -11,7 +11,8 @@ class NavBar extends React.Component{
   
   handleClick(value){
 
-     return()=>{
+     return(e)=>{
+       
       this.props.updateFilter('department', value)
        
     }

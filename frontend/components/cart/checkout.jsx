@@ -21,8 +21,8 @@ class CheckOut extends React.Component{
         }
     }
 
-    handleCheckout(){
-        
+    handleCheckout(e){
+        e.preventDefault()
         this.props.products.map(product=>{
            const clear = { product_id: product.id, quantity: 0 }         
             this.props.updateCart(clear)
