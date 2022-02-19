@@ -2,7 +2,7 @@
 [Mamazon](https://mamazon-fullstack.herokuapp.com/#/) is an amazon clone, where moms can shop and review products. 
 
 Splash gif here
-![Splash](https://mamazon-seeds.s3.us-west-1.amazonaws.com/ezgif.com-gif-maker+(3).gif)
+![Splash](https://mamazon-seeds.s3.us-west-1.amazonaws.com/ezgif.com-gif-maker+(4).gif)
 
 ## Technologies Used
 * Ruby on Rails 
