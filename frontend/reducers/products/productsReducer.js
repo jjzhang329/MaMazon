@@ -15,8 +15,8 @@ const productsReducer = (state={}, action)=>{
             
             // return Object.assign(nextState, {[action.product.id]: action.product})
             return Object.assign({}, { [action.product.id]: action.product })
-        case RECEIVE_ITEMS:
-            return action.items;
+        // case RECEIVE_ITEMS:
+        //     return action.items;
 
 
         default:

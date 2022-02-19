@@ -6,7 +6,6 @@ if user.items.length != 0
 
     count = 0
     user.carts.each do |cart| 
-       
         count += cart.quantity
     end
     json.cartCount count
