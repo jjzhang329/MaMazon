@@ -101,7 +101,7 @@
 .searchinput{
     display: flex;
     box-sizing: border-box;
-    margin-bottom: 4px;
+    margin-bottom: 3px;
     left:0;
     height: 38px;
     width: 100%;

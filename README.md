@@ -1,24 +1,14 @@
-# README
+# Welcome to Mamazon!
+[Mamazon](https://mamazon-fullstack.herokuapp.com/#/) is an amazon clone, where moms can shop and review products. 
+![Splash](https://mamazon-seeds.s3.us-west-1.amazonaws.com/ezgif.com-gif-maker.gif)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Technologies
+* Ruby on Rails 
+* React / Redux 
+* JavaScript / AJAX / JBuilder 
+* PostgreSQL 
+* HTML5 and CSS
+* AWS S3 and AWS IAM 
+* Heroku 
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Features
