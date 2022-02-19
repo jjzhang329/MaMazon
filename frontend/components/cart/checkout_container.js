@@ -4,8 +4,9 @@ import {fetchCartItems, updateCart} from '../../actions/cart_actions'
 
 const mapState = (state)=>{
    const currentUserId = state.session.id
+    const items = state.entities.users.cartItems ? Object.values(state.entities.users.cartItems) : []
     return{
-        cartItems: Object.values(state.entities.users.cartItems),
+        cartItems: items,
         products: Object.values(state.entities.products),
         cartCount: state.entities.users[currentUserId].cartCount
     }

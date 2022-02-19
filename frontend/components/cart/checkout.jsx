@@ -29,16 +29,25 @@ class CheckOut extends React.Component{
         })
     }
     render(){
-        const {products, cartCount, updateCart} = this.props
+        const {products, cartCount, updateCart, cartItems} = this.props
         let totalPrice = 0;
-        if (!products.length) return (<div>your cart is empty, keep shopping</div>)
-        const items = products.map((product,idx)=>{
+        if (cartItems.length === 0) return (<div>your cart is empty, keep shopping</div>)
+        // const items = products.map((product,idx)=>{
             
-            let rounded = (product.price * product.quantity).toFixed(2)
-            totalPrice += parseInt(rounded)
+        //     let rounded = (product.price * product.quantity).toFixed(2)
+        //     totalPrice += parseInt(rounded)
             
-            return (product.quantity && <CheckOutItems product={product} key={idx} updateCart={updateCart}/>)
-        })
+        //     return (product.quantity && <CheckOutItems product={product} key={idx} updateCart={updateCart}/>)
+        // })
+       
+           
+          const items = cartItems.map((product, idx)=>{
+                let rounded = (product.price * product.quantity).toFixed(2)
+                totalPrice += parseInt(rounded)
+                return ( product && <CheckOutItems product={product} key={idx} updateCart={updateCart} />)
+            })
+         
+
         return(
 
             <div className="checkout-body">
