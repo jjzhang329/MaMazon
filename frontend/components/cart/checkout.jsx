@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 import CheckOutItems from './checkout_items'
 
@@ -31,7 +31,11 @@ class CheckOut extends React.Component{
     render(){
         const {products, cartCount, updateCart, cartItems} = this.props
         let totalPrice = 0;
-        if (cartItems.length === 0) return (<div>your cart is empty, keep shopping</div>)
+        if (cartItems.length === 0) return (
+        <div className="empty-cart-message">
+            <span>Your cart is empty, keep shopping!</span>
+            <NavLink className='continue-shopping' to='/products'>Continue Shopping</NavLink>
+        </div>)
         // const items = products.map((product,idx)=>{
             
         //     let rounded = (product.price * product.quantity).toFixed(2)

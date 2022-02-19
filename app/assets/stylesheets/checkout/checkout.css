@@ -1,3 +1,29 @@
+.empty-cart-message{
+    margin: 20% auto;
+    position: relative;
+    height: 100px;
+    width: 400px;
+    background: #fff;
+    border: 1px solid gray;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.empty-cart-message > span{
+   font-size: 18px;
+   font-weight: 600;
+}
+
+.continue-shopping{
+ color: green;
+}
+.continue-shopping:hover{
+    cursor: pointer;
+    color: green;
+}
+
 .checkout-body{
    padding: 14px 18px 18px 18px; 
     line-height: 20px;

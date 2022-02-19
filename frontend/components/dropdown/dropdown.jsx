@@ -33,10 +33,13 @@ const Dropdown= ({select, setSelected, product, updateCart})=>{
                         <div onClick={() => {
                             // setIsActive(false)
                             setSelected(option)
-                           debugger
-                            if(parseInt(option) < product.quantity) option = -(product.quantity - parseInt(option))
+                           
+                            if(parseInt(option) < product.quantity) {
+                                option = -(product.quantity - parseInt(option))
+                            }else{
+                                option = parseInt(option) - product.quantity 
+                            }
                             option = (option === "0 (Delete)") ? "0" : option
-                        
                             
                             updateCart({ product_id: product.id, quantity: option})
                             
