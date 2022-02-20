@@ -1,41 +1,32 @@
-import React from 'react';
-import NavBarContainer from '../home/nav_bar_container'
-import HeaderContainer from '../home/header_container'
+import React, { useEffect, useRef, useState } from 'react';
 import ProductIndexItem from './product_index_item'
 class ProductIndex extends React.Component{
 
     constructor(props){
         super(props)
+        this.saveStateToLocalStorage = this.saveStateToLocalStorage.bind(this)
     }
     saveStateToLocalStorage() {
-        
         localStorage.setItem("filter", JSON.stringify(this.props.filter))
-
     }
     componentDidMount(){   
-        
-        let filter = localStorage.getItem("filter")    
-        this.props.fetchAllProducts(JSON.parse(filter))
-        window.addEventListener("beforeunload", this.saveStateToLocalStorage.bind(this))
-    }
+        console.log('1')
+        let filter = localStorage.getItem("filter")
+        debugger    
+        this.props.updateFilter("department", JSON.parse(filter).department)
+        // window.addEventListener("beforeunload", ()=>{
+        //     // this.props.updatefilter("department", JSON.parse(filter).department)
+        //     this.saveStateToLocalStorage()
+        // })
 
-    componentDidUpdate(prevState){
-        // console.log(prevState)
-        let filter = localStorage.getItem("filter") 
-        if (prevState.filter.department !== JSON.parse(filter).department){
-            // this.props.fetchAllProducts(this.props.filter)
-            this.saveStateToLocalStorage()
-            this.componentDidMount()
-            // console.log('need to redirect')
-        }
     }
 
     componentWillUnmount() {
-        window.removeEventListener("beforeunload",
-            this.saveStateToLocalStorage.bind(this)
-        )
-        this.saveStateToLocalStorage()
-    }
+     
+        // window.removeEventListener("beforeunload", this.saveStateToLocalStorage.bind(this))
+        this.props.updateFilter('department', "")
+       
+    }   
     render(){
         if(!this.props.products) return null;
         return(
@@ -50,4 +41,12 @@ class ProductIndex extends React.Component{
         )
     }
 }
+
+
+
+
+
 export default ProductIndex;
+
+
+

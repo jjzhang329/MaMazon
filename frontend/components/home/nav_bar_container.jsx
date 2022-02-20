@@ -13,7 +13,8 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = dispatch => ({
     updateFilter: (filter,value) => dispatch(updateFilter(filter,value)),
-    // fetchAllProducts: (filter)=>dispatch(fetchAllProducts(filter))
+    fetchAllProducts: (filter)=>dispatch(fetchAllProducts(filter)),
+    changeFilter: (filter, value)=>dispatch(changeFilter(filter, value))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(NavBar);

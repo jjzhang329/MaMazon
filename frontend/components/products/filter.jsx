@@ -1,9 +1,9 @@
 import React from 'react';
 import ProductIndex from './product_index';
 
-const Filter = ({products, fetchAllProducts, filter, updateFilter}) => (
+const Filter = ({products, fetchAllProducts, changeFilter, filter, updateFilter}) => (
    <div>
-       <ProductIndex products={products} updateFilter={updateFilter} fetchAllProducts={fetchAllProducts} filter={filter}/>
+       <ProductIndex changeFilter= {changeFilter} products={products} updateFilter={updateFilter} fetchAllProducts={fetchAllProducts} filter={filter}/>
    </div>
 )
 

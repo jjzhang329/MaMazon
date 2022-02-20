@@ -12,7 +12,7 @@ const Header = (props) => {
         <img className="logo" src={window.homelogoURL}/>
       </Link>
   
-        <SearchBar/>
+        {/* <SearchBar/> */}
         
         
         <div className='header-nav'>
