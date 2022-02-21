@@ -39,7 +39,7 @@ useEffect(()=>{
    fetchAllProducts(searchFilter).then((docs)=>setResult(Object.values(docs.products)))          
 }, [input, department])
     
-```
+```js
 * Update Cart and Checkout 
 
 * Review products
