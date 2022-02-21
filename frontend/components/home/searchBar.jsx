@@ -13,31 +13,34 @@ const SearchBar = ({changeFilter, products, filter, updateFilter, fetchAllProduc
     const [result, setResult] = useState([])
     const [toggle, setToggle] = useState(true)
     const [resultActive, setResultActive] = useState(true)
+    const savedfilter = JSON.parse(localStorage.getItem('filter'))
+    const [department, setDepartment] = useState(savedfilter.department)
+  
     useEffect(()=>{
-        console.log('this should only run once')
-        const filter = JSON.parse(localStorage.getItem('filter'))
-        updateFilter("department",filter.department)
-    },[])
-    console.log(input)
-    useEffect(()=>{
+        console.log('first')
+        setDepartment(savedfilter.department)
+    }, [savedfilter.department])
+    useEffect(()=>{     
         
         const search = { 'name': input }
-        const searchFilter = { ...filter, ...search }
-        console.log(filter)
-    //    fetchAllProducts(searchFilter).then((docs)=>setResult(Object.values(docs.products)))       
+        
+        const key = {'department': department.toLowerCase()}
+        console.log(key)
+        const searchFilter = { ...key, ...search }
        
-    }, [input])
-    console.log(products)
+       fetchAllProducts(searchFilter).then((docs)=>setResult(Object.values(docs.products)))       
+       
+    }, [input, department])
     return (
         <div className='searchbar'>
-            <SearchDrop toggle={toggle} setToggle={setToggle} filter={filter} updateFilter={updateFilter} changeFilter={changeFilter}/>
+            <SearchDrop toggle={toggle} setToggle={setToggle} setDepartment={setDepartment} filter={filter} updateFilter={updateFilter} changeFilter={changeFilter}/>
             <div className="search-center">
                 <input className='searchinput' value={input} type="text" onChange={(e)=>setInput(e.currentTarget.value)} 
                 onClick={()=>{
                     setResultActive(true)
                     setToggle(false)
                     }}/>
-                {result.length && input && resultActive && <ResultDrop result={result} setInput={setInput} setResultActive={setResultActive}/>}
+                {result.length && input && resultActive && <ResultDrop result={result} setInput={setInput} setResult={setResult} setResultActive={setResultActive}/>}
                 {input && !result.length && (<div className="result-list-container">
                     <NavLink to='/products' onClick={() => {
                     setResultActive(false)

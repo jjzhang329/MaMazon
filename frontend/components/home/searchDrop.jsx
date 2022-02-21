@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { RiArrowDropDownFill } from 'react-icons/ri'
-const SearchDrop = ({ filter,toggle, changeFilter, setToggle})=>{
+const SearchDrop = ({ setDepartment, filter,toggle, changeFilter, setToggle})=>{
     const [active, setActive] = useState(false)
-    const [department, setDepartment] = useState('All')
+    
     const options = [
         "All Department", 
         'Baby', 
@@ -16,7 +16,10 @@ const SearchDrop = ({ filter,toggle, changeFilter, setToggle})=>{
         'Gift'
     ]
     
-    // console.log(department)
+
+    const capitalize=(word)=>{
+        return word.slice(0, 1).toUpperCase() + word.slice(1)
+    }
     return(
         <div className='dropdown'>
             <div className="dropdown-wrapper" onClick={()=>{
@@ -24,7 +27,7 @@ const SearchDrop = ({ filter,toggle, changeFilter, setToggle})=>{
                 setToggle(true)
                 }}>
                 <div className="all">{
-                   department 
+                   filter.department === '' ? 'All' : capitalize(filter.department)
                 }
                 </div>
                 <div className="search-arrow-icon">
@@ -40,11 +43,9 @@ const SearchDrop = ({ filter,toggle, changeFilter, setToggle})=>{
                             return <div key={idx} className="dropdown-item"
                             onClick={()=>{
                                 setActive(!active)
-                                
+                                option = (option === 'All Department' ? '' : option)
                                setDepartment(option)
                           
-                              option = (option === 'All Department' ? '' : option)
-                             
                               changeFilter("department",option.toLocaleLowerCase())
                             }}>{option}</div>
                         })}

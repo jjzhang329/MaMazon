@@ -10,9 +10,7 @@ class ProductIndex extends React.Component{
         localStorage.setItem("filter", JSON.stringify(this.props.filter))
     }
     componentDidMount(){   
-        console.log('1')
         let filter = localStorage.getItem("filter")
-        debugger    
         this.props.updateFilter("department", JSON.parse(filter).department)
         // window.addEventListener("beforeunload", ()=>{
         //     // this.props.updatefilter("department", JSON.parse(filter).department)
