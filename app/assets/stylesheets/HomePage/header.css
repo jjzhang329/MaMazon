@@ -135,8 +135,8 @@
 
 .searchicon{
     box-sizing: border-box;  
-    margin-top: 1px;
-    margin-bottom: 4px;
+    /* margin-top: 1px;
+    margin-bottom: 4px; */
     margin-right: 5px;
     height: 38px;
     color: rgb(49, 49, 49);

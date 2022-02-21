@@ -9,7 +9,7 @@ const ResultDrop = ({ result, setInput,setResultActive})=>{
         className='search-result-list'
         onClick={()=>{
             setResultActive(false)
-            setInput(name)
+            setInput("")
         }}>{name}</NavLink>
     })
     return(

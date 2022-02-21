@@ -17,15 +17,15 @@ const SearchBar = ({changeFilter, products, filter, updateFilter, fetchAllProduc
     const [department, setDepartment] = useState(savedfilter.department)
   
     useEffect(()=>{
-        console.log('first')
         setDepartment(savedfilter.department)
     }, [savedfilter.department])
+
     useEffect(()=>{     
         
         const search = { 'name': input }
         
         const key = {'department': department.toLowerCase()}
-        console.log(input)
+        console.log(department)
         const searchFilter = { ...key, ...search }
        
        fetchAllProducts(searchFilter).then((docs)=>setResult(Object.values(docs.products)))       
@@ -50,8 +50,11 @@ const SearchBar = ({changeFilter, products, filter, updateFilter, fetchAllProduc
                     className="search-result-list">No Result Found</NavLink>
                 </div>)}
             </div>
-            <GoSearch className='searchicon' />
-            
+            <NavLink to='/products' onClick={() => 
+                updateFilter('department', department.toLowerCase())                
+                } replace>
+                <GoSearch className='searchicon' />
+            </NavLink>
         </div>
     )
 }

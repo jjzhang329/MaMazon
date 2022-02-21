@@ -9,6 +9,9 @@
     padding: 1px;
     justify-content: center;
 }
+.carousel-button:hover{
+    cursor: pointer;
+}
 
 .right{
     left: calc(100% - 80px);
