@@ -52,7 +52,6 @@ class ReviewForm extends React.Component {
         const id = this.state.review.product_id
         const product = this.state.product[id]
 
-        // console.log(this.props)
        if(!product)return null
         return (
             <div className='review-form-container'>

@@ -16,7 +16,6 @@ class ProductShow extends React.Component{
     }
 
     handleSelect(){    
-        // debugger
         return(e)=> {
             e.preventDefault()
             this.setState({quantity: e.currentTarget.value})

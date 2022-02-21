@@ -14,10 +14,9 @@ class CheckOut extends React.Component{
         this.props.fetchCartItems()
     }
     componentDidUpdate(prevState, state){
-        // console.log(prevState, this.props.cartCount)
+        
         if(this.props.cartCount !== prevState.cartCount){
             this.props.fetchCartItems()
-            // console.log(hi)
         }
     }
 
