@@ -21,7 +21,7 @@ Products are filtered by departments and can be searched by name.
 Nav-bar shows different departments, and will redirect the user to the products page accordingly.
 Search-bar will read the department selected from the dropdown and then search products by name depend on user's input. 
 When searching on the products index page, products will be rendered dynamically based on the search result.  
-```
+```js
 const [input, setInput] = useState('')
 const [result, setResult] = useState([])
 const [resultActive, setResultActive] = useState(true)
