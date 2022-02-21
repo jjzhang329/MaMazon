@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { MdOutlineStar } from "react-icons/md";
 
 const ProductShowReview=({reviews, productId})=>{
+    
     let averageRating = 0
     let count = 0
     let value5 = 0

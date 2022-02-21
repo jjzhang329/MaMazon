@@ -117,4 +117,5 @@
    end 
    ```
 * ### Review products
-   
+   User can review products, the average rating and stars bar will be udpated accordingly
+   ![Reviews](https://mamazon-seeds.s3.us-west-1.amazonaws.com/ezgif.com-gif-maker+(9).gif)

@@ -35,14 +35,7 @@ class CheckOut extends React.Component{
             <span>Your cart is empty, keep shopping!</span>
             <NavLink className='continue-shopping' to='/products'>Continue Shopping</NavLink>
         </div>)
-        // const items = products.map((product,idx)=>{
-            
-        //     let rounded = (product.price * product.quantity).toFixed(2)
-        //     totalPrice += parseInt(rounded)
-            
-        //     return (product.quantity && <CheckOutItems product={product} key={idx} updateCart={updateCart}/>)
-        // })
-       
+
            
           const items = cartItems.map((product, idx)=>{
                 let rounded = (product.price * product.quantity).toFixed(2)

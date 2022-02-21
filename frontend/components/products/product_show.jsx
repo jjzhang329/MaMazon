@@ -15,6 +15,7 @@ class ProductShow extends React.Component{
         this.props.fetchProduct(this.props.match.params.id)
     }
 
+
     handleSelect(){    
         return(e)=> {
             e.preventDefault()
