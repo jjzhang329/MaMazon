@@ -21,8 +21,8 @@ class CheckOut extends React.Component{
     }
 
     handleCheckout(e){
-        e.preventDefault()
-        this.props.products.map(product=>{
+        // e.preventDefault()
+        this.props.cartItems.map(product=>{
            const clear = { product_id: product.id, quantity: 0 }         
             this.props.updateCart(clear)
         })
@@ -67,9 +67,9 @@ class CheckOut extends React.Component{
                                 <span className="title">Subtotal {`(${cartCount} Items)`}:</span>
                                 <span className="totalprice"> ${totalPrice.toLocaleString('en-US', { maximumFractionDigits: 2 })}</span>
                             </div>
-                            <Link to='/payment'>
-                                <button onClick={this.handleCheckout} className="checkout-button">Proceed to checkout</button>
-                            </Link>
+                            <NavLink to='/payment' onClick={this.handleCheckout}>
+                                <button  className="checkout-button">Proceed to checkout</button>
+                            </NavLink>
                         </div>
                     </div>
                 </div>

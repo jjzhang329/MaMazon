@@ -9,28 +9,25 @@ import ResultDrop from "./resultDrop";
 import { NavLink } from "react-router-dom";
 
 const SearchBar = ({changeFilter, products, filter, updateFilter, fetchAllProducts})=>{
+    const [toggle, setToggle] = useState(true)
+    
     const [input, setInput] = useState('')
     const [result, setResult] = useState([])
-    const [toggle, setToggle] = useState(true)
     const [resultActive, setResultActive] = useState(true)
     const savedfilter = JSON.parse(localStorage.getItem('filter'))
     const [department, setDepartment] = useState(savedfilter.department)
-  
+
     useEffect(()=>{
         setDepartment(savedfilter.department)
     }, [savedfilter.department])
 
-    useEffect(()=>{     
-        
-        const search = { 'name': input }
-        
+    useEffect(()=>{         
+        const search = { 'name': input }    
         const key = {'department': department.toLowerCase()}
-        console.log(department)
-        const searchFilter = { ...key, ...search }
-       
-       fetchAllProducts(searchFilter).then((docs)=>setResult(Object.values(docs.products)))       
-       
+        const searchFilter = { ...key, ...search }  
+       fetchAllProducts(searchFilter).then((docs)=>setResult(Object.values(docs.products)))          
     }, [input, department])
+
     return (
         <div className='searchbar'>
             <SearchDrop toggle={toggle} setToggle={setToggle} setDepartment={setDepartment} filter={filter} updateFilter={updateFilter} changeFilter={changeFilter}/>
@@ -50,9 +47,13 @@ const SearchBar = ({changeFilter, products, filter, updateFilter, fetchAllProduc
                     className="search-result-list">No Result Found</NavLink>
                 </div>)}
             </div>
-            <NavLink to='/products' onClick={() => 
-                updateFilter('department', department.toLowerCase())                
-                } replace>
+            <NavLink to='/products' onClick={() => {
+                updateFilter('department', department.toLowerCase())
+                // setStatus(true)
+                setToggle(false)
+                setResultActive(false)
+                }                    
+            } replace>
                 <GoSearch className='searchicon' />
             </NavLink>
         </div>

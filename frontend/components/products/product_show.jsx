@@ -26,26 +26,18 @@ class ProductShow extends React.Component{
     
     handleClick(e){
         e.preventDefault()
-        
-        if(!this.props.currentUser){
-          
+        if(!this.props.currentUser){    
            this.props.history.push('/login')
-        }else{
-            
+        }else{    
             const product_id = this.props.product.id
             const alreadyInCart = this.props.cart
             if (alreadyInCart.includes(product_id)) {
-
-                this.props.updateCart({ product_id: product_id, quantity: this.state.quantity })
-                    
+                this.props.updateCart({product_id: product_id, quantity: this.state.quantity})        
             } else {
-                this.props.addToCart({ product_id: product_id, quantity: this.state.quantity })
-               
+                this.props.addToCart({product_id: product_id, quantity: this.state.quantity})   
             }
-
             this.props.openModal('addtocart')
-        }
-       
+        }  
     }
     
     render(){
@@ -156,7 +148,9 @@ class ProductShow extends React.Component{
                                         if(!this.props.currentUser){
                                             this.props.history.push('/login')
                                         }else{
+                                            this.props.fetchProduct(this.props.match.params.id)
                                             this.props.openModal('buynow')
+                                            
                                         }
                                         
                                         }}>Buy Now</button>

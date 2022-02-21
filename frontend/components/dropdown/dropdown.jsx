@@ -36,12 +36,16 @@ const Dropdown= ({select, setSelected, product, updateCart})=>{
                            
                             if(parseInt(option) < product.quantity) {
                                 option = -(product.quantity - parseInt(option))
+                            }else if (parseInt(option) === product.quantity ){
+                                return option
                             }else{
                                 option = parseInt(option) - product.quantity 
                             }
                             option = (option === "0 (Delete)") ? "0" : option
                             
-                            updateCart({ product_id: product.id, quantity: option})
+                            updateCart({ product_id: product.id, quantity: option}).then(()=>{
+                                setSelected("")
+                            })
                             
 
                             }} 
