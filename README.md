@@ -28,16 +28,16 @@ const [resultActive, setResultActive] = useState(true)
 const savedfilter = JSON.parse(localStorage.getItem('filter'))
 const [department, setDepartment] = useState(savedfilter.department)
 
-    useEffect(()=>{
-        setDepartment(savedfilter.department)
-    }, [savedfilter.department])
+useEffect(()=>{
+   setDepartment(savedfilter.department)
+}, [savedfilter.department])
 
-    useEffect(()=>{         
-        const search = { 'name': input }    
-        const key = {'department': department.toLowerCase()}
-        const searchFilter = { ...key, ...search }  
-       fetchAllProducts(searchFilter).then((docs)=>setResult(Object.values(docs.products)))          
-    }, [input, department])
+useEffect(()=>{         
+   const search = { 'name': input }    
+   const key = {'department': department.toLowerCase()}
+   const searchFilter = { ...key, ...search }  
+   fetchAllProducts(searchFilter).then((docs)=>setResult(Object.values(docs.products)))          
+}, [input, department])
     
 ```
 * Update Cart and Checkout 
