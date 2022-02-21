@@ -25,7 +25,7 @@ const SearchBar = ({changeFilter, products, filter, updateFilter, fetchAllProduc
         const search = { 'name': input }
         
         const key = {'department': department.toLowerCase()}
-        console.log(key)
+        console.log(input)
         const searchFilter = { ...key, ...search }
        
        fetchAllProducts(searchFilter).then((docs)=>setResult(Object.values(docs.products)))       
@@ -43,8 +43,9 @@ const SearchBar = ({changeFilter, products, filter, updateFilter, fetchAllProduc
                 {result.length && input && resultActive && <ResultDrop result={result} setInput={setInput} setResult={setResult} setResultActive={setResultActive}/>}
                 {input && !result.length && (<div className="result-list-container">
                     <NavLink to='/products' onClick={() => {
-                    setResultActive(false)
-                    setInput("")
+                        setInput("")
+                        setResultActive(false)
+                        
                     }}
                     className="search-result-list">No Result Found</NavLink>
                 </div>)}
