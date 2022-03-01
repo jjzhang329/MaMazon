@@ -18,8 +18,8 @@ const Payment=()=>{
                         <span className='right-icon'>
                             <ImPointRight size={18}/>
                         </span> 
-                        <a href=''>Linkedin</a> 
-                        <a href=''>Github</a>
+                            <a href="https://www.linkedin.com/in/jing-jing-zhang-888a05a5/" target="_blank">Linkedin</a> 
+                            <a href="https://github.com/jjzhang329?tab=repositories" target="_blank">Github</a>
                     </span>
                 </div>
             </div>
