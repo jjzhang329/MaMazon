@@ -14,7 +14,8 @@ const mapState = (state, ownProps) => ({
                 },
             product: state.entities.products,
             formType: "Create Review",
-            username: state.entities.users[state.session.id].name
+            username: state.entities.users[state.session.id].name,
+            errors: state.errors.review
         
 })
 

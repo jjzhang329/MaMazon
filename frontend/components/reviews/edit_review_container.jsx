@@ -7,7 +7,7 @@ import { editReview } from "../../actions/review_actions";
 import ReviewForm from './review_form'
 
 const EditReviewForm = (props)=>{
-    const { action, formType, username, product, review, fetchProduct} = props
+    const { action, formType, username, product, review, fetchProduct, errors} = props
    
     const[editReview, setEditReview] = useState(review)
     useEffect(()=>{
@@ -35,6 +35,7 @@ const EditReviewForm = (props)=>{
                 formType={formType}
                 username={username}
                 fetchProduct={fetchProduct}
+                errors={errors}
             />
        </div>
     )
@@ -54,7 +55,8 @@ const mapState = (state, ownProps) => {
         },
         product: state.entities.products,
         formType: "Update Review",
-        username: state.entities.users[state.session.id].name
+        username: state.entities.users[state.session.id].name,
+        errors: state.errors.review
     }      
         
 }

@@ -206,3 +206,9 @@
 .reviews-edit > button:hover{
     background-color: #e9ecec;
 }
+
+.review-error{
+    color: red;
+    margin-top: 5px;
+        font-size: 13px;
+}

@@ -5,7 +5,8 @@ import { withRouter } from 'react-router-dom'
 class ReviewForm extends React.Component {
     constructor(props) {
         super(props)
-        this.state = {review: this.props.review, product: this.props.product, username: this.props.username}
+        this.state = {review: this.props.review, product: this.props.product, 
+            username: this.props.username, errors: this.props.errors}
         this.handleRating = this.handleRating.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
     }
@@ -24,9 +25,11 @@ class ReviewForm extends React.Component {
     handleSubmit(e){
         
         e.preventDefault()
-        this.props.action(this.state.review)
-        this.props.history.replace(`/products/${this.props.review.product_id}`)
-        this.props.fetchProduct(this.state.review.product_id)
+        this.props.action(this.state.review).then(()=>{
+            this.props.history.replace(`/products/${this.props.review.product_id}`)
+            this.props.fetchProduct(this.state.review.product_id)
+        }, ()=>{this.setState({errors: this.props.errors})})
+        
     }
     handleUpdate(key) {
         
@@ -34,25 +37,33 @@ class ReviewForm extends React.Component {
             e.preventDefault()
             let review = { ...this.state.review }
             review[key] = e.target.value
-                this.setState({review})
+            this.setState({review})
+            this.setState({errors: []})
         }
     }
 
     handleRating(value){
         let review = { ...this.state.review}
-        
-        review.rating += value
+        review.rating = value
         // review.rating = Math.floor(review.rating  4) 
         this.setState({ review })
     }
-
+    checkError(key){
+        let message = ''
+        if(this.state.errors){
+            this.state.errors.forEach(error=>{
+                if(error.split(" ")[0] === key)message = error
+            })
+        }
+        return message
+    }
 
     render() {
         const{formType} = this.props
         const id = this.state.review.product_id
         const product = this.state.product[id]
-        console.log(this.props)
-       if(!product)return null
+       if(!product || this.state.errors === 'undefined')return null
+       console.log(this.state.errors)
         return (
             <div className='review-form-container'>
                 <div className='review-form-banner'>
@@ -82,6 +93,7 @@ class ReviewForm extends React.Component {
                         <div className='overall-rating'>
                             <h3>Overall Rating</h3>
                             <StarRating updateStars={this.handleRating} presetRating={this.props.review.rating}/>
+                            <div className='review-error'>{this.checkError('Rating')}</div>
                         </div>
                       
                         <div className='form-row-subtitle'>
@@ -90,6 +102,7 @@ class ReviewForm extends React.Component {
                                 <input value={this.state.review.headline} onChange={this.handleUpdate("headline")}type="text"
                                     placeholder={this.props.review.headline === "" ? "What's most important to know?" : this.props.review.headline}/>
                             </div>
+                            <div className='review-error'>{this.checkError('Headline')}</div>
                         </div>
                         {/* <div className='form-row-subtitle'>
                             <label><h3>Add a photo or video</h3></label>
@@ -101,13 +114,14 @@ class ReviewForm extends React.Component {
                             </div>
                         </div> */}
                         <div className="form-row-subtitle">
-                            <label><h3>Add a written review</h3></label>
+                                 <label><h3>Add a written review</h3></label>
                             
                                 <textarea className='written-box' value={this.state.review.body}
                                     onChange={this.handleUpdate('body')}
                                     placeholder={this.props.review.body === "" ? 
                                     'What did you like or dislike? What did you use this product for?' : this.props.review.body}>
                                 </textarea>
+                            <div className='review-error'>{this.checkError('Body')}</div>
                             
                         </div>
                         <div className='submit-form-button'>
