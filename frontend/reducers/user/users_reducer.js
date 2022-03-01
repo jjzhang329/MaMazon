@@ -14,14 +14,11 @@ const usersReducer = (state = {}, action) => {
             nextState[action.newItem.user_id].cart.push(action.newItem.product_id)
             nextState[action.newItem.user_id].cartCount += action.newItem.quantity
             return nextState;
-
-        case UPDATE_CART:
-         
+        case UPDATE_CART: 
             const user_id = action.quantity.id
             const count = action.quantity.cartCount
             nextState[user_id].cartCount = count
-             return nextState;
-     
+            return nextState;     
         case LOGOUT_CURRENT_USER:
             return {}
         default:

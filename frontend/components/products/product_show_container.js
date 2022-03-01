@@ -3,6 +3,7 @@ import ProductShow from './product_show';
 import {fetchProduct} from "../../actions/products_actions"
 import {addItem, updateCart} from '../../actions/cart_actions'
 import {openModal} from '../../actions/modal_actions'
+import { deleteReview } from '../../actions/review_actions';
 
 const mapStateToProps = (state, {match}) => {
     const currentUser = state.entities.users[state.session.id]
@@ -18,7 +19,8 @@ const mapDispatchToProps = (dispatch)=>({
     fetchProduct: (id)=>dispatch(fetchProduct(id)),
     addToCart: (newItem)=>dispatch(addItem(newItem)),
     updateCart: (item)=>dispatch(updateCart(item)),
-    openModal: (modal)=>dispatch(openModal(modal))
+    openModal: (modal)=>dispatch(openModal(modal)),
+    deleteReview: (reviewId)=>dispatch(deleteReview(reviewId))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProductShow);

@@ -11,7 +11,7 @@ import HeaderContainer from './home/header_container';
 import NavBarContainer from './home/nav_bar_container';
 import Modal from './modal/modal'
 import ReviewFormContainer from './reviews/add_review_form_container'
-import Footer from './footer'
+import EditReviewFormContainer from './reviews/edit_review_container';
 import Payment from './cart/payment';
 
 const App = ()=>(
@@ -27,6 +27,7 @@ const App = ()=>(
         <ProtectedRoute path='/checkout' component={CheckoutContainer}/>
         <ProtectedRoute path='/payment' component={Payment} />
         <ProtectedRoute path='/products/:id/reviews/new' component={ReviewFormContainer}/>
+        <ProtectedRoute path='/products/:id/reviews/edit' component={EditReviewFormContainer} />
         <Route path='/products/:id' component={ProductShowContainer} />
         <Route path='/products' component={SearchContainer}/>
         <Route path='/' component={Home} />  
