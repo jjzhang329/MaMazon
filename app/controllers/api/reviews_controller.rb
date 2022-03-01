@@ -14,19 +14,23 @@ class Api::ReviewsController < ApplicationController
     end
 
 
-    def udpate 
+    def update 
         @review = Review.find_by(id: params[:id])
-        if @review.update
-             render "api/products/show"
+        @product = Product.find_by(id: params[:review][:product_id])
+        if @review.update(review_params)
+       
+            render "api/products/show"
         end 
     end 
 
     def destroy
+        
         @review = Review.find_by(id: params[:id])
-        if  @review.destroy
-             render "api/products/show"
-        end 
-
+        @product = @review.product
+       if @review.destroy
+            render "api/products/show"
+       end
+  
     end
 
     def review_params

@@ -175,3 +175,34 @@
     width: 235px;
     visibility: hidden;
 }
+
+.reviews-edit{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.reviews-edit > button {
+    border-radius: 8px;
+    box-shadow: 0 2px 5px 0 rgba(213, 217, 217, 0.05);
+    font-size: 13px;
+    border: 1px solid #D5D9D9;
+    background: transparent;
+    width: 100px;
+    margin-left: 15px;
+}
+.reviews-edit > a > button{
+    border-radius: 8px;
+    box-shadow: 0 2px 5px 0 rgba(213, 217, 217, 0.05);
+    font-size: 13px;
+    border: 1px solid #D5D9D9;
+    background: transparent;
+    width: 100px;
+}
+.reviews-edit > a > button:hover{
+    background-color: #e9ecec;
+}
+
+.reviews-edit > button:hover{
+    background-color: #e9ecec;
+}

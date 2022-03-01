@@ -3,10 +3,6 @@ import { fetchProduct } from "../../actions/products_actions";
 import { addReview } from "../../actions/review_actions";
 import ReviewForm from './review_form'
 
-// const getProductId = (url)=>{
-//     return parseInt(url.split("/")[2])
-// }
-
 const mapState = (state, ownProps) => ({
     
             review: {

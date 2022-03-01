@@ -12,13 +12,13 @@ const productsReducer = (state={}, action)=>{
         case RECEIVE_ALL_PRODUCTS:
             return action.products;
         case RECEIVE_PRODUCT:
-            
-            // return Object.assign(nextState, {[action.product.id]: action.product})
             return Object.assign({}, { [action.product.id]: action.product })
-        // case RECEIVE_ITEMS:
-        //     return action.items;
-
-
+        case CREATE_REVIEW:
+            return Object.assign({}, { [action.payload.id]: action.payload })
+        case UPDATE_REVIEW:
+            return Object.assign({}, { [action.payload.id]: action.payload })
+        case DELETE_REVIEW:
+            return Object.assign({}, { [action.payload.id]: action.payload})
         default:
             return state;
     }

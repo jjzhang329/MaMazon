@@ -15,9 +15,9 @@ class ReviewForm extends React.Component {
     }
     componentDidUpdate(oldState){
         if(Object.keys(oldState.product).length !== Object.keys(this.props.product).length){  
-         
             this.setState({product: this.props.product})
             this.setState({ username: this.props.username})
+            this.setState({review: this.props.review})
         }
     }
    
@@ -51,7 +51,7 @@ class ReviewForm extends React.Component {
         const{formType} = this.props
         const id = this.state.review.product_id
         const product = this.state.product[id]
-
+        console.log(this.props)
        if(!product)return null
         return (
             <div className='review-form-container'>
@@ -81,28 +81,14 @@ class ReviewForm extends React.Component {
                         </div>
                         <div className='overall-rating'>
                             <h3>Overall Rating</h3>
-                            <StarRating updateStars={this.handleRating}/>
+                            <StarRating updateStars={this.handleRating} presetRating={this.props.review.rating}/>
                         </div>
-                        {/* <div className='rate-features'>
-                            <h3>Rate features</h3>
-                            <div className='rate-feature-row'>
-                                <div className='rate-feature-title'>Easy to use</div>
-                                <StarRating updateStars={this.handleRating} />
-                            </div>
-                            <div className='rate-feature-row'>
-                                <div className='rate-feature-title'>Value for money</div>
-                                <StarRating updateStars={this.handleRating} />
-                            </div>
-                            <div className='rate-feature-row'>
-                                <div className='rate-feature-title'>Accuracy</div>
-                                <StarRating updateStars={this.handleRating} />
-                            </div>
-                           
-                        </div> */}
+                      
                         <div className='form-row-subtitle'>
                             <label><h3>Add a headline</h3></label>
                             <div className="headline-input">
-                                <input value={this.state.review.headline} onChange={this.handleUpdate("headline")}type="text"placeholder="What's most important to know?"/>
+                                <input value={this.state.review.headline} onChange={this.handleUpdate("headline")}type="text"
+                                    placeholder={this.props.review.headline === "" ? "What's most important to know?" : this.props.review.headline}/>
                             </div>
                         </div>
                         {/* <div className='form-row-subtitle'>
@@ -119,7 +105,8 @@ class ReviewForm extends React.Component {
                             
                                 <textarea className='written-box' value={this.state.review.body}
                                     onChange={this.handleUpdate('body')}
-                                    placeholder='What did you like or dislike? What did you use this product for?'>
+                                    placeholder={this.props.review.body === "" ? 
+                                    'What did you like or dislike? What did you use this product for?' : this.props.review.body}>
                                 </textarea>
                             
                         </div>

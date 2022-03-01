@@ -1,8 +1,8 @@
 import React from 'react';
 import { MdOutlineStar  } from 'react-icons/md';
-import { Redirect } from 'react-router';
-
+import { deleteReview } from '../../util/reviews_util';
 import ProductShowReview from './product_show_reviews'
+
 class ProductShow extends React.Component{
     constructor(props){
         super(props)
@@ -43,7 +43,7 @@ class ProductShow extends React.Component{
     
     render(){
         
-        const {product} = this.props
+        const {product, currentUser, deleteReview} = this.props
         if(!product) return null;
         //delivery eta date format
         let slow = new Date()
@@ -163,7 +163,7 @@ class ProductShow extends React.Component{
                         
                     </div>
                     {/* reviews section */}
-                        <ProductShowReview reviews={product.reviews} productId={product.id}/>
+                        <ProductShowReview deleteReview={deleteReview} currentUser={currentUser} reviews={product.reviews} productId={product.id}/>
                 </div>
             
         );

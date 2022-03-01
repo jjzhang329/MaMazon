@@ -1,11 +1,9 @@
-import {connect} from "react-redux"
 import React from 'react';
 import Review from '../reviews/reviews'
-import StarRating from '../reviews/starRating';
 import { Link } from "react-router-dom";
 import { MdOutlineStar } from "react-icons/md";
 
-const ProductShowReview=({reviews, productId})=>{
+const ProductShowReview=({reviews, productId, currentUser, deleteReview})=>{
     
     let averageRating = 0
     let count = 0
@@ -126,7 +124,7 @@ const ProductShowReview=({reviews, productId})=>{
                 </div>
             </div>
             {reviews ? <div className='reviews-right'>
-                    {reviews.reverse().map((review, idx) => <Review review={review} key={idx} />)}
+                    {reviews.reverse().map((review, idx) => <Review review={review} key={idx} productId={productId} deleteReview={deleteReview}currentUser={currentUser}/>)}
                 </div> :
                 <div className='reviews-right'><h2 style={{fontSize: "20px"}}>No reviews for this prodcut</h2></div>
             }

@@ -11,13 +11,13 @@ const Footer = ()=>{
                     <img src={homelogoURL}/>
                 </div>
                 <div className='links-row'>
-                    <a href="https://www.linkedin.com/in/jing-jing-zhang-888a05a5/">
+                    <a href="https://www.linkedin.com/in/jing-jing-zhang-888a05a5/" target="_blank" >
                         <img src="https://mamazon-seeds.s3.us-west-1.amazonaws.com/linkedinlogo.png"/>
                     </a> 
-                    <a href="https://github.com/jjzhang329?tab=repositories">
+                    <a href="https://github.com/jjzhang329?tab=repositories" target="_blank">
                         <img id="github" src="https://mamazon-seeds.s3.us-west-1.amazonaws.com/github.png"/>
                     </a>
-                    <a href="https://angel.co/u/jing-jing-zhang">
+                    <a href="https://angel.co/u/jing-jing-zhang" target="_blank">
                         <img src="https://mamazon-seeds.s3.us-west-1.amazonaws.com/angellist-logo-256x256.png"></img>
                     </a>
                 </div>
