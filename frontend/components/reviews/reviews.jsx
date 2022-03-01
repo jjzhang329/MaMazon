@@ -10,8 +10,11 @@ const Reviews = ({review, currentUser, productId, deleteReview})=>{
     date = date.split(",").slice(1)
     
     const editable = ()=>{
-        if(currentUser.id === review.user.id){
-            return true
+        if(currentUser){
+            if(currentUser.id === review.user.id){
+                return true
+            }
+            
         }
         return false
     }
