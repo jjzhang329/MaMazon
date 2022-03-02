@@ -63,7 +63,6 @@ class ReviewForm extends React.Component {
         const id = this.state.review.product_id
         const product = this.state.product[id]
        if(!product || this.state.errors === 'undefined')return null
-       console.log(this.state.errors)
         return (
             <div className='review-form-container'>
                 <div className='review-form-banner'>
