@@ -14,17 +14,21 @@ const SearchBar = ({changeFilter, products, filter, updateFilter, fetchAllProduc
     const [input, setInput] = useState('')
     const [result, setResult] = useState([])
     const [resultActive, setResultActive] = useState(true)
-    const savedfilter = JSON.parse(localStorage.getItem('filter'))
-    const [department, setDepartment] = useState(savedfilter.department)
-
+   
+    let savedfilter = JSON.parse(localStorage.getItem('filter')) 
+    
+    const [department, setDepartment] = useState('')
+  
     useEffect(()=>{
+       
         setDepartment(savedfilter.department)
     }, [savedfilter.department])
 
     useEffect(()=>{         
-        const search = { 'name': input }    
-        const key = {'department': department.toLowerCase()}
-        const searchFilter = { ...key, ...search }  
+        const search = { 'name': input }   
+        const key = {'department': department}
+        const searchFilter = { ...key, ...search } 
+        
        fetchAllProducts(searchFilter).then((docs)=>setResult(Object.values(docs.products)))          
     }, [input, department])
 

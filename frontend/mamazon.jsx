@@ -7,6 +7,12 @@ import * as reviewActions from './actions/review_actions'
 document.addEventListener("DOMContentLoaded", ()=>{
     const root = document.getElementById('root')
     let store
+    let filter = localStorage.getItem('filter') 
+    // 
+    if(!filter){
+        localStorage.setItem('filter', JSON.stringify({ 'department': '' }))
+    }
+
     if (window.currentUser) {
         const preloadedState = {
             entities: {
