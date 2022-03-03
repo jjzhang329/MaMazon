@@ -17,7 +17,7 @@ const SearchBar = ({changeFilter, products, filter, updateFilter, fetchAllProduc
    
     let savedfilter = JSON.parse(localStorage.getItem('filter')) 
     
-    const [department, setDepartment] = useState('')
+    const [department, setDepartment] = useState()
   
     useEffect(()=>{
        
