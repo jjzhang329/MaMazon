@@ -11,7 +11,7 @@ const filtersReducer = (state=defaultFilters, action)=>{
            
             return Object.assign({}, state, {[action.filter]: action.value})
         default:
-            return state
+            return state;
     }
 }
 
