@@ -80,6 +80,5 @@ test:
 #
 production:
   <<: *default
-  database: MaMazon_production
-  username: MaMazon
-  password: <%= ENV['MAMAZON_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
+  

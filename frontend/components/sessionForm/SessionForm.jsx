@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import  logo from '../../../app/assets/images/MAMAZON.png'
 
 export default class SessionForm extends React.Component {
   constructor(props){
