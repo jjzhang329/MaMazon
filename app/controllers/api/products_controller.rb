@@ -31,7 +31,7 @@ class Api::ProductsController < ApplicationController
     end 
 
     def show 
-        @product = Product.find_by(id: params[:id])
+        @product = Product.with_attached_photos.find(params[:id])
         render:show
     end 
 
