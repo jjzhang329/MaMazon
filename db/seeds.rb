@@ -36,7 +36,7 @@ Great gift：It is an ideal gift for family and friends, especially for those wh
 Eastern Rock：Design according to the needs of the times, pay attention to the unity of the use function and aesthetic function of the product.",
 department:"homedecor",
 price:29.5)
-file22 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/home+decor/homedecor2.jpg")
+file22 = URI.open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/home+decor/homedecor2.jpg")
 homedecor2.photo.attach(io:file22, filename:"homedecor2")
 
 
@@ -50,7 +50,7 @@ With stand: 10' diameter x 14' high; without stand: 8' diameter x 8.27' high
 Planter does not have drainage holes",
 department:"homedecor",
 price: 58.49)
-file25 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/home+decor/homedecor5.jpg")
+file25 = URI.open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/home+decor/homedecor5.jpg")
 homedecor5.photo.attach(io:file25, filename:"homedecor5")
 
 
@@ -63,7 +63,7 @@ BREW LIKE A PRO - A sleek LCD display screen indicates the desired Set Temp & Re
 WELL CRAFTED KETTLE - Aesthetically beautiful and quality made 304 stainless steel kettle body and lid with a minimalist base; Has a 0.9 Liter boiling capacity; Kettle comes with a 1-Year warranty backed by our outstanding customer service",
 department:"kitchen",
 price:189)
-file30 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/kitchen/kitchen5.jpg")
+file30 = URI.open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/kitchen/kitchen5.jpg")
 kitchen5.photo.attach(io:file30, filename:"kitchen5")
 
 #product4#home
@@ -76,7 +76,7 @@ DELICATE GLASSWARE - Designed in a fluted glass jar with stylish packaging, this
 SATISFACTION GUARANTEED - Experience thoughtful customer service and full refund & return if there are any problems upon receiving the product.",
 department:"homedecor",
 price:27.99)
-file24 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/home+decor/homedecor4.jpg")
+file24 = URI.open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/home+decor/homedecor4.jpg")
 homedecor4.photo.attach(io:file24, filename:"homedecor4")
 
 
@@ -84,7 +84,7 @@ homedecor4.photo.attach(io:file24, filename:"homedecor4")
 baby1 = Product.create!(
     {name:"Huggies Baby Diapers, Little Movers, Multi-Color, Size 3, 156 Count", 
     description:"Huggies Little Movers baby diapers size 3 fit babies 16-28 lb. (7-13 kg)
-#1 Fitting Diaper* features 5-Way Fit System with contoured shape to move with baby & virtually eliminate leaks (*Wet Fit, Among Open Diapers)
+#1 Fitting Diaper* features 5-Way Fit System with contoured shape to move with baby & virtually eliminate leaks (*Wet Fit, Among URI.Open Diapers)
 DryTouch Liner absorbs wetness on contact & Leak Lock System helps prevent leaks for up to 12 hours
 SnugFit Waistband & Double Grip Strips keep the diaper in place while baby is crawling, moving or walking
 Huggies' Pocketed Waistband helps prevent diaper blowouts (NB-Size 2), plus wetness indicator changes color when baby is ready for a diaper change
@@ -94,7 +94,7 @@ Packaging may vary from image shown",
     department: "baby", 
     price: 49.11}
 )
-file1 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/baby/baby1_.jpg")
+file1 = URI.open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/baby/baby1_.jpg")
 
 #product#beauty
 baby1.photo.attach(io: file1, filename:"baby1")
@@ -102,7 +102,7 @@ beauty2 = Product.create!(name:"Oribe Gold Lust Collection Holiday Set",
 description:"Gold Lust Shampoo rejuvenates with our revolutionary -restorative complex, while Gold Lust Conditioner undoes the damage of time. A drop of Gold Lust Nourishing Hair Oil before heat styling seals in sleekness and shine.",
 department:"beauty",
 price: 200)
-file7 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/beauty/beauty2.jpg")
+file7 = URI.open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/beauty/beauty2.jpg")
 beauty2.photo.attach(io:file7, filename:"beauty2")
 
 #product6#maternity
@@ -115,7 +115,7 @@ Easy to find the baby position quickly as early as 12 weeks, the best time for u
 Safe and Accuracy: High sensitivity probe, no radiation, low power, safe to baby.",
 department:"maternity",
 price:79.98)
-file35 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/maternity/maternity5.jpg")
+file35 = URI.open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/maternity/maternity5.jpg")
 maternity5.photo.attach(io:file35, filename:"maternity5")
 
 #product7#smarthome
@@ -128,7 +128,7 @@ Optional Cloud & Local Storage - 24/7 CVR enables the indoor security camera to 
 ",
 department:"smarthome",
 price:40.98)
-file40 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/smart-home/smarthome5.jpg")
+file40 = URI.open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/smart-home/smarthome5.jpg")
 smarthome5.photo.attach(io:file40, filename:"smarthome5")
 
 #product8#smarthome
@@ -143,7 +143,7 @@ Designed to protect your privacy – Amazon is not in the business of selling yo
 department:"smarthome",
 price:49.99)
 
-file39 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/smart-home/smarthome4.jpg")
+file39 = URI.open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/smart-home/smarthome4.jpg")
 smarthome4.photo.attach(io:file39, filename:"smarthome4")
 
 baby2 = Product.create!(
@@ -158,7 +158,7 @@ New Look! Packaging may vary",
     department: "baby", 
     price: 11.12
 )
-file2 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/baby/baby2.jpg")
+file2 = URI.open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/baby/baby2.jpg")
 baby2.photo.attach(io: file2, filename:"baby2")
 
 baby3 = Product.create!(
@@ -174,7 +174,7 @@ Packaging and prints on diapers may vary",
     department: "baby", 
     price: 42.99
 )
-file3 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/baby/baby3.jpg")
+file3 = URI.open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/baby/baby3.jpg")
 baby3.photo.attach(io: file3, filename:"baby3")
 
 baby4 = Product.create!(name:"Papablic Archie Baby Swing, Bluetooth Portable Swing for Infants with 5 Natural Sway Speeds and 3 Recline Positions, Unique Breathable System, Remote Control", 
@@ -186,7 +186,7 @@ description:"👶 Give Your Arms A Rest: Swinging our baby in arms for hours upo
 ", 
 department:"baby", 
 price:149.92)
-file4 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/baby/baby4.jpg")
+file4 = URI.open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/baby/baby4.jpg")
 baby4.photo.attach(io: file4, filename:"baby4")
 
 baby5 = Product.create!(name:"Lansinoh Breastmilk Storage Bags, 100 Count", 
@@ -197,7 +197,7 @@ PUMP DIRECTLY - Breast milk storage bags can be pumped directly into with Lansin
 EASY STORAGE- Stand in the fridge for compact storage; lay flat to safely freeze",
 department:"baby",
 price:13.88)
-file5 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/baby/baby5.jpg")
+file5 = URI.open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/baby/baby5.jpg")
 baby5.photo.attach(io:file5, filename:"baby5")
 
 # beauty
@@ -212,14 +212,14 @@ Please note there are no fragrances or masking fragrances in Vanicream products.
     department: "beauty",
     price: 13.49
 )
-file6 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/beauty/beauty1.jpg")
+file6 = URI.open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/beauty/beauty1.jpg")
 beauty1.photo.attach(io: file6, filename:"beauty1")
 
 beauty3 = Product.create!(name:"NuFACE Petite Facial Toning Device | Mini Facial Trainer Device + Hydrating Skin Care | Skin Care Device to Lift Contour Tone Skin + Reduce Look of Wrinkles | FDA-Cleared At-Home System",
 description:"Unlock the magic of microcurrent with the NuFACE Mini Hydrate + Contour Gift Set in limited-edition Platinum Shimmer—the ultimate starter device to tone, lift, and contour the face and neck.",
 department:"beauty",
 price: 209)
-file8 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/beauty/beaty3.jpg")
+file8 = URI.open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/beauty/beaty3.jpg")
 beauty3.photo.attach(io:file8, filename:"beauty3")
 
 
@@ -233,14 +233,14 @@ Includes: 1 Connected Sonicare toothbrush handle with 4 modes; 1 Premium Plaque 
 ",
 department:"beauty",
 price:199.95)
-file9 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/beauty/beauty4.jpg")
+file9 = URI.open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/beauty/beauty4.jpg")
 beauty4.photo.attach(io:file9, filename:"beauty4")
 
 beauty5 = Product.create!(name:"L'Occitane Hand Cream Classics Trio Gift Set Enriched with Shea Butter for Dry Hands",
 description:"A trio of L'Occitane's nourishing hand creams for exceptional comfort packaged in a limited edition box.",
 department:"beauty",
 price:29)
-file10 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/beauty/beauty5.jpg")
+file10 = URI.open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/beauty/beauty5.jpg")
 beauty5.photo.attach(io:file10, filename:"beauty5")
 
 #fashion
@@ -254,14 +254,14 @@ COMPOSITION: This high quality gown is true to size and is made from 100% polyes
 HOW TO WEAR: This flowy, evening gown is perfect for your next special occasion. The high neck and tiered skirt offer elegant accents.",
 department:"fashion",
 price:39.95)
-file11 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/fashion/fashion1.jpg")
+file11 = URI.open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/fashion/fashion1.jpg")
 fashion1.photo.attach(io:file11, filename:"fashion1")
 
 fashion2 = Product.create!(name:"Shonyin Mother Daughter & Grandma Granddaughter Dainty Necklace, Mother's Day Birthday Jewelry Gift Infinity Heart Pendant Necklace for Women",
 description:"【 MOTHER & DAUGHTER NECKLACE MEANING 】 The infinite and heart design represents the eternal love between mother and daughter. No matter where we go, no matter what we do, you'll always be there for me, and I'll always be there for you.",
 department:"fashion",
 price:16.99)
-file12 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/fashion/fashion2.jpg")
+file12 = URI.open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/fashion/fashion2.jpg")
 fashion2.photo.attach(io:file12, filename:"fashion2")
 
 fashion3 = Product.create!(name:"Oval Garnet Double Halo Loop Pendant Necklace in 14K White Gold (10x8mm Garnet) - January Birthstone",
@@ -272,12 +272,12 @@ Free Certificate of Authenticity. Easy Returns - If you are not 100% satisfied w
 Angara offers high-quality Garnet jewelry in a variety of appealing designs. All our Garnet are sourced directly from mines and manufacturers. The exceptional craftsmanship ensures that every Garnet jewelry piece will last for generations.",
 department:"fashion",
 price:2659)
-file13 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/fashion/fashion3.jpg")
+file13 = URI.open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/fashion/fashion3.jpg")
 fashion3.photo.attach(io:file13, filename:"fashion3")
 
 fashion4 = Product.create!(name:"Stuart Weitzman Women's 5050 Over-the-Knee Boot",
 description:"Imported
-Boot opening measures approximately 14' around
+Boot URI.opening measures approximately 14' around
 These bodacious over-the-knee 5050 boots are half rockstar, half supermodel!
 Available in a variety of upper materials.
 Easy pull-on construction.
@@ -285,7 +285,7 @@ Soft leather lining.
 Lightly cushioned leather footbed.",
 department:"fashion",
 price:750)
-file14 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/fashion/fashion4.jpg")
+file14 = URI.open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/fashion/fashion4.jpg")
 fashion4.photo.attach(io:file14, filename:"fashion4")
 
 fashion5 = Product.create!(name:"Coach Crossbody Bag Saddle Leather Cross Body",
@@ -297,12 +297,12 @@ Adjustable strap with 22 inches drop for shoulder or crossbody wear
 7 3/4' (L) x 6 3/4' (H) x 3' (W)'",
 department:"fashion",
 price:244.62)
-file15 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/fashion/fashion5.jpg")
+file15 = URI.open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/fashion/fashion5.jpg")
 fashion5.photo.attach(io:file15, filename:"fashion5")
 
-fashion6 = Product.create!(name:"Ross-Simons 0.25 ct. t.w. Diamond Openwork Bolo Bracelet in Sterling Silver",
-description:" DIAMONDS + STERLING SILVER — .25 ct. t.w. diamond openwork bolo bracelet in sterling silver. Polished finish. Length adjusts to fit most wrists. 1/2 in. wide. Features a 1.7mm wheat chain with 4mm end beads.
-THE FINISHING TOUCH — With its vintage-inspired design, this diamond openwork bolo bracelet adds a feminine accent to any style. Pair it with your casual or formal attire.
+fashion6 = Product.create!(name:"Ross-Simons 0.25 ct. t.w. Diamond URI.Openwork Bolo Bracelet in Sterling Silver",
+description:" DIAMONDS + STERLING SILVER — .25 ct. t.w. diamond URI.openwork bolo bracelet in sterling silver. Polished finish. Length adjusts to fit most wrists. 1/2 in. wide. Features a 1.7mm wheat chain with 4mm end beads.
+THE FINISHING TOUCH — With its vintage-inspired design, this diamond URI.openwork bolo bracelet adds a feminine accent to any style. Pair it with your casual or formal attire.
 ROSS-SIMONS QUALITY — Treat yourself to the luxury of Ross-Simons fine jewelry. Whether your selection is made of 14kt gold, 18kt gold or gorgeous sterling silver, our jewelry always makes a lasting statement.
 THE PERFECT GIFT FOR HER — This is the ideal gift for your sister, daughter, mom, wife, niece, aunt, best friend, girlfriend — or yourself! Whether she prefers modern or traditional jewelry, Ross-Simons has a wide selection of bracelets, earrings, necklaces and rings to choose from.
 GIFT BOX INCLUDED — Ross-Simons jewelry arrives beautifully packaged in a gift box, ready to delight for any occasion, including birthdays, Christmas, Mother’s Day, anniversaries, 
@@ -310,7 +310,7 @@ Valentine’s Day, weddings, graduations and much more! Due to the naturally occ
 each is unique and may exhibit imperfections such as inclusions, blemishes and cloudiness, as well as color variations.",
 department: "fashion",
 price: 169)
-file41 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/fashion/fashion6.jpg")
+file41 = URI.open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/fashion/fashion6.jpg")
 fashion6.photo.attach(io:file41, filename:"fashion6")
 
 
@@ -324,7 +324,7 @@ The subtly textured surface prevents hands and feet from slipping out of positio
 Made of SGS certified TPE material which is non-slip, odor-less and excellent in cushioning, unlike those cheap & traditional non-green PVC, NBR or EVA yoga mats.",
 department:"fitness",
 price:29.99)
-file16 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/fitness/Fitness1.jpg")
+file16 = URI.open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/fitness/Fitness1.jpg")
 fitness1.photo.attach(io:file16, filename:"fitness1")
 
 fitness2 = Product.create!(name:"Apple Watch Series 5 (GPS, 44mm) - Gold Aluminum Case with Pink Sport Band ",
@@ -340,7 +340,7 @@ Emergency SOS
 Fall detection",
 department:"fitness",
 price:239)
-file17 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/fitness/fitness2.jpg")
+file17 = URI.open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/fitness/fitness2.jpg")
 fitness2.photo.attach(io:file17, filename:"fitness2")
 
 fitness3 = Product.create!(name:"Exercise Workout Bands, Resistance Bands for Women, 3 Levels Booty Bands for Legs and Butt",
@@ -352,18 +352,18 @@ Resistance bands set, it is 4 different resistance levels of light, medium and h
 ",
 department:"fitness",
 price:16.99)
-file18 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/fitness/fitness3.jpg")
+file18 = URI.open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/fitness/fitness3.jpg")
 fitness3.photo.attach(io:file18, filename:"fitness3")
 
 fitness4 = Product.create!(name:"GalSports Exercise Ball (45cm-75cm), Yoga Ball Chair with Quick Pump, Stability Fitness Ball for Core Strength Training & Physical Therapy",
 description:"🎄 BURST RESISTANT & SAFE DEFLATION - Our exercise ball is safety guaranteed with the honey comb structure, so even if you accidentally pierce the yoga ball, you will never fall to the ground immediately. This structure means the air would be released little by little, therefore, this anti-burst and slow deflation design makes the stability ball so much safer.
-⛄ Anti Slip Material- The non-slip lines offer this equipment more friction, which means you can not only practice at home or in the gym, but also in places like outdoors or open spaces where the ground conditions are tougher. And rather than invest in a large, expensive gym machine, going for a smaller and more economical option like the fitness ball is much wiser! Use it to enhance your flexibility, facilitate your stretching, and maintain the stability during your practice of Yoga or Pilates!
+⛄ Anti Slip Material- The non-slip lines offer this equipment more friction, which means you can not only practice at home or in the gym, but also in places like outdoors or URI.open spaces where the ground conditions are tougher. And rather than invest in a large, expensive gym machine, going for a smaller and more economical option like the fitness ball is much wiser! Use it to enhance your flexibility, facilitate your stretching, and maintain the stability during your practice of Yoga or Pilates!
 🎁 Excellent Quality Material & Weight Capacity - Amazingly high weight capacity of 2,000 lbs. Professional GYM grade PVC: harmless to humans and pets alike, safely certified by SGS, BPA-free, latex-free and durable. Whether used as a pregnancy ball, a physio ball, a fun bouncy ball for your kids, or a professional ball for physical therapy, it would never fail you! Enjoy the soft and comfortably elastic texture as you press it down.
 🎈 Sitting Posture Correction& Massage: This inflatable balance ball can be effectively served as a multifunctional Office Ball Chair. It constantly reminds you of a good sitting posture as your various body parts actively make subtle adjustments to stay in balance, which makes you automatically sit up nice and straight, increasing overall blood circulation. The soft PVC surface produces a massaging effect to alleviate your fatigue while working in front of the desk.
 🎅 EASY TO INFLATE – Conveniently inflatable, comes with a quick inflation foot pump, a plug remover, a measuring tape, 2 air stoppers, and detailed instructions. Available in 4 sizes: 45cm, 55cm, 65cm, and 75cm to cater to your specific needs. Make the purchase decision based on your individual height. Also make sure you can comfortably hold the gym ball of the size chosen with your hands and squeeze it in between your feet conveniently if these moves will be often practiced.",
 department:"fitness",
 price:17.99)
-file19 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/fitness/fitness4.jpg")
+file19 = URI.open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/fitness/fitness4.jpg")
 fitness4.photo.attach(io:file19, filename:"fitness4")
 
 fitness5 = Product.create!(name:"NordicTrack Commercial Studio Cycle",
@@ -374,7 +374,7 @@ SMR Silent Magnetic Resistance delivers a smooth, quiet workout with every use; 
 350-pound user weight capacity; Protected with a 10-year frame warranty, 2-year parts warranty, and 1-year labor warranty; 59” H x 22” W x 60” L",
 department:"fitness",
 price:1798)
-file20 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/fitness/fitness5.jpg")
+file20 = URI.open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/fitness/fitness5.jpg")
 fitness5.photo.attach(io:file20, filename:"fitness5")
 
 # Home Decor
@@ -386,7 +386,7 @@ description:"👍GORGEOUS & CHANGEABLE HOME DECORATION: Welcome your guests with
 🎁FABULOUS GIFT IDEA: Passionately designed, cut and engraved, this home wall decor Sign with elegant design and artificial Artificial Eucalyptus wreath, great for home decoration, matching with most home styles, will make a special housewarming gift, anniversary gift, birthday or Christmas gift for yourself, family, friends, couples or new neighbor! Any issue with our wood home letters decor, feel free to tell us directly for prompt replacement or refund.",
 department:"homedecor",
 price:32.99)
-file21 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/home+decor/homedecor1.jpg")
+file21 = URI.open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/home+decor/homedecor1.jpg")
 homedecor1.photo.attach(io:file21, filename:"homedecor1")
 
 
@@ -398,7 +398,7 @@ Shed free yarn.
 Safe for wood floors.",
 department:"homedecor",
 price:200.88)
-file23 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/home+decor/homedecor3.jpg")
+file23 = URI.open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/home+decor/homedecor3.jpg")
 homedecor3.photo.attach(io:file23, filename:"homedecor3")
 
 
@@ -415,7 +415,7 @@ Servings: this premium French press Coffee maker makes 8 cups of Coffee, 4oz eac
 ",
 department:"kitchen",
 price:37.48)
-file26 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/kitchen/bodumreplace_.jpg")
+file26 = URI.open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/kitchen/bodumreplace_.jpg")
 kitchen1.photo.attach(io:file26, filename:"kitchen1")
 
 kitchen2 = Product.create!(name:"Staub Cast Iron 5-qt Tall Cocotte - Cherry, Made in France", 
@@ -426,7 +426,7 @@ Heavy weight, tight-fitting lid retains moisture, spikes on the lid create a rai
 Oven safe up to 500°F. Dishwasher safe, hand wash recommended. Made in France.",
 department:"kitchen",
 price:199.95)
-file27 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/kitchen/kitchen2.jpg")
+file27 = URI.open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/kitchen/kitchen2.jpg")
 kitchen2.photo.attach(io:file27, filename:"kitchen2")
 
 kitchen3 = Product.create!(name:"KitchenAid KSM150PSPT Artisan Series 5-Qt. Stand Mixer with Pouring Shield - Pistachio", 
@@ -439,7 +439,7 @@ Powerful enough for nearly any task or recipe, whether you’re stirring wet and
 Includes coated flat beater, coated dough hook, 6-wire whip and 1-piece pouring shield. The flat beater and dough hook are dishwasher-safe.",
 department:"kitchen",
 price:429.95)
-file28 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/kitchen/kitchen3.jpg")
+file28 = URI.open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/kitchen/kitchen3.jpg")
 kitchen3.photo.attach(io:file28, filename:"kitchen3")
 
 kitchen4 = Product.create!(name:"Wedgwood with Love Nouveau Indigo Rim 5-Piece Place Setting, White", 
@@ -450,7 +450,7 @@ Chic indigo and platinum color combination
 Dishwasher and microwave safe",
 department:"kitchen",
 price:98.25)
-file29 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/kitchen/kitchen4.jpg")
+file29 = URI.open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/kitchen/kitchen4.jpg")
 kitchen4.photo.attach(io:file29, filename:"kitchen4")
 
 
@@ -465,7 +465,7 @@ Care instructions: Wash gentle cycle cold with like colors/do not bleach and dry
 Some styles and color options imported.",
 department:"maternity",
 price:39.95)
-file31 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/maternity/maternity1.jpg")
+file31 = URI.open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/maternity/maternity1.jpg")
 maternity1.photo.attach(io:file31, filename:"maternity1")
 
 maternity2 = Product.create!(name:"PharMeDoc Pregnancy Pillow, Grey U-Shape Full Body Pillow and Maternity Support - Support for Back, Hips, Legs, Belly for Pregnant Women",
@@ -476,7 +476,7 @@ MORE THAN JUST A PILLOW FOR PREGNANT WOMEN - This full body pillow is perfect fo
 Try the PharMeDoc U-Shaped maternity pillow today, RISK-FREE. You're covered by our lifetime manufacturer warranty and 100% satisfaction guarantee.",
 department:"maternity",
 price:42.95)
-file32 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/maternity/maternity2.jpg")
+file32 = URI.open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/maternity/maternity2.jpg")
 maternity2.photo.attach(io:file32, filename:"maternity2")
 
 maternity3 = Product.create!(name:"Maternity Belt Pregnancy Belly Band Waist Abdominal Back Belly Band Support Brace, Beige, One Size",
@@ -487,7 +487,7 @@ description:"✅BREATHABLE LIGHTWEIGHT & COMFORTABLE MATERNITY BELT: Our pregnan
 ✅ADJUSTABLE PREGNANCY BELT: With the adjustable design of pregnancy band, ease to take on and off by yourself. According to your needs, you can adjust its size in the different trimester period to create the most comfortable situation for you and your baby. Give you bring a comfortable and wonderful pregnancy experience.",
 department:"maternity",
 price:18.99)
-file33 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/maternity/maternity3.jpg")
+file33 = URI.open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/maternity/maternity3.jpg")
 maternity3.photo.attach(io:file33, filename:"maternity3")
 
 maternity4 = Product.create!(name:"BirthBag - Pre Packed Maternity Labor and Delivery Hospital Birth Bag Gift Set for New Mom and Baby (Large Tote)",
@@ -497,7 +497,7 @@ Why spend extra time and money on lists when you can find all your mom to be and
 Perfect for a baby shower gift or mom to be present",
 department:"maternity",
 price:69.99)
-file34 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/maternity/maternity4.jpg")
+file34 = URI.open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/maternity/maternity4.jpg")
 maternity4.photo.attach(io:file34, filename:"maternity4")
 
 
@@ -514,7 +514,7 @@ COMPLETE HANDS-FREE CONTROL: Set a cleaning schedule, initiate on-demand cleanin
 CONTINUOUS CLEANING CONTACT: Shark’s innovative PowerFins brushroll digs deep into carpets and directly engages floors for incredible cleaning.",
 department:"smarthome",
 price:408)
-file36 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/smart-home/smarthome1.jpg")
+file36 = URI.open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/smart-home/smarthome1.jpg")
 smarthome1.photo.attach(io:file36, filename:"smarthome1")
 
 smarthome2 = Product.create!(name:"Google Nest Thermostat - Smart Thermostat for Home - Programmable Wifi Thermostat - Snow",
@@ -528,7 +528,7 @@ Smart thermostat with HVAC monitoring, which looks out for your heating and cool
 ",
 department:"smarthome",
 price:119)
-file37 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/smart-home/smarthome2.jpg")
+file37 = URI.open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/smart-home/smarthome2.jpg")
 smarthome2.photo.attach(io:file37, filename:"smarthome2")
 
 smarthome3 = Product.create!(name:"Introducing Fire TV Stick 4K Max streaming device, Wi-Fi 6, Alexa Voice Remote (includes TV controls)",
@@ -542,7 +542,7 @@ Do more with your smart home - View the front door camera without stopping your 
 Game on - Fluid gameplay and fast-rendering graphics with a 750Mhz GPU. Access popular games with a Luna cloud gaming subscription.",
 department:"smarthome",
 price:29.99)
-file38 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/smart-home/smarthome3.jpg")
+file38 = URI.open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/smart-home/smarthome3.jpg")
 smarthome3.photo.attach(io:file38, filename:"smarthome3")
 
 smarthome6 = Product.create!(name:"Introducing Amazon Glow, Interactive Projector + Video Calling, Designed for Togetherness, with Tangram Bits, Kids 3+
@@ -557,20 +557,20 @@ Easy to setup and connect - Use the free Amazon Glow app, available on select iO
 ",
 department:"smarthome",
 price:249.99)
-filesmarthome6 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/smart-home/smarthome6.jpg")
+filesmarthome6 = URI.open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/smart-home/smarthome6.jpg")
 smarthome6.photo.attach(io:filesmarthome6, filename:"smarthome6")
 
 #gift-set
 
 gift1 = Product.create!(name:"Birthday Gifts for Women,Friend Gifts for Women,Spa Wine Tumbler Holiday Gift Box,Birthday Gift Baskets for Mom,Wife,Sister,Friend (Blue)", 
-description:"💖 FEMININE AND STYLISH GIFTSET: Beautifully designed with a modern and elegant touch, our giftbox is made to impress every lady at first sight. Filled with lovely and thoughtful gifts inside, this set once opened will bring her the sweetest surprise and make her feel so loved on her special day.
+description:"💖 FEMININE AND STYLISH GIFTSET: Beautifully designed with a modern and elegant touch, our giftbox is made to impress every lady at first sight. Filled with lovely and thoughtful gifts inside, this set once URI.opened will bring her the sweetest surprise and make her feel so loved on her special day.
 🎉 COMPLETE SPA GIFTSET FOR YOUR SPECIAL LADY: one 12 oz Blue insulated stainless steel tumbler with a “Not A Day Over Fabulous” quote (with straw and straw cleaner), one premium bath bomb, one Rainbow Cloud Bath Bombs,one premium Lavender bar soap, one 3.9oz Soy Wax lavender scented candle one 'Not a Day Over Fabulous' rose gold compact mirror ,one soft cupcake socks and a card for your special message.
 🌸 HIGH QUALITY AND PREMIUM PRODUCTS: Made from nourishing and soothing ingredients such as essential flower oil and 100% soy wax, the giftset all together will bring her a luxurious and sublime home spa experience, where she could pamper and indulge herself with a deluxe floral bubble bath while enjoying her favorite drink for the special occasion.
 💖 “This is a perfect gift to make someone feel special”- Imagine the surprise of receiving this gift on her birthday, Valentine’s day, Mother’s day, your anniversary. she could pamper and indulge herself with a deluxe floral bubble bath while enjoying her favorite drink for the special occasion in the fresh fragrance atmosphere.
 🎁 PERFECT GIFTBOX FOR EVERY OCCASION: Every item in our set has been selected and curated with thought and care to create the most special moment for that lady in your life. Whether you’re looking to surprise your Wife, Girlfriend, Mom, Best Friend, Sister or co-worker, we will help you show them all the love and appreciation they deserve.",
 department:"gift",
 price:29.99)
-filegift1 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/gift/gift1.jpg")
+filegift1 = URI.open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/gift/gift1.jpg")
 gift1.photo.attach(io: filegift1, filename:"gift1")
 
 gift2 = Product.create!(name:"Spa Gift Baskets, Spa Luxetique Spa Gifts for Women, 15pcs Spa Gift Set Includes Bath Bombs, Essential Oil, Hand Cream, Bath Salt and Luxury Tote Bag, Gifts Set for Women", 
@@ -581,7 +581,7 @@ description:"🛀 Nourishing Spa Gift Basket - The luxury 15pc bath set moisturi
 🛀 Special Bath Sets for Her - Finding a way to win woman’s heart? Our beautiful packaging and high-quality bath and body daily care products are the perfect gift for your Mom, Sister, Girlfriend or Wife. Also, this bath set makes a wonderful present for Birthdays, Holidays, Anniversaries, Christmas, Mother’s Day and Valentine’s Day.",
 department:"gift",
 price:39.96)
-filegift2 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/gift/gift2.jpg")
+filegift2 = URI.open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/gift/gift2.jpg")
 gift2.photo.attach(io: filegift2, filename:"gift2")
 
 gift3 = Product.create!(name:"Candles 12 Pack Scented Candles Gift Set for Women , Candles for Home Scented Soy Wax Aromatherapy Candle Sets 2.5 Oz Birthday Gift Mother Gift Christmas Gifts for Women Perfect Gifts for Her…", 
@@ -592,7 +592,7 @@ Candles for Home Portable And Exquisite Jar： Each scented candle has a jar wit
 Perfect Candles Gift for Women Packaging： The candle gift set comes with a beautiful gift box, suitable for any holiday or special event, such as Mother’s Day, Father’s Day, Valentine’s Day, Children’s Day, Anniversary, Thanksgiving, Birthday Gifts, Christmas, Teachers, Ideal gift for female friends.",
 department:"gift",
 price: 24.99)
-filegift3 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/gift/gift3.jpg")
+filegift3 = URI.open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/gift/gift3.jpg")
 gift3.photo.attach(io: filegift3, filename:"gift3")
 
 gift4 = Product.create!(name:"Gucci Bloom for Women 3 Piece Set Includes: 3.3 oz Eau de Parfum Spray + 3.3 oz Body Lotion + 0.25 oz Eau de Parfum Fragrance Rollerball", 
@@ -603,14 +603,14 @@ Type: Eau De Parfum,Lotion
 ",
 department:"gift",
 price: 147.95)
-filegift4 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/gift/gift4.jpg")
+filegift4 = URI.open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/gift/gift4.jpg")
 gift4.photo.attach(io: filegift4, filename:"gift4")
 
 gift5 = Product.create!(name:"Estee Lauder 2021 Holiday Gift Set $550 Resilience Multi-effect Creme", 
 description:"29 Beauty Essentials, inlcude: 2 Advanced Night Repair Face Serums, full-size (1 oz./30ml) and deluxe travel size (.24 oz./7ml); 2 Advanced Night Repair Eye Supercharged Complex Gel Cremes, full-size (.5 oz./15ml) and deluxe travel size (.17 oz./5ml); 2 Resilience Multi-Effect Cremes, full-size (1 oz./30ml) and deluxe travel size (.24 oz./7ml); 2 Pure Color Envy Palettes in CANDY GLOW (9 shades) and CANDY GLAM (9 shades)—18 essential shades in all for eyes and cheeks (total net wt. for each palette .18 oz./6g) .1 oz./3.7g 1 Full-Size Sumptuous Extreme Mascara, (.27 oz./8ml) 2 Full-Size Pure Color Envy Lipsticks, (.12 oz./3.5geach) in 539 Excite and 111 Tiger Eye 1 Full-Size Eye Makeup Remover, (3.4 oz./100ml) Train Case",
 department:"gift",
 price:124.88)
-filegift5 = open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/gift/gift5.jpg")
+filegift5 = URI.open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/gift/gift5.jpg")
 gift5.photo.attach(io: filegift5, filename:"gift5")
 
 
