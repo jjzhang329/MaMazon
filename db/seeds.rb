@@ -84,7 +84,7 @@ homedecor4.photo.attach(io:file24, filename:"homedecor4")
 baby1 = Product.create!(
     {name:"Huggies Baby Diapers, Little Movers, Multi-Color, Size 3, 156 Count", 
     description:"Huggies Little Movers baby diapers size 3 fit babies 16-28 lb. (7-13 kg)
-#1 Fitting Diaper* features 5-Way Fit System with contoured shape to move with baby & virtually eliminate leaks (*Wet Fit, Among Open Diapers)
+#1 Fitting Diaper* features 5-Way Fit System with contoured shape to move with baby & virtually eliminate leaks (*Wet Fit, Among URI.Open Diapers)
 DryTouch Liner absorbs wetness on contact & Leak Lock System helps prevent leaks for up to 12 hours
 SnugFit Waistband & Double Grip Strips keep the diaper in place while baby is crawling, moving or walking
 Huggies' Pocketed Waistband helps prevent diaper blowouts (NB-Size 2), plus wetness indicator changes color when baby is ready for a diaper change
@@ -277,7 +277,7 @@ fashion3.photo.attach(io:file13, filename:"fashion3")
 
 fashion4 = Product.create!(name:"Stuart Weitzman Women's 5050 Over-the-Knee Boot",
 description:"Imported
-Boot opening measures approximately 14' around
+Boot URI.opening measures approximately 14' around
 These bodacious over-the-knee 5050 boots are half rockstar, half supermodel!
 Available in a variety of upper materials.
 Easy pull-on construction.
@@ -300,9 +300,9 @@ price:244.62)
 file15 = URI.open("https://mamazon-seeds.s3.us-west-1.amazonaws.com/fashion/fashion5.jpg")
 fashion5.photo.attach(io:file15, filename:"fashion5")
 
-fashion6 = Product.create!(name:"Ross-Simons 0.25 ct. t.w. Diamond Openwork Bolo Bracelet in Sterling Silver",
-description:" DIAMONDS + STERLING SILVER — .25 ct. t.w. diamond openwork bolo bracelet in sterling silver. Polished finish. Length adjusts to fit most wrists. 1/2 in. wide. Features a 1.7mm wheat chain with 4mm end beads.
-THE FINISHING TOUCH — With its vintage-inspired design, this diamond openwork bolo bracelet adds a feminine accent to any style. Pair it with your casual or formal attire.
+fashion6 = Product.create!(name:"Ross-Simons 0.25 ct. t.w. Diamond URI.Openwork Bolo Bracelet in Sterling Silver",
+description:" DIAMONDS + STERLING SILVER — .25 ct. t.w. diamond URI.openwork bolo bracelet in sterling silver. Polished finish. Length adjusts to fit most wrists. 1/2 in. wide. Features a 1.7mm wheat chain with 4mm end beads.
+THE FINISHING TOUCH — With its vintage-inspired design, this diamond URI.openwork bolo bracelet adds a feminine accent to any style. Pair it with your casual or formal attire.
 ROSS-SIMONS QUALITY — Treat yourself to the luxury of Ross-Simons fine jewelry. Whether your selection is made of 14kt gold, 18kt gold or gorgeous sterling silver, our jewelry always makes a lasting statement.
 THE PERFECT GIFT FOR HER — This is the ideal gift for your sister, daughter, mom, wife, niece, aunt, best friend, girlfriend — or yourself! Whether she prefers modern or traditional jewelry, Ross-Simons has a wide selection of bracelets, earrings, necklaces and rings to choose from.
 GIFT BOX INCLUDED — Ross-Simons jewelry arrives beautifully packaged in a gift box, ready to delight for any occasion, including birthdays, Christmas, Mother’s Day, anniversaries, 
@@ -357,7 +357,7 @@ fitness3.photo.attach(io:file18, filename:"fitness3")
 
 fitness4 = Product.create!(name:"GalSports Exercise Ball (45cm-75cm), Yoga Ball Chair with Quick Pump, Stability Fitness Ball for Core Strength Training & Physical Therapy",
 description:"🎄 BURST RESISTANT & SAFE DEFLATION - Our exercise ball is safety guaranteed with the honey comb structure, so even if you accidentally pierce the yoga ball, you will never fall to the ground immediately. This structure means the air would be released little by little, therefore, this anti-burst and slow deflation design makes the stability ball so much safer.
-⛄ Anti Slip Material- The non-slip lines offer this equipment more friction, which means you can not only practice at home or in the gym, but also in places like outdoors or open spaces where the ground conditions are tougher. And rather than invest in a large, expensive gym machine, going for a smaller and more economical option like the fitness ball is much wiser! Use it to enhance your flexibility, facilitate your stretching, and maintain the stability during your practice of Yoga or Pilates!
+⛄ Anti Slip Material- The non-slip lines offer this equipment more friction, which means you can not only practice at home or in the gym, but also in places like outdoors or URI.open spaces where the ground conditions are tougher. And rather than invest in a large, expensive gym machine, going for a smaller and more economical option like the fitness ball is much wiser! Use it to enhance your flexibility, facilitate your stretching, and maintain the stability during your practice of Yoga or Pilates!
 🎁 Excellent Quality Material & Weight Capacity - Amazingly high weight capacity of 2,000 lbs. Professional GYM grade PVC: harmless to humans and pets alike, safely certified by SGS, BPA-free, latex-free and durable. Whether used as a pregnancy ball, a physio ball, a fun bouncy ball for your kids, or a professional ball for physical therapy, it would never fail you! Enjoy the soft and comfortably elastic texture as you press it down.
 🎈 Sitting Posture Correction& Massage: This inflatable balance ball can be effectively served as a multifunctional Office Ball Chair. It constantly reminds you of a good sitting posture as your various body parts actively make subtle adjustments to stay in balance, which makes you automatically sit up nice and straight, increasing overall blood circulation. The soft PVC surface produces a massaging effect to alleviate your fatigue while working in front of the desk.
 🎅 EASY TO INFLATE – Conveniently inflatable, comes with a quick inflation foot pump, a plug remover, a measuring tape, 2 air stoppers, and detailed instructions. Available in 4 sizes: 45cm, 55cm, 65cm, and 75cm to cater to your specific needs. Make the purchase decision based on your individual height. Also make sure you can comfortably hold the gym ball of the size chosen with your hands and squeeze it in between your feet conveniently if these moves will be often practiced.",
@@ -563,7 +563,7 @@ smarthome6.photo.attach(io:filesmarthome6, filename:"smarthome6")
 #gift-set
 
 gift1 = Product.create!(name:"Birthday Gifts for Women,Friend Gifts for Women,Spa Wine Tumbler Holiday Gift Box,Birthday Gift Baskets for Mom,Wife,Sister,Friend (Blue)", 
-description:"💖 FEMININE AND STYLISH GIFTSET: Beautifully designed with a modern and elegant touch, our giftbox is made to impress every lady at first sight. Filled with lovely and thoughtful gifts inside, this set once opened will bring her the sweetest surprise and make her feel so loved on her special day.
+description:"💖 FEMININE AND STYLISH GIFTSET: Beautifully designed with a modern and elegant touch, our giftbox is made to impress every lady at first sight. Filled with lovely and thoughtful gifts inside, this set once URI.opened will bring her the sweetest surprise and make her feel so loved on her special day.
 🎉 COMPLETE SPA GIFTSET FOR YOUR SPECIAL LADY: one 12 oz Blue insulated stainless steel tumbler with a “Not A Day Over Fabulous” quote (with straw and straw cleaner), one premium bath bomb, one Rainbow Cloud Bath Bombs,one premium Lavender bar soap, one 3.9oz Soy Wax lavender scented candle one 'Not a Day Over Fabulous' rose gold compact mirror ,one soft cupcake socks and a card for your special message.
 🌸 HIGH QUALITY AND PREMIUM PRODUCTS: Made from nourishing and soothing ingredients such as essential flower oil and 100% soy wax, the giftset all together will bring her a luxurious and sublime home spa experience, where she could pamper and indulge herself with a deluxe floral bubble bath while enjoying her favorite drink for the special occasion.
 💖 “This is a perfect gift to make someone feel special”- Imagine the surprise of receiving this gift on her birthday, Valentine’s day, Mother’s day, your anniversary. she could pamper and indulge herself with a deluxe floral bubble bath while enjoying her favorite drink for the special occasion in the fresh fragrance atmosphere.
