@@ -22,9 +22,9 @@ const Slider=()=>{
 
     
     let path
-    if (currentIdx === 0){path = 'products/41'}
-    if(currentIdx === 1){path = 'products/6'}
-    if (currentIdx === 2) { path = 'products/42' }
+    if (currentIdx === 0){path = 'products/88'}
+    if(currentIdx === 1){path = 'products/53'}
+    if (currentIdx === 2) { path = 'products/89' }
 
     const handleNextClick = (e)=>{ 
         e.preventDefault()
