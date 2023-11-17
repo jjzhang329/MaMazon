@@ -1,5 +1,5 @@
 # Welcome to Mamazon!
-Mamazon (live link will be available soon) is an amazon clone, where moms can search, shop and review products. 
+[Mamazon](https://mamazon-596c53b88011.herokuapp.com/) is an amazon clone, where moms can search, shop and review products. 
 
 ![Splash](https://mamazon-seeds.s3.us-west-1.amazonaws.com/ezgif.com-gif-maker+(5).gif)
 
