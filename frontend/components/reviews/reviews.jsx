@@ -4,10 +4,8 @@ import { NavLink } from 'react-router-dom';
 
 
 const Reviews = ({review, currentUser, productId, deleteReview})=>{
-    let date = Date.parse(review.createdAt)
-    var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
-    date = new Intl.DateTimeFormat('en-US', options).format(date)
-    date = date.split(",").slice(1)
+    let date = review.created_at
+    date = date.slice(0, 10)
     
     const editable = ()=>{
         if(currentUser){
