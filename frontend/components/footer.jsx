@@ -17,9 +17,6 @@ const Footer = ()=>{
                     <a href="https://github.com/jjzhang329?tab=repositories" target="_blank">
                         <img id="github" src="https://mamazon-seeds.s3.us-west-1.amazonaws.com/github.png"/>
                     </a>
-                    <a href="https://angel.co/u/jing-jing-zhang" target="_blank">
-                        <img src="https://mamazon-seeds.s3.us-west-1.amazonaws.com/angellist-logo-256x256.png"></img>
-                    </a>
                 </div>
             </div>
             <div className='footer-message'>
